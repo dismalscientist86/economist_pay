@@ -1,5 +1,5 @@
 # economist_pay
-Contains data on economists from publicly available sources.
+Contains data on economists in the federal government from publicly available sources.
 
 There are two distinct sources here. The first is FedsDataCenter.org. It only contains the most recent three fiscal years, and we just pulled the 2015 data, since that is closest in time to the internal data we are using, so could serve as the best comparison. It contains everyone with the occupation "Economist" in that year, for the agencies that report to OPM and were released as part of the FOIA request.
 
