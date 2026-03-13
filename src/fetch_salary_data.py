@@ -80,7 +80,7 @@ def fetch_all_years(start: int = 2015, end: int = 2024, overwrite: bool = False)
         print(f"Fetching FY{year}...")
         df = fetch_year(year)
         df.to_csv(out_path, index=False)
-        print(f"  FY{year}: saved {len(df)} records → {out_path.name}")
+        print(f"  FY{year}: saved {len(df)} records to {out_path.name}")
         time.sleep(1)
 
 
