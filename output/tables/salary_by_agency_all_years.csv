@@ -1,0 +1,25 @@
+agency_group,gender,n,median,mean
+BEA,female,979,127103.0,126709.0
+BEA,male,2167,124283.0,125314.0
+BLS,female,385,94857.0,97937.0
+BLS,male,692,96750.0,96812.0
+Census Bureau,female,454,128911.0,128157.0
+Census Bureau,male,818,124626.0,126975.0
+Departmental Offices,female,68,132368.0,128059.0
+Departmental Offices,male,146,136722.0,130695.0
+Dept of Agriculture (incl. ERS),female,1201,118484.0,120827.0
+Dept of Agriculture (incl. ERS),male,2193,126062.0,127473.0
+Dept of Commerce (other),female,59,185100.0,166671.0
+Dept of Commerce (other),male,145,185100.0,168358.0
+Dept of Energy,female,517,116365.0,118362.0
+Dept of Energy,male,982,117510.0,119473.0
+Dept of HHS,female,613,134296.0,131406.0
+Dept of HHS,male,817,132955.0,131581.0
+Dept of Labor (incl. BLS),female,3541,108421.0,110166.0
+Dept of Labor (incl. BLS),male,6475,107611.0,108792.0
+Dept of Treasury,female,706,160300.0,155175.0
+Dept of Treasury,male,1663,159855.0,159417.0
+Economic Research Service,female,61,112014.0,111503.0
+Economic Research Service,male,128,121635.0,123101.0
+Other,female,3718,139642.0,142437.0
+Other,male,8405,144945.0,144837.0
