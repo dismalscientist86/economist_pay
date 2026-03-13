@@ -1,8 +1,8 @@
 category,female,male,total,female_pct
-tenure_track,80,259,339,23.6
-private_sector,25,81,106,23.6
-other_academic,16,50,66,24.2
-central_banks,6,36,42,14.3
-international_orgs,10,22,32,31.2
-government,8,23,31,25.8
-think_tanks,5,10,15,33.3
+tenure_track,626,1424,2050,30.5
+private_sector,247,565,812,30.4
+other_academic,186,416,602,30.9
+central_banks,94,299,393,23.9
+government,78,156,234,33.3
+international_orgs,66,120,186,35.5
+think_tanks,54,126,180,30.0
