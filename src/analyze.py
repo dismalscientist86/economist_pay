@@ -24,12 +24,21 @@ import pandas as pd
 PROCESSED_DIR = Path(__file__).parent.parent / "data" / "processed"
 TABLES_DIR    = Path(__file__).parent.parent / "output" / "tables"
 
+# BEA (ZP pay plan) and Census (GS pay plan) can be separated within
+# Dept of Commerce for all years. BLS is Dept of Labor for FY2016+.
+# FY2015 used bureau-level names directly.
 AGENCY_LABELS = {
-    "bls_dum":    "BLS",
-    "bea_dum":    "BEA",
-    "census_dum": "Census Bureau",
+    "bls_dum":              "BLS",
+    "bea_dum":              "BEA",
+    "census_dum":           "Census Bureau",
+    "dept_labor_dum":       "Dept of Labor (incl. BLS)",
+    "dept_treasury_dum":    "Dept of Treasury",
+    "dept_agriculture_dum": "Dept of Agriculture (incl. ERS)",
+    "dept_hhs_dum":         "Dept of HHS",
+    "dept_energy_dum":      "Dept of Energy",
+    "dept_commerce_dum":    "Dept of Commerce (other)",
 }
-OTHER_AGENCIES = [
+OTHER_AGENCIES_2015 = [
     "INTERNAL REVENUE SERVICE",
     "ECONOMIC RESEARCH SERVICE",
     "DEPARTMENTAL OFFICES",
@@ -135,20 +144,29 @@ def salary_by_grade(df: pd.DataFrame, year: int = None) -> pd.DataFrame:
     )
 
 
+def _label_agencies(g: pd.DataFrame) -> pd.DataFrame:
+    """Add agency_group column. BEA/BLS/Census flags work across all years."""
+    g = g.copy()
+    g["agency_group"] = "Other"
+
+    for dum_col, label in AGENCY_LABELS.items():
+        if dum_col in g.columns:
+            g.loc[g[dum_col] == 1, "agency_group"] = label
+
+    # FY2015 only: catch IRS, ERS, Departmental Offices by name
+    agency_upper = g["agency"].str.strip().str.upper()
+    for name in OTHER_AGENCIES_2015:
+        g.loc[(g["fiscal_year"] == 2015) & (agency_upper == name), "agency_group"] = name.title()
+
+    return g
+
+
 def salary_by_agency(df: pd.DataFrame, year: int = None) -> pd.DataFrame:
-    """Salary and bonus summary by agency and gender."""
+    """Salary summary by agency/department and gender."""
     g = gendered(df)
     if year:
         g = g[g["fiscal_year"] == year]
-
-    g = g.copy()
-    g["agency_group"] = "Other"
-    for dum_col, label in AGENCY_LABELS.items():
-        g.loc[g[dum_col] == 1, "agency_group"] = label
-    agency_upper = g["agency"].str.strip().str.upper()
-    for name in OTHER_AGENCIES:
-        g.loc[agency_upper == name, "agency_group"] = name.title()
-
+    g = _label_agencies(g)
     return (
         g.groupby(["agency_group", "gender"])["salary"]
         .agg(n="count", median="median", mean="mean")
@@ -157,17 +175,20 @@ def salary_by_agency(df: pd.DataFrame, year: int = None) -> pd.DataFrame:
 
 
 def gender_composition(df: pd.DataFrame) -> pd.DataFrame:
-    """Share of female economists by agency and year."""
+    """Share of female economists by agency/department and year."""
     g = gendered(df)
-    g = g.copy()
-    g["agency_group"] = "All"
-    for dum_col, label in AGENCY_LABELS.items():
-        g.loc[g[dum_col] == 1, "agency_group"] = label
+    g = _label_agencies(g)
+    g_all = g.copy()
+    g_all["agency_group"] = "All"
+    g_combined = pd.concat([g, g_all], ignore_index=True)
 
-    total = g.groupby(["fiscal_year", "agency_group"]).size()
-    female = g[g["gender"] == "female"].groupby(["fiscal_year", "agency_group"]).size()
+    total = g_combined.groupby(["fiscal_year", "agency_group"]).size()
+    female = g_combined[g_combined["gender"] == "female"].groupby(["fiscal_year", "agency_group"]).size()
     share = (female / total * 100).round(1).unstack("agency_group")
-    return share
+
+    # Keep only columns present in most years to avoid a very sparse table
+    keep = share.columns[share.notna().mean() >= 0.3]
+    return share[keep]
 
 
 # ---------------------------------------------------------------------------

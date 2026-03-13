@@ -28,11 +28,23 @@ RAW_DIR = Path(__file__).parent.parent / "data" / "raw" / "fedsdatacenter"
 PROCESSED_DIR = Path(__file__).parent.parent / "data" / "processed"
 GENDER_CACHE = PROCESSED_DIR / "gender_cache.csv"
 
-# Agencies of interest → indicator column name
+# Agency flags handle two naming conventions:
+#   FY2015: bureau-level names (BLS, BEA, Census Bureau)
+#   FY2016+: department-level names (Dept of Labor, Commerce, Treasury, etc.)
+# BEA and Census Bureau are both under Dept of Commerce and cannot be
+# separated in FY2016+ data from FedsDataCenter.
 AGENCY_FLAGS = {
-    "BUREAU OF THE CENSUS":         "census_dum",
-    "BUREAU OF LABOR STATISTICS":   "bls_dum",
-    "BUREAU OF ECONOMIC ANALYSIS":  "bea_dum",
+    # Bureau-level (FY2015 only)
+    "BUREAU OF LABOR STATISTICS":        "bls_dum",
+    "BUREAU OF ECONOMIC ANALYSIS":       "bea_dum",
+    "BUREAU OF THE CENSUS":              "census_dum",
+    # Department-level (FY2016+)
+    "DEPARTMENT OF LABOR":               "dept_labor_dum",
+    "DEPARTMENT OF COMMERCE":            "dept_commerce_dum",
+    "DEPARTMENT OF TREASURY":            "dept_treasury_dum",
+    "DEPARTMENT OF AGRICULTURE":         "dept_agriculture_dum",
+    "DEPARTMENT OF HEALTH AND HUMAN SERVICES": "dept_hhs_dum",
+    "DEPARTMENT OF ENERGY":              "dept_energy_dum",
 }
 
 # BEA uses ZP pay plan; IRS and ERS are also tracked
@@ -72,6 +84,21 @@ def process_year(year: int, gender_cache: pd.DataFrame) -> pd.DataFrame:
     agency_upper = df["agency"].str.strip().str.upper()
     for agency_str, col in AGENCY_FLAGS.items():
         df[col] = (agency_upper == agency_str).astype(int)
+
+    # Within Dept of Commerce (FY2016+), distinguish BEA from Census by pay plan:
+    #   ZP → BEA (Commerce Alternative Personnel System)
+    #   GS → Census Bureau
+    #   NaN pay plan with non-GS grades → BEA (FY2017 data quality issue: ZP label missing)
+    in_commerce = agency_upper == "DEPARTMENT OF COMMERCE"
+    plan = df["pay_plan"].str.strip().str.upper()
+    is_zp   = plan == "ZP"
+    is_gs   = plan == "GS"
+    is_null = plan.isna() | (plan == "")
+    df["bea_dum"]    = df["bea_dum"]    | (in_commerce & (is_zp | is_null) & ~is_gs).astype(int)
+    df["census_dum"] = df["census_dum"] | (in_commerce & is_gs).astype(int)
+    # Remove double-counted records from dept_commerce_dum where we now have sub-flags
+    # (keep dept_commerce_dum for records that are neither BEA nor Census: SES, GG, etc.)
+    df["dept_commerce_dum"] = (in_commerce & ~is_zp & ~is_gs & ~is_null).astype(int)
 
     # Pay plan indicator columns
     for plan, col in PAYPLAN_FLAGS.items():
