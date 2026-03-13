@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from utils import parse_first_name
+from utils import parse_first_name_natural as parse_first_name
 
 import pandas as pd
 

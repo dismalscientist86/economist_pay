@@ -46,6 +46,23 @@ def parse_first_name(name: str) -> str:
     return firstname
 
 
+def parse_first_name_natural(name: str) -> str:
+    """
+    Parse first name from natural "First [Middle] Last" format.
+    Used for PhD placement data (not OPM salary data).
+    If the first token is a single initial, returns the second token.
+    """
+    if not isinstance(name, str) or not name.strip():
+        return ""
+    tokens = name.strip().split()
+    if not tokens:
+        return ""
+    first = tokens[0].rstrip(".")
+    if len(first) <= 1 and len(tokens) > 1:
+        return tokens[1].rstrip(".")
+    return first
+
+
 def clean_numeric(val) -> float | None:
     """
     Parse currency strings like '$120,000' or plain numbers to float.
