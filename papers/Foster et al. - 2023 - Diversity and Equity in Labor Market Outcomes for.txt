@@ -1,0 +1,1177 @@
+Vol.:(0112 33456789)
+Journal of Economics, Race, and Policy
+https://doi.org/10.1007/s41996-023-00117-z
+RESEARCH
+Diversity and Equity in Labor Market Outcomes for Economists
+Lucia Foster1 · Erika McEntarfer1 · Danielle H. Sandler1
+Received: 29 November 2022 / Revised: 31 March 2023 / Accepted: 31 March 2023
+This is a U.S. Government work and not under copyright protection in the US; foreign copyright protection may apply 2023
+Abstract
+The lack of gender and racial diversity in economics academia is well-established, but less is known about the overall placement
+and earnings of economists. Using person-level data from the Survey of Earned Doctorates linked to Longitudinal
+Employer-Household Dynamics jobs data, we examine placements and earnings for new PhD economists by gender and race.
+Female PhD economists earn 12 percent less than their male counterparts; compared to their white counterparts on average
+Black PhD economists earn 15 percent less and overall underrepresented minority PhD economists earn 8 percent less. Pay
+disparities are attenuated in some sectors and when controlling for PhD granting institution and employer.
+Keywords Gender · Race · Market for economists · Diversity
+“Why does diversity matter? What makes it important
+for the economics profession to become more inclusive?
+The first reason is basic fairness. ….Beyond
+fairness, the lack of diversity harms the field because
+it wastes talent. …Diversity is important in insuring
+that the research that is done within economics
+appropriately reflects society’s priorities. … Diverse
+groups outperform in solving complex problems …”
+Janet Yellen, September 23, 2019.
+Introduction
+A large and growing literature documents the lack of gender
+and racial diversity in economics over multiple dimensions
+from choice of undergraduate major, to graduate field,
+to post-PhD placement, and promotion in academia.1 The
+2022 annual report from the Committee on the Status of
+Women in the Economics Profession finds that 17.8 percent
+of full economics professors at PhD-granting institutions are
+women (CSWEP 2022). Similarly, the 2021 annual report
+from the Committee on the Status of Minority Groups in the
+Economics Profession shows that 7.7 percent of full-time
+full economics professors at PhD-granting institutions are
+from minority groups (Black, Hispanic, and Native American)
+(CSMGEP 2021). The American Economic Association
+(AEA) and others have taken actions to increase diversity in
+the profession, but greater diversity remains an elusive goal.2
+* Danielle H. Sandler
+Danielle.H.Sandler@census.gov
+Lucia Foster
+Lucia.S.Foster@census.gov
+Erika McEntarfer
+Erika.McEntarfer@census.gov
+1 Census Bureau, Washington, DC, U.S.A.
+1 This literature encompasses many aspects of diversity in academia:
+students and professors in economics (Allgood et al. (2019), Bayer
+and Rouse (2016), Bedard, Lee, and Royer (2021), Collins (2000),
+Darity (2010), Halim, Powers, and Thornton (2022), Ginther and
+Kahn (2004, 2021), Kahn (1993, 1995), Lundberg and Stearns (2019),
+Price (2009), Sharpe (2018)); invited seminar speakers (Doleac et al.
+(2021)); participants in economics conferences and seminars (Chari
+and Goldsmith-Pinkham (2017), Cunningham and Zavodny (2015),
+Dupas et al. (2021)); representation in economics textbooks (Stevenson
+and Zlotnik (2018)); informal job website (Wu (2018)); economics
+publications (Hengel (2022). In contrast, research does not find evidence
+of gender bias in NBER membership (Kleemans and Thornton
+(2021) or the AEA executive board (Donald and Hamermesh (2006)).
+2 These include the AEA’s Committee on the Status of Women in the
+Economics Profession (CSWEP); Committee on the Status of Minority
+Groups in the Economics Profession (CSMGEP); Summer Economics
+Fellows Program; an analogous program for undergraduates;
+and a mentoring program. Buckles (2019) provides an overview. The
+National Economic Association (NEA) and the American Society of
+Hispanic Economists (ASHE) also promote greater diversity.
+
+Journal of Economics, Race, and Policy
+1 3
+Only a third of economics PhDs are awarded to women,
+a share unchanged since the 1990s, and economics ranks
+near the bottom in the share of doctorates in social sciences
+awarded to underrepresented minority students.3 We expand
+our understanding of the state of the profession beyond academia
+by combining individual-level data on PhD economists
+with jobs data to document placement and earnings in
+economics across multiple sectors of the economy.
+Our ability to look beyond academia provides a more
+complete view of the economics profession and suggests
+that institutional barriers to advancement for underrepresented
+groups vary by sector. Recognizing the systemic
+issues within the economics profession, we present placement
+and earnings results without covariates as the baseline.
+We then extend these results to look at earnings by
+sector and control for PhD program rank and post-PhD
+employer.
+Our contribution to this literature rests on the breadth
+of our data on placements and earnings post-PhD attainment.
+We match data on PhD economists from the
+U.S. Survey of Earned Doctorates (SED) to a national
+database of jobs, tracking economists’ placements and
+earnings in their early post-PhD careers. We provide a
+detailed look at the careers of about 12,500 economists
+not only in academia but also in government and industry.
+This wider focus is especially important as the share
+of PhD economists’ placements in academia is falling
+while the share in industry is rising. As one example,
+Athey and Luca (2019) report that Amazon employs
+more economists than the largest economics academic
+departments (in terms of scale, Amazon hired over 150
+economists between 2014–2019).
+Our matched data provide a unique opportunity to survey
+the U.S. labor market for PhD economists, representing
+an expansion in size and scope relative to existing
+work. Bedard et al. (2021) summarize the current literature
+as “all existing research relies on cross-sectional
+data, short early career panels, or panels specific to a
+narrow set of institutions (p. 69).” Boustan and Langan
+(2019) use CSWEP survey information on 88 PhD programs
+to examine job placement rates by gender at PhD
+granting institutions, other academic institutions, private
+sector jobs, public sector jobs, and jobs outside the U.S.
+They find similar average placement rates for men and
+women at PhD granting institutions and public sector
+jobs, but higher placement rates for women in other academic
+and private sector jobs.
+We build upon our earlier work which focuses on PhD
+economists in the federal government (Foster et al. 2020).
+In regressions controlling for experience and agency effects,
+we find earnings gaps relative to white males for females
+ranging from 1 percent for white and Asian economists to
+6 percent for URM economists. For males, the earnings
+gaps relative to white males range from 6 percent for Asian
+economists to 10 percent for URM economists. Wessel et al.
+(2021) also focus on PhD economists in the federal government.
+They combine data from multiple sources to create a
+sample of about 2,300 PhD economists representing about
+95% of the PhD economists in the federal government and
+report 26% of federal PhD economists identify as minorities
+and 29% as women in 2020.
+Our paper is related to Schultz and Stansbury (2022),
+which uses the public SED,4 and finds economics is less
+socioeconomically diverse than other PhD major fields:
+economists are the least likely to be first-generation college
+students and one of the most likely to have at least one parent
+with a graduate degree.5 Further, the share of first-generation
+students in top economics programs is especially small,
+about 5 percent, compared to 17 percent in programs below
+the top 15. As Jones and Sloan (2021) show, most tenuretrack
+faculty at PhD-granting institutions in the U.S. come
+from the top 15 PhD programs. These faculty are drawn
+from a population that is even less diverse than the profession
+generally. Our descriptive results on the role of PhD
+program rank in determining post-PhD earnings complement
+this work.
+We briefly highlight research concerning reasons underlying
+this lack of diversity in order to provide context for our
+analyses. Much of the work with respect to gender uses a
+“leaky pipeline” analogy to illustrate the pattern of fewer
+and fewer women at each stage of an academic career.
+Kolpin and Singell Jr (1996) find women have lower initial
+placements than similarly qualified men, as indicated by
+their subsequent productivity. Ginther and Kahn (2004) find
+female economists are less likely to get tenure at their first
+academic job, even when controlling for publication record
+and family characteristics. An important component of hiring
+and promotion is publication. Hengel (2022) finds less
+than 8 percent of authors in the top four economic journals
+over 1950–2015 are female and female authors are held to
+3 National Center for Science and Engineering Statistics (NCSES)
+(2020) https:// www. nsf. gov/ stati stics/ srvyd octor ates/# tabs-2 (accessed
+December 4, 2021). As other evidence, according to experimental data
+from the RePEc Author Service, the share of women economists with a
+U.S. affiliation is 22.5 percent in January 2023. https:// ideas. repec. org/
+top/ female. html (accessed March 8, 2023).
+4 In a related paper, Rennane et al. (2022) use the SED and the Survey
+of Doctorate Recipients to examine academic (tenure versus nontenure)
+and non-academic career paths for PhD recipients in STEM
+fields.
+5 They define their major fields as: agriculture, biological/biomedical
+sciences, health sciences, engineering, computer and information
+sciences, mathematics, physical sciences, psychology, social sciences
+(excluding economics), humanities, education, business management/
+administration, communication, and other or unknown.
+
+Journal of Economics, Race, and Policy
+1 3
+higher standards (as measured by clarity of abstracts) in the
+refereeing process. Card et al. (2020) summarize the existing
+evidence on gender biases in the evaluation of economic
+research as “mixed” and find mixed results in their analysis
+of 30,000 submissions to four economics journals: they find
+no difference in how the journals treat papers by male and
+female authors but find female authors are held to a higher
+standard (as measured by future citations).
+Once published, economics papers with female authors
+are less likely to be cited by related papers (Koffi 2021),
+female co-authors are less likely to get credit for their contribution
+(Sarsons 2017), and women have narrower coauthoring
+networks (McDowell et al. 2006). As author credit
+for publications is critical to promotion in academia, these
+disadvantages may drive the higher gender pay gaps we find
+in academia relative to other sectors. Lundberg and Stearns
+(2019) provide an excellent overview of the “stalled progress”
+for women in the profession and their focus on differential
+assessments of men and women highlights the importance
+of implicit bias in promotion and tenure decisions.
+Turning to race and ethnicity,6 Price (2009) finds when
+the supply of Black economists increased, the number of
+Black economics professors remained unchanged; thus, he
+concludes the challenge for Black economists is not only
+a “pipeline” but a “color-line.” Darity and Kreeger (2014)
+and Simms and Conrad (2019) take a case-study approach
+as they examine the experiences of Black economics graduate
+students at MIT and Stanford University, respectively,
+and note the importance of institutional support. In a recent
+survey of minorities in economics, the most commonly
+cited challenges with advancement in the profession were
+a lack of mentoring and role models, and a sense of isolation
+(Bayer et al. 2020). Several respondents also cited a
+lack of information regarding non-academic opportunities
+for economists, with students from blue-collar backgrounds
+indicating greater interest in non-academic jobs.
+Logan and Myers Jr (2020) discuss the importance of
+networks in building citations and note the Review of
+Black Political Economy was not indexed in the Journal
+of Economic Literature for decades. Doleac et al. (2021)
+note the importance of presentations and find underrepresented
+minority economists accounted for only 1.1 percent
+of invited seminar speakers in their sample covering
+2014–2019. Dupas et al. (2021) find the underrepresentation
+of economists by race and ethnicity (and sexuality and disability
+status) at top economic departments precludes them
+from including these characteristics in their analysis of
+seminar and conference culture since they “would lack the
+statistical power to say much of interest” (p. 4).
+In sum, while much of this research focuses on supplyside
+issues of underrepresentation, understanding demandside
+factors is also important, as improvements in the supply
+side by diversifying the pipeline may not be enough to
+improve diversity in the profession. ‘Demand-side’ factors,
+such as implicit bias in placements and promotions, further
+hamper efforts to improve equity and inclusion within the
+profession.
+Data and Matching Methodology
+Survey of Earned Doctorates
+Our data on PhD economists come from the Survey of
+Earned Doctorates (SED) produced by the National Center
+for Science and Engineering Statistics (NCSES). The SED
+is an annual census of all individuals receiving a research
+doctorate from an accredited U.S. institution in a given academic
+year. Due to the availability of comprehensive lists of
+doctorate-granting institutions and the institutions' high levels
+of participation in the survey, coverage of PhD-granting
+departments is nearly complete. Graduate schools collect the
+survey data from degree recipients at the time of doctorate
+completion, and response rates are over 90 percent. Thus, the
+SED data provide nearly complete coverage of all individuals
+who received an economics PhD in the U.S. Our subset
+of these data covers 2001–2017.
+We use the following SED variables: doctoral degree
+received, year of receipt, granting institution, field of study,
+gender, citizenship, ethnicity, and race. Two important
+features of the SED are (1) race and ethnicity are reported
+only for U.S. citizens and permanent residents and (2) all
+responses for Hispanic ethnicity are reported as Hispanic
+only (thus only non-Hispanic responses are further categorized
+by race).7 We use the PhD granting institution from
+the SED to create PhD program fixed effects, to help capture
+the significance of hierarchies in the economics profession
+with its emphasis on rank of PhD granting institutions, rank
+of employment institution, number of citations, and placement
+of publications in top 5 journals (Fourcade et al. 2015;
+6 We follow CSMGEP (see Hoover and Washington (2021, p. 764 Kleemans and Thornton 2021).
+footnote 5) in designating the following demographic groups as part
+of underrepresented minorities in economics: Black, Hispanic, American
+Indian/Native Alaskan (AIAN) – and add Native Hawaiian/Other
+Pacific Islanders (NHPI). Asian economists are not included in this
+definition of underrepresented minority students because Asians as a
+group are well represented in economics; however, subgroups within
+the Asian group could be underrepresented in economics.
+7 Thus, when we report results for “white economists” for example,
+we are by construction referring to “non-Hispanic white economists.”
+Our Appendix provides more details on the SED, including how we
+define economists using field information, the exact wording of questions
+for variables used in this paper, and the relationship between
+citizenship, ethnicity, and race.
+
+Journal of Economics, Race, and Policy
+1 3
+Although our analysis uses individual-level data from the
+SED, we start with SED published figures to provide context.
+There are about one thousand economics PhD recipients per
+year over our sample period (rising from about 900 in 2001 to
+about 1,200 in 2017). Since our analysis is post-PhD and thus
+encompasses the entirety of pipeline issues, a relevant comparison
+group is the U.S. adult population.8 Thus, we present
+total adult population shares by way of crude comparison:
+women are 51.0 percent of the general population, but only
+34 percent of economics Ph.D. recipients; American Indian
+and Alaska Native (AIAN) individuals are 1.1 percent of the
+population, but less than half a percent of economists; Asian
+individuals are 6.1 percent of the population, but 16 percent
+of economics PhD recipients; Black individuals are 12 percent
+of the population, but only 4 percent of new economists;
+Hispanic individuals are16.8 percent of the population, but
+only 7 percent of economist PhD recipients; Native Hawaiian
+and Pacific Islander (NHPI) are 0.2 percent and are pooled
+with “other race or race not reported” in the SED; and White
+individuals are 64.1 percent of the general population and 63
+percent of the economist PhD recipient population.9
+By way of further comparison, gender parity of PhD
+recipients is already achieved (and surpassed) for some fields
+outside of economics. For example in 2017, 53 percent of
+PhD recipients in biological and biomedical sciences are
+women and 61 percent in sociology are women (NCSES
+(2018), table 16). Overall 47 percent of PhD recipients
+across all fields are female in 2017. However, this is not the
+case for racial parity which is not achieved across all fields;
+for example in 2017 Hispanic and Black PhD recipients each
+account for only 7 percent of all PhD recipients (NCSES
+(2018) Table 22 and see Appendix B in Foster et al. (2022)).
+When using the micro data, we expand the definition
+of the economics field used in SED public tabulations to
+include agricultural and environmental economists. The
+impact of this broader definition is documented in the
+Appendix where we discuss detailed measurement issues.
+Longitudinal Employer‑Household Dynamics Data
+Our data on earnings and employment after the PhD are
+primarily from the U.S. Census Bureau’s Longitudinal
+Employer-Household Dynamics (LEHD) data. LEHD data
+includes quarterly earnings records collected by state unemployment
+insurance (UI) programs, linked to establishmentlevel
+data from the Quarterly Census of Employment and
+Wages (QCEW) data. LEHD employment coverage is quite
+broad, covering over 95 percent of private-sector workers
+and almost all state and local government employment (see
+Abowd et al. (2009) for details).
+We use LEHD data for all private-sector and publicsector
+employers in all available states, from 2001 to 2017.
+As the LEHD wage record data have some coverage gaps
+(particularly federal workers) we supplement the LEHD
+data with Internal Revenue Service (IRS) form W-2 data to
+obtain earnings for jobs not covered in LEHD data. These
+two data sources together provide near-universal coverage
+of U.S. earnings. Information on placements/employers for
+economists comes from the QCEW.
+We aggregate earnings from all jobs held during the
+year for our measure of earnings. Our earnings data include
+wage and salary earnings, bonuses, overtime, and incentive
+pay, but exclude any self-employment earnings, which usually
+includes income from consulting, patents, prizes, or
+book royalties. The primary employer is the highest paying
+employer for each individual in each year, which we use to
+determine the sector of employment. All earnings measures
+in this paper are real earnings, measured in 2015 dollars.
+Matched SED/LEHD Sample
+We use personal identifiers called Protected Identification
+Keys (PIKs) assigned to individuals by the Census Bureau’s
+Person Identification Validation System (PVS) to link SED
+respondents to LEHD and W-2 earnings histories following
+graduation. Our sample of PhD economists is therefore different
+from the SED in two important respects. First, we cannot
+link earnings records for SED respondents who are not
+assigned a PIK. Our SED microdata contain degree records
+for approximately 20,500 PhD economists. We can assign a
+PIK to approximately 19,000 (93 percent).
+Second, we can only characterize post-PhD earnings for
+those economists who work in the U.S. after graduation.
+This restriction further narrows our sample to 12,500 PhD
+economists (61 percent). Thus, when comparing our data to
+the SED, it is important to note that our sample is less than
+two-thirds of all economics PhDs granted by U.S. institutions.
+The majority of economics PhDs granted by U.S. institutions
+are awarded to temporary visa holders. Since most
+leave the country after receiving their degrees, we are unable
+to match them to our earnings data after they leave the U.S.
+Presumably, many of these temporary visa holders obtained
+post-PhD employment outside of the U.S. But many remain
+in the U.S. for work following graduation. Economists who
+8 Doleac et al. (2021) discuss relevant comparison groups and note
+“our view is that the optimal target for the share of seminar speakers
+[the subject of their paper] who are women or URM is not the current
+composition of the profession but the composition we aspire to
+achieve (p. 59).”
+9 The comparison is crude because we are not restricting based on citizenship
+status. Sources: Gender: U.S. Census Bureau, 2021 American
+Community Survey 1-Year Estimates https:// data. censU.S. gov/ cedsci/
+table?q= sex& tid= ACSDP 1Y2021. DP05 (Accessed November 1,
+2022). Race (race alone) and ethnicity from Fig. 5 of Jones et al. (2021).
+
+Journal of Economics, Race, and Policy
+1 3
+were temporary residents at the time of graduation account
+for 45 percent of our sample of PhD economists working in
+the U.S.10
+Gender, Ethnicity, and Race Measurement
+As is common in this literature (including in the SED),
+we use all respondents when stratifying by gender, but
+for results by race and ethnicity we use only the subset of
+doctorate recipients who are U.S. citizens or permanent
+residents at the time of graduation.11 We recognize these
+groups do not encompass all notions of diversity in the
+profession, especially as almost half of economists working
+in the U.S. are foreign-born. The unique challenges facing
+foreign-born economists working in the U.S. are worthy
+of further study but are beyond the scope of our analysis.
+Due to small sample sizes, we cannot report results
+separately for AIAN and NHPI economists and thus they
+appear in a combined category with Hispanic economists.
+We also pool those who report two or more races and those
+who report no race, both very small categories. In some
+analyses it is necessary to further group race and ethnicity
+into an underrepresented minority (URM) category
+which combines AIAN, Black, Hispanic, NHPI, two or
+more races, and race not reported respondents. Ideally, we
+would be able to produce statistics for all race/ethnicity
+categories separately to capture the unique experiences
+of each group. Further, it would be ideal if we could also
+produce statistics that also take into account the importance
+of gender and for all race categories together but
+are constrained in our ability to provide a detailed intersectional
+analysis.12
+Employment and Earnings of PhD
+Economists
+We start by providing employment results across all sectors
+where we find low shares of female and underrepresented
+minority economists in our sample of economists
+who received their PhD between 2001–2017. The first two
+columns of Table 1 show the demographics of the full set
+of PhD economists in the SED and of our sample of PhD
+economists.13 Approximately one-third are female. Temporary
+residents account for 61 percent of the full SED
+sample, but only 45 percent of PhD economists in our sample,
+primarily due to the large proportion of temporary
+residents who do not work in the U.S. after PhD receipt.
+Within the remaining category of U.S. citizens and permanent
+residents where we can classify race and ethnicity,
+AIAN, Hispanic, and NHPI account for 5 percent, Asian
+for 12 percent, Black for 4 percent, and White for 76 percent
+of our sample of economists.
+We categorize employers into three major sectors: academia,
+government, and industry.14 In columns 3–5 of
+Table 1 we show a cross-section of all economists working
+in the U.S. in 2017, aggregating across years of PhD
+receipt.15 The first row of Table 1 shows the shares of
+women employed in academia, industry, and government
+are 33 percent, 36 percent, and 38 percent respectively.
+Thus, the overall lack of diversity by gender is slightly
+less pronounced in government and more pronounced in
+academia.
+The share of temporary visa holders varies across sectors
+(almost half of industry economists, less than 20 percent
+of government), so race is reported here as the share
+of U.S. citizens/residents to make comparisons across
+columns easier. We start with the combined category of
+AIAN, Hispanic, and NHPI economists. These account
+for roughly 5 percent across all three categories with academia
+only slightly higher than industry and government.
+Asian economists account for 9 percent in academia,
+17 percent in industry, and 14 percent in government.
+Black economists represent 4 percent of economists in
+academia, 3 percent in industry, and 5 percent in government.
+Finally, white economists account for 77 percent
+in academia, 71 percent in industry, and 76 percent in
+government. Thus, the lack of diversity by race and ethnicity
+appears to be pervasive across all three sectors.
+10 Table 1 in the appendix shows the impacts of these measurement
+challenges by demographic group.
+11 The Appendix describes the SED’s practice of stratifying race and
+ethnicity for U.S. citizens only.
+12 An intersectional lens can reveal important differences and thus
+the annual CSMGEP report also reports race by gender. For example,
+Sharpe (2018) finds that the growth in the number of economics
+undergraduate degrees from 1996–2005 to 2006–2015 was higher for
+men than women (42 percent versus 30 percent) and roughly similar
+for Blacks and Whites (25 percent versus 24 percent) but growth for
+Black women was only 1 percent.
+13 These demographics are largely useful for interpreting the impact
+of PhD program controls on our wage regressions. Graduates of top
+programs in our sample skew male, and programs in the 6–20 range
+are marginally less diverse.
+14 We use the term ‘industry’ to describe jobs for economists that
+are not in academia (NAICS 61, education) or government (NAICS
+92, public sector), the majority of which are consulting, finance,
+and increasingly technology jobs. If an economist works more than
+one job during the calendar year, we determine the sector using the
+employer that was the primary source of earnings in that year. All
+earnings discussed in this section are real 2015 earnings.
+15 Using all jobs in the latest year of our data also has the benefit
+of maximizing the sample size for this analysis, which allows us to
+report finer race categories than we could otherwise.
+
+Journal of Economics, Race, and Policy
+1 3
+Earnings Across All Sectors
+We now turn to earnings by race and gender.16 In order to be
+able to expand our analyses to control for experience over
+time, we pool the data over time and control for experience
+with a series of human-capital regressions (Mincer (1974))
+of the form17:
+where yit is individual i ’s log real annual earnings in year
+t , Femalei is an indicator the economist is female, Racei is
+a set of mutually exclusive race/ethnicity/citizenship indicators,
+and Expit is experience, measured in years since
+PhD completion. We run several different variations of this
+regression: separate regressions with the Femalei and Racei
+indicators and a version with them interacted and we also
+run specifications both with and without PhD program ( Pi )
+and employer ( Eit ) fixed effects.
+These pooled regressions use variation both across individuals
+and within individual over time. The composition
+of the sample will vary over time, as new cohorts are added
+to the sample and individuals move in and out of the U.S.
+labor force. Those who were temporary residents of the U.S.
+(1)
+yit
+= + Femalei
++ Racei
++ Femalei
+∗ Racei
++ Expit
++ Exp2
+it
++ Pi
++ Eit
++ it
+at the time of their Ph.D. receipt are both the most likely to
+not have any U.S. employment and not appear in the sample
+at all and are also the most likely to move in and out of the
+U.S. labor force.
+Table 2 shows estimates from these regressions for all
+economists, controlling for gender only; controlling for
+race only, and controlling for both gender and race. Female
+economists earn 12 percent less than male economists in the
+baseline specification with only experience controls (column
+1). Black economists have 15 percent lower earnings relative
+to white economists in the baseline specification. AIAN/
+Hispanic/NHPI economists earn about 5 percent less than
+their white counterparts. In contrast, Asian economists earn
+about 3 percent more than their white counterparts.
+We next look at regressions controlling for gender and
+race (lower panel of Table 2). When interacted with gender,
+the coefficient for Black economists is larger, indicating a
+21 percent earnings gap relative to white men, but the interaction
+between Black and female is positive and almost as
+large in magnitude as the coefficient on the Black variable.
+This implies that although Black men are disadvantaged relative
+to white men, the earnings of Black women are more
+similar to their white female counterparts (that is, relative
+to white men, the earnings gaps are 13 percent for white
+women and 17 percent for Black women). We see a similar
+(but smaller and less significant) pattern for AIAN/Hispanic/
+NHPI economists. Interestingly, the earnings premium found
+for Asian economists appears to be driven by male Asian
+economists.
+As the disadvantages facing underrepresented groups
+in the profession likely impact both PhD program and
+selection into higher-paying employers, controlling for
+Table 1 Demographics of PhD
+Economists Employed in the
+U.S. in 2017
+Authors calculations from matched SED/LEHD microdata. Shares are rounded using Census rounding
+rules (and thus may not sum to 100 percent in categories). Shares by race/ethnicity are for the share of
+workers in the sector who are U.S. citizens and permanent residents only. Academic sector is defined as all
+economists working in NAICS 61 (almost all of whom work in colleges and universities), government is
+those employed in NAICS 92 (which includes the Federal Reserve Board and other federal agencies) and
+industry is all other sectors
+Demographic Group Percentage of Demographic Group in Category
+2017 Primary Employer Type
+All SED Our Sample Academia Industry Government
+Female 33.17 34.62 32.81 35.90 38.46
+Race/Ethnicity
+Temporary Resident 60.98 44.60 39.06 46.15 19.23
+AIAN, Hispanic, NHPI 5.53 5.20 5.13 4.76 4.76
+Asian 13.51 12.11 8.97 16.66 14.29
+Black 3.67 3.75 3.85 3.33 4.76
+White 73.62 75.92 76.93 71.42 76.19
+Two or More /Not Reported 3.67 3.01 2.56 3.81 2.86
+N 20,500 12,500 6,400 3,900 1,300
+17 More flexible functional forms, including adding additional polynomial
+terms or a spline of experience with breakpoints at 5 and
+10 years have no effect on the coefficients of interest.
+16 We examine career paths of PhD economists in a related paper
+but are only able to provide details by gender due to data limitations
+(Foster, Sandler and McEntarfer (forthcoming)).
+
+Journal of Economics, Race, and Policy
+1 3
+these factors understates the earnings impact of gender
+and race.18 For these reasons, we believe the full statistical
+impact of gender and race on labor market earnings is
+best estimated by the specifications that do not control for
+PhD program type and employer; i.e., the specification in
+column 1. However, the specifications with program and
+employer fixed effect are instructive to see how much of
+these gaps can be explained by selection into better programs
+and higher-paying employers.
+We turn to the results controlling for sorting across
+program and employer next (columns 2–4). Accounting
+for PhD program and employer effects accounts for only
+a small portion of the gap for females; in the specification
+with both controls, women earn 10 percent less than their
+male colleagues on average (column 4). In specifications
+with program and employer effects, the coefficient for Black
+economists is reduced by two-thirds, with Black economists
+earning 5 percent less than their white colleagues. However,
+the effect of race on earnings is more severe for Black men.
+In the lower panel where we stratify by both race and gender,
+Black men earn 20 percent less than their white male
+colleagues in the baseline and in the full fixed effect model
+this gap is still 10 percent. Gender by race interactions are
+insignificant for other URM groups. AIAN/Hispanic/NHPI
+economists have a 5–6 percent gap in earnings across all
+specifications. As noted above, Asian economists earn a
+small premium relative to white economists in the baseline
+specification, but with both sets of fixed effects, Asian economists
+earn 2 percent less than white economists.
+Using the regression with program and employer controls,
+the largest pay gaps in the economics profession are
+for women and Black men, who both make 10 percent less
+than their white male colleagues controlling for experience,
+PhD program, and employer. Graduates of top programs
+working in the U.S. are slightly less likely to be female or
+URM, and more likely to be Asian.19 This distribution is
+partly why controlling for program effects generally lowers
+wage gaps for women and URM economists but raises them
+for Asian economists. While earnings gaps are larger in the
+baseline specification, the overall picture of larger wage gaps
+for women and Black men remains the same. In this pooled
+regression the program and employer fixed effects appear to
+explain very little of the earnings gap for women, somewhat
+more the earnings gaps by race, but the amount sorting into
+PhD program and employer matters for earnings differences
+varies by sector, as we describe next.
+Earnings within Sectors
+In our regressions by sector, we must pool AIAN, Black,
+Hispanic, NHPI economists, and those indicating multiple
+races into an underrepresented minority (URM) group due
+to small cells. Collapsing these groups flattens the heterogeneity
+in wage gaps by race we see in Table 2, with URM
+economists having an 8 percent wage gap in the baseline
+and a 5 percent wage gap in the full fixed effect specification
+(see Appendix Table 4 for the full set of estimates). In
+interpreting our results by sector, it is important to keep in
+mind effects are likely heterogeneous across groups within
+this category.
+Table 3 shows regression estimates for economists in
+academia. Starting with the upper panel results, on average,
+women earn 15 percent less than men with similar experience
+in academia (column 1). Controlling for PhD program
+lowers these gaps slightly (column 2) and controlling for
+sorting across employers lowers the gap slightly more (column
+3). In our specification controlling for work experience
+and both program and employer fixed effects, the wage gap
+for women in academia is 12 percent (column 4). On average,
+URM economists earn 9 percent less than their white
+colleagues with similar experience in academia (column 1).
+The gap for URM economists relative to white economists is
+5 percent when we add program and employer fixed effects.
+There is no significant difference in earnings for Asian economists
+relative to white economists until we add in either
+program or employment (or both) fixed effects which then
+lead to a 6 percent earnings gap relative to white economists.
+The results for race by gender stratification in the lower
+panel shows the effect for URM economists is driven by
+URM men; the coefficient on earnings of URM women is
+positive, indicating their earnings are closer to that of white
+women. For male Asian economists, the earnings premium
+is slightly higher in academia than for all sectors, but the
+large negative impact for female Asian economists overwhelms
+this premium (in baseline and in regressions with
+program and employment fixed effects).
+Table 4 shows these same regression estimates for economists
+within industry. In industry, women earn 12 percent
+less than men in the baseline regression. When we add program
+and employer effects, the gap for women is 9 percent.
+URM economists earn 10 percent less than white economists.
+Adding program and employer effects, the earnings
+gap for URM economists is 3 percent. In contrast to academia,
+Asian economists face an earnings gap in industry
+relative to white economists. The earnings gap for Asian
+economists is 3 percent in the baseline regression and 4 percent
+when adding in program and employer fixed effects.
+Considering the regressions for race by gender stratification,
+there are no notable differences for URM economists
+18 Here we are mindful of Darity’s (1982) criticism that “Empirical
+studies of the earnings gap typically fail to model racism as a process….”
+(footnote 5, p. 77).
+19 Table 3 shows the demographics of our sample by PhD program
+rank in columns 1–3.
+
+Journal of Economics, Race, and Policy
+1 3
+by gender, and the wage gap disappears when both employer
+and program effects are added. There are also no notable
+differences for Asian economists by gender in the baseline
+regression; however, when adding in program and employer
+effects there are notable differences. In these regressions,
+male Asian economists have a penalty relative to white male
+economists but Asian female economists have a smaller
+overall penalty than white female economists. The remaining
+differences in industry earnings by race group appears
+to be driven primarily by sorting into different employers.
+Our regression results for government are shown in
+Table 5. In government, female economists earn 9 percent
+Table 2 Earnings Regressions –
+All Economists
+Authors calculations from matched SED/LEHD microdata. Exp controls include experience and experience
+squared. Observation count and R-sq reflect the regressions by gender and race results
+(1) (2) (3) (4)
+Regressions controlling for Gender
+Female -0.123 -0.114 -0.102 -0.0983
+(0.00361) (0.00461) (0.00308) (0.00415)
+Regressions controlling for Race
+AIAN/Hispanic/NHPI -0.0453 -0.0660 -0.0454 -0.0630
+(0.0108) (0.0140) (0.00911) (0.0125)
+Asian 0.0315 -0.00597 -0.0237 -0.0222
+(0.00703) (0.00841) (0.00602) (0.00752)
+Black -0.153 -0.0813 -0.0586 -0.0533
+(0.0118) (0.0201) (0.0107) (0.0194)
+Non-Citizen -0.00640 -0.0222 -0.0612 -0.0486
+(0.00370) (0.00474) (0.00330) (0.00445)
+Two + Races -0.0229 -0.0504 -0.0350 -0.0336
+(0.0133) (0.0159) (0.0113) (0.0143)
+Regressions controlling for Gender and Race
+Female -0.134 -0.134 -0.104 -0.106
+(0.00548) (0.00705) (0.00464) (0.00630)
+AIAN/Hispanic/NHPI -0.0474 -0.0583 -0.0447 -0.0628
+(0.0133) (0.0181) (0.0113) (0.0161)
+Female*AIAN/Hispanic/NHPI 0.0251 0.0215 0.0162 0.0313
+(0.0225) (0.0282) (0.0187) (0.0251)
+Asian 0.0737 0.0290 0.0124 0.00220
+(0.00959) (0.0112) (0.00821) (0.00998)
+Female*Asian -0.0343 -0.0218 -0.0352 -0.0137
+(0.0141) (0.0169) (0.0120) (0.0150)
+Black -0.207 -0.127 -0.115 -0.0988
+(0.0143) (0.0254) (0.0128) (0.0244)
+Female*Black 0.175 0.150 0.178 0.141
+(0.0251) (0.0411) (0.0227) (0.0397)
+Non-Citizen -0.00439 -0.0318 -0.0560 -0.0485
+(0.00449) (0.00560) (0.00390) (0.00516)
+Female*Non-Citizen 0.0147 0.0452 0.00496 0.0182
+(0.00783) (0.00998) (0.00659) (0.00890)
+Two + Races -0.0366 -0.0534 -0.0478 -0.0483
+(0.0156) (0.0189) (0.0134) (0.0171)
+Female*Two + Races 0.0405 0.0144 0.0455 0.0504
+(0.0292) (0.0345) (0.0247) (0.0306)
+Exp Controls X X X X
+Program FE X X
+Employer FE X X
+N 82,500 46,000 81,500 45,500
+R-sq 0.081 0.169 0.513 0.495
+
+Journal of Economics, Race, and Policy
+1 3
+less in the baseline model. When we add both program and
+employer fixed effects the gap for female economists is 4
+percent. URM economists earn 4 percent less than white
+economists in the baseline specification. The gap is slightly
+larger (5 percent) when we add program and employer fixed
+effects. Asian economists have a 4 percent earnings premium
+in the baseline regression and a 5 percent premium when we
+add program and employer fixed effects.
+The regressions with gender and race show the effect for
+URM economists to be driven by URM men; the coefficient
+on earnings of URM women is positive, indicating
+their earnings are closer to that of white women (similar
+to patterns in academia). The earnings premium for Asian
+economists is present for both male and female economists
+and is especially strong for female Asian economists when
+we add program and employer effects (and is large enough
+that they face a premium even relative to white male economists
+in government).
+Summing up the results from Tables 3–5, on average,
+women earn 15 percent less than men with similar experience
+in academia, 12 percent less in industry, and 9 percent
+less in the public sector.20 Controlling for PhD program lowers
+these gaps slightly (top PhD programs skew male) but
+controlling for sorting across employers lowers the gap by
+more. In our specification controlling for work experience
+and both program and employer fixed effects, the wage gaps
+for women in academia, industry, and government are 12 percent,
+9 percent, and 4 percent, respectively. In other words,
+sorting of women to less well-paying employers accounts for
+over half the gender wage gap within government, one-fourth
+of the gap in industry, and two-tenths of the gap in academia.
+Academia has both the largest pay gap for women, and the
+largest share of that gap that is unexplained after controlling
+for PhD program, employer, and experience.
+URM economists earn, on average, 9 percent less than white
+economists with similar experience in academia, 10 percent less
+in industry, and 4 percent less in the public sector. When we
+control for PhD program and employer, these gaps are 5 percent
+in academia, 3 percent in industry, and 5 percent in government.
+That is, PhD program and employer sorting explain almost
+one-half of the wage gap in academia (9 versus 5 percent) and
+more than one-half in industry (10 versus 3 percent) but have
+little impact in government. In the race and gender regressions
+controlling for experience, program, and employer fixed
+effects, the URM penalty is driven by male economists: male
+URM economists earn about 6 percent less than their white
+male counterparts in academia, 2 percent less in industry, and
+8 percent less in government. The overall earnings premium for
+Asian economists (3 percent) is driven by the public sector (4
+percent) as there is no significant difference in academia and
+there is an earnings gap in industry (3 percent). The impact of
+being a female Asian economist on earnings in the baseline case
+varies over the sectors from negative in academia (15 percent)
+to positive in government (5 percent).
+Conclusion
+We contribute to the literature documenting the state of
+diversity and equity in economics by providing information
+on post-PhD employment and earnings by race and gender
+Table 3 Earnings Regressions – Academic Economists
+Authors calculations from matched SED/LEHD microdata. Exp controls
+include experience and experience squared. Observation count
+and R-sq reflect the regressions by gender and race results. URM
+includes AIAN/Hispanic/NHPI, Black, Two or more races, and race
+non-response
+(1) (2) (3) (4)
+Regressions controlling for Gender
+Female -0.146 -0.135 -0.114 -0.119
+(0.00469) (0.00615) (0.00434) (0.00606)
+Regressions controlling for Race
+Asian -0.00328 -0.0572 -0.0582 -0.0555
+(0.0102) (0.0125) (0.00938) (0.0120)
+URM -0.0870 -0.0636 -0.0548 -0.0522
+(0.00933) (0.0131) (0.00895) (0.0130)
+Non-Citizen -0.00814 -0.0120 -0.0620 -0.0427
+(0.00473) (0.00619) (0.00443) (0.00625)
+Regressions controlling for Gender and Race
+Female -0.131 -0.132 -0.104 -0.119
+(0.00704) (0.00949) (0.00658) (0.00942)
+Asian 0.0851 0.0161 0.0165 0.0164
+(0.0134) (0.0158) (0.0123) (0.0151)
+Female*Asian -0.155 -0.140 -0.133 -0.146
+(0.0205) (0.0253) (0.0189) (0.0243)
+URM -0.123 -0.0877 -0.0759 -0.0624
+(0.0113) (0.0163) (0.0109) (0.0164)
+Female*URM 0.124 0.0984 0.0764 0.0644
+(0.0195) (0.0269) (0.0183) (0.0266)
+Non-Citizen 0.00885 -0.00876 -0.0534 -0.0431
+(0.00567) (0.00724) (0.00526) (0.00724)
+Female*Non-
+Citizen
+-0.0318 0.00666 -0.00588 0.0190
+(0.0100) (0.0131) (0.00919) (0.0129)
+Exp Controls X X X X
+Program FE X X
+Employer FE X X
+N 46,000 25,000 46,000 25,000
+R-sq 0.082 0.226 0.363 0.379
+20 In unreleased results, we test whether the wage penalty is statistically
+significantly larger for women in academia than in other sectors
+and find it is.
+
+Journal of Economics, Race, and Policy
+1 3
+for multiple sectors of the economy. Consistent with previous
+work demonstrating the lack of diversity in economics
+we find relatively low shares of female and underrepresented
+minority economists in our sample of PhD economists. Of
+our sample working in the U.S. in 2017, the shares are 34
+percent female economists, 45 percent temporary resident
+economists, and amongst the U.S. citizens the shares by race
+are 4 percent Black economists; 12 percent Asian economists,
+and 5 percent AIAN/Hispanic/NHPI economists.
+As a reminder, this only includes economists working in
+the U.S. after PhD receipt, which comprises only around
+two-thirds of all economics PhD recipients from U.S. universities
+and especially underrepresents temporary resident
+economists. Diving deeper into the data to consider issues
+of equity, female economists earn about 12 percent less than
+their male colleagues on average; Black economists earn
+about 15 percent less than their white counterparts; AIAN/
+Hispanic/NHPI economists earn about 5 percent less than
+their white counterparts; Asian economists earn a 3 percent
+premium relative to their white counterparts, but this premium
+becomes a 2 percent earnings gap when program and
+employer fixed effects are added.
+These pay gaps suggest that equity and inclusion issues
+could be tightly tied to the diversity issue since they may
+serve to dissuade potential economists. While the earnings
+gaps estimated in this paper are new, the underlying
+Table 4 Earnings Regressions – Industry Economists
+Authors calculations from matched SED/LEHD microdata. Exp controls
+include experience and experience squared. Observation count
+and R-sq reflect the regressions by gender and race results. URM
+includes AIAN/Hispanic/NHPI, Black, Two or more races, and race
+non-response
+(1) (2) (3) (4)
+Regressions controlling for Gender
+Female -0.120 -0.118 -0.102 -0.0902
+(0.00649) (0.00822) (0.00534) (0.00701)
+Regressions controlling for Race
+Asian -0.0268 -0.0284 -0.0398 -0.0386
+(0.0120) (0.0145) (0.00996) (0.0126)
+URM -0.0971 -0.0807 -0.0470 -0.0257
+(0.0136) (0.0172) (0.0114) (0.0150)
+Non-Citizen -0.0577 -0.0617 -0.0703 -0.0665
+(0.00677) (0.00849) (0.00582) (0.00740)
+Regressions controlling for Gender and Race
+Female -0.159 -0.167 -0.118 -0.107
+(0.0110) (0.0134) (0.00913) (0.0115)
+Asian -0.00687 -0.00294 -0.0181 -0.0474
+(0.0165) (0.0195) (0.0138) (0.0169)
+Female*Asian 0.0261 0.0149 0.00229 0.0568
+(0.0243) (0.0293) (0.0200) (0.0253)
+URM -0.0987 -0.0575 -0.0591 -0.0248
+(0.0163) (0.0212) (0.0134) (0.0181)
+Female*URM 0.0121 -0.0283 0.0392 0.000634
+(0.0293) (0.0359) (0.0246) (0.0315)
+Non-Citizen -0.0732 -0.0888 -0.0722 -0.0686
+(0.00825) (0.0100) (0.00689) (0.00866)
+Female*Non-
+Citizen
+0.0762 0.109 0.0344 0.0322
+(0.0143) (0.0179) (0.0116) (0.0150)
+Exp Controls X X X X
+Program FE X X
+Employer FE X X
+N 27,000 15,500 26,000 15,000
+R-sq 0.093 0.151 0.669 0.649
+Table 5 Earnings Regressions – Government Economists
+Authors calculations from matched SED/LEHD microdata. Exp controls
+include experience and experience squared. Observation count
+and R-sq reflect the regressions by gender and race results. URM
+includes AIAN/Hispanic/NHPI, Black, Two or more races, and race
+non-response
+(1) (2) (3) (4)
+Regressions controlling for Gender
+Female -0.0862 -0.0935 -0.0489 -0.0378
+(0.00813) (0.00988) (0.00643) (0.00834)
+Regressions controlling for Race
+Asian 0.0370 -0.00413 0.0688 0.0536
+(0.0127) (0.0143) (0.00988) (0.0119)
+URM -0.0421 -0.0662 -0.0247 -0.0513
+(0.0138) (0.0193) (0.0108) (0.0163)
+Non-Citizen 0.0325 0.102 -0.0514 -0.0388
+(0.0109) (0.0132) (0.00948) (0.0116)
+Regressions controlling for Gender and Race
+Female -0.111 -0.103 -0.0849 -0.0752
+(0.0103) (0.0124) (0.00802) (0.0104)
+Asian 0.0322 -0.00190 0.0419 0.0141
+(0.0187) (0.0209) (0.0146) (0.0174)
+Female*Asian 0.0543 0.0421 0.0814 0.101
+(0.0257) (0.0285) (0.0201) (0.0238)
+URM -0.0785 -0.0909 -0.0583 -0.0812
+(0.0163) (0.0240) (0.0129) (0.0205)
+Female*URM 0.109 0.0685 0.101 0.0837
+(0.0299) (0.0396) (0.0234) (0.0332)
+Non-Citizen 0.0220 0.102 -0.0686 -0.0567
+(0.0130) (0.0155) (0.0110) (0.0135)
+Female*Non-
+Citizen
+0.0212 -0.00554 0.0525 0.0612
+(0.0236) (0.0277) (0.0187) (0.0230)
+Exp Controls X X X X
+Program FE X X
+Employer FE X X
+N 9,500 5,700 9,500 5,700
+R-sq 0.089 0.208 0.496 0.482
+
+Journal of Economics, Race, and Policy
+1 3
+disparities in the profession that these gaps reflect are well
+known, as were documented by the 2018 AEA Professional
+Climate Survey (Allgood et al. 2019). The exploration of
+heterogeneity in earnings gaps across individual and job
+characteristics in this paper gives us another window into
+the inequalities in the economics profession.
+Acknowledging the issues with diversity along the entire
+pipeline, we need to be careful in how we interpret results
+that control for PhD program and employer. As one of our
+colleagues aptly put it “the road to earnings inequality
+is long” and parsing out the impact of each stage on the
+earnings gap is beyond the scope of this paper. We have
+attempted to describe one part of this long road, but a full
+accounting would include the entire educational experience,
+as well as other socioeconomic factors including health and
+access to wealth. Moreover, we acknowledge that our measures
+of race only crudely capture the lived experience of
+underrepresented economists.21
+Our ability to combine the rich data collected in the Survey
+of Earned Doctorates with the near universe of employment
+and earnings from the Longitudinal Employer-Household
+Dynamics dataset has enabled us to provide a view into the
+labor market dynamics of the economics profession for PhD
+economists. With our linked sample, we provide a unique
+view into the employment and earnings of PhD economists
+by gender and race. We hope our contribution of new descriptive
+statistics provides a useful framework for other research
+into diversity, equity, and inclusion in our profession.
+Supplementary Information The online version contains supplementary
+material available at https:// doi. org/ 10. 1007/ s41996- 023- 00117-z.
+Authors' Contributions The three authors contributed equally to this
+paper.
+Funding This research was conducted while all three authors were
+employed by the U.S. Census Bureau. No additional funding was
+received.
+Data Availability The Census microdata used in our research are confidential
+and protected by Title 13 and Title 26 of the U.S. Code. We
+will not be able to make the data directly available to the journal in the
+event our paper is accepted for publication. However, we can provide
+the code and researchers can follow the directions on how to write a
+proposal to gain access to the data via a Federal Statistical Research
+Data Center using the Standard Application Process.
+Declarations
+Ethical Approval This research involves secondary use of survey
+and administrative data collected for other purposes, however we are
+required to maintain confidentiality of that data.
+The Census Bureau has reviewed this data product for unauthorized
+disclosure of confidential information and has approved the disclosure
+avoidance practices applied to this release (DRB Clearance Numbers:
+CBDRB-FY2022-CES005-001 and CBRDB-FY2022-CES-005–004..
+DMS: 7517511). The National Center for Science and Engineering at
+the National Science Foundation (NSF) has reviewed this data product
+for unauthorized disclosure and has approved its release.
+Competing Interests Authors affiliated with the U.S. Census Bureau.
+Any opinions and conclusions expressed herein are those of the authors
+and do not represent the views of the U.S. Census Bureau. The use of
+NSF data does not imply NSF endorsement of the research, research
+methods, or conclusions contained in this paper.
+References
+Abowd JM, Stephens BE, Vilhuber L, Andersson FA, McKinney
+KL, Roemer M, Woodcock S. The LEHD infrastructure
+files and the creation of the quarterly workforce indicators. In
+Producer Dynamics: new evidence from micro data, edited by
+Timothy Dunn J, Bradford J, Roberts MJ. University of Chicago
+Press. 2009;149–230.
+Allgood S, Badgett L, Bayer A, Bertrand M, Black SE, Bloom N,
+Cook LD. AEA professional climate survey: final report. tech.
+rep., Nashville: American Economic Association Committee on
+Equity, Diversity and Professional Conduct 2019.
+Athey S, Luca M. Economists (and Economics) in tech companies. J
+Econ Perspect. 2019;33(1):209–30.
+Bayer A and, Rouse CE. Diversity in the economics Profession: a new
+attack on an old problem. J Econ Perspect. 2016;30(4):221–42.
+Bayer A, Hoover G, Washington E. How you can work to increase the
+presence and improve the experience of Black, Latinx, and Native
+American people in the economics profession. J Econ Perspect.
+2020;34(3):193–219.
+Bedard K, Lee M, and Royer H. Using longitudinal data to explore the
+gender gap for academic economists. AEA Papers and Proceedings.
+2021;111:69–73.
+Boustan L, and Langan A. Variation in women’s success across PhD
+programs in economics. J Econ Perspect. 2019;33(1):23–42.
+Buckles K. Fixing the Leaky Pipeline: Strategies for Making Economics
+Work for Women at Every Stage. J Econ Perspect.
+2019;33(1):43–60.
+Card D, DellaVigna S, Funk P, Iriberri N. Are referees and editors
+in economics gender neutral? Q J Econ. 2020;135(1):269–327.
+Chari A, Goldsmith-Pinkham P. Gender representation in economics
+across topics and time: Evidence from the NBER Summer Institute.
+Technical Report, National Bureau of Economic Research
+2017.
+Collins S. Minority Groups in the Economics Profession. Journal of
+Economic Perspectives. 2000;14(2):133–48.
+CSMGEP. Report of the Committee on the Status of Minority Groups
+in the Economics Profession (CSMGEP), December 2021.
+CSWEP. Report of the Committee on the Status of Women in the Economics
+Profession (CSWEP), December 2022.
+Cunningham R, Zavodny M. Looking for women on the AEA Program.
+CSWEP Newsletter 2015;(3).
+Darity WA, Jr. The human-capital approach to black-white
+earnings inequality: Some unsettled questions. J Hum
+Resour 1982;17(1):72–93.
+Darity WA, Jr. Notes from the back of the academic bus. In: Little D,
+Mohanty SP, Macmillan P, editors. The future of diversity. New
+York City 2010.
+21 Logan (2022) notes “Race is not a variable in an econometric
+model or in a dataset, either – it is also a dynamic experiential condition
+that is both acted out and acted upon” (p. 83).
+
+Journal of Economics, Race, and Policy
+1 3
+Darity WA, Jr., Kreeger A. The desegregation of an elite economics
+Department’s PhD program: Black Americans at MIT. Hist Political
+Econ 46(Annual Supplement). 2014;317–36.
+Doleac JL, Hengel E, Pancotti E. Diversity in Economics Seminars:
+Who Gives Invited Talks? AEA Papers and Proceedings.
+2021;111:55–9.
+Donald SG, Hamermesh DS. What is Discrimination? Gender in the
+American Economic Association, 1935–2004. Am Econ Rev.
+2006;96(4):1283–92.
+Dupas P, Modestino AS, Niederle M, Wolfers J, and the Seminar
+Dynamics Collective. Gender and the dynamics of economic
+seminars. NBER Working Paper 2021;28494.
+Foster L, Manzella J, McEntarfer E, Sandler DH. Employment and
+Earnings for Federal Government Economists: Empirical Evidence
+by Gender and Race. AEA Papers and Proceedings.
+2020;110:210–4.
+Foster L, McEntarfer E, Sandler DH (forthcoming). “Career Paths of
+PhD Economists.”
+Foster L, McEntarfer E, Sandler DH. “Diversity and Labor Market Outcomes
+in the Economics Profession.” CES Working Papers 2022;22–6.
+Fourcade M, Ollion E, Algan Y. The Superiority of Economists. J Econ
+Perspect. 2015;29(1):89–114.
+Ginther DK, Kahn S. Women in Economics: Moving Up or Falling
+Off the Academic Career Ladder? J Econ Perspect.
+2004;18(3):193–214.
+Ginther DK, Kahn S. Women in Academic Economics: Have We Made
+Progress? AEA Papers and Proceedings. 2021;111:138–42.
+Halim D, Powers ET, Thornton R. Gender Differences in Economics
+Course-Taking and Majoring: Findings from an RCT. AEA
+Papers and Proceedings. 2022;112:597–602. https:// doi. org/ 10.
+1257/ pandp. 20221 120.
+Hengel E. Publishing while female: are women held to higher standards?
+Evidence from peer review. Econ J. 2022;132(648):2951–91.
+Hoover GA, Washington E. Report: Committee on the Status of Minority
+Groups in the Economics Profession (CSMGEP). AEA Papers
+and Proceedings. 2021;111:764–79.
+Jones T, Sloan A. The academic origins of economics faculty. IZA
+Working Paper No. 2021;14965.
+Jones N, Marks R, Ramirez R, Rios-Vargas M. Census illuminates
+racial and ethnic composition of the country. America Counts
+Story, U.S. Census Bureau, August 12, 2021. Improved Race,
+Ethnicity Measures Show U.S. is More Multiracial (census.gov)
+Kahn S. Gender Differences in Academic Career Paths of Economists.
+Am Econ Rev. 1993;83(2):52–6.
+Kahn S. Women in the Economics Profession. J Econ Perspect.
+1995;9(4):193–206.
+Kleemans M, Thornton RL. Who Belongs? The Determinants of Selective
+Membership into the National Bureau of Economic Research. American
+Economic Association Papers and Proceedings. 2021;111:117–22.
+Koffi M. Innovative ideas and gender inequality. Canadian Labour Economics
+Forum Working Paper Series 2021;35.
+Kolpin VW, Singell Jr LD. The Gender Composition and Scholarly
+Performance of Economics Departments: A Test for Employment
+Discrimination. ILR Rev. 1996;49(3):408–23.
+Logan T. American enslavement and the recovery of black economic
+history. J Econ Perspect. Spring. 2022;36(2):81–98.
+Logan T, and Myers SL Jr. The failure of economics and the marginalization
+of research on race. In Publishing and Measuring Success
+in Economics, eds. Sebastian Galiani and Ugo Panizza, CEPR
+Press, 2020 London
+Lundberg S, Stearns J. Women in Economics: Stalled Progress. J Econ
+Perspect. 2019;33(1):3–22.
+McDowell JM, Singell LD Jr, Stater M. Two to Tango? Gender differences
+in the decisions to publish and coauthor. Econ Inq.
+2006;44(1):153–68.
+Mincer JA. Schooling, Experience, and Earnings. New York: NBER
+Press; 1974.
+National Center for Science and Engineering Statistics (NCSES),
+National Science Foundation (2018), Doctorate Recipients from
+U.S. Universities: 2017, NSF-19–301. Alexandria VA. Available
+at https:// ncses. nsf. gov/ pubs/ nsf19 301.
+National Center for Science and Engineering Statistics (NCSES),
+National Science Foundation (2020), Doctorate Recipients from
+U.S. Universities: 2019, NSF-21–308. Alexandria VA. Available
+at https:// ncses. nsf. gov/ pubs/ nsf21 308.
+Price GN. The Problem of the 21st century: Economics Faculty and the
+Color Line. J Socio-Econ. 2009;38(2):331–43.
+Rennane S, Acheson-Field H, Edwards KA, Gahlon G, Zaber MA. Leak
+or link? The overrepresentation of women in non-tenure-track
+academic positions in STEM. PLoS ONE. 2022;17(6):e0267561.
+https:// doi. org/ 10. 1371/ journ al. pone. 02675 61.
+Sarsons H. Recognition for Group Work: Gender Differences in Academia.
+In American Economic Association Papers and Proceedings.
+2017;107:141–5.
+Schultz R, Stansbury A. Socioeconomic diversity of economics PhDs.
+Working Paper 22–4. Peterson Institute for International Economics.
+2022 https:// www. piie. com/ publi catio ns/ worki ng- papers/
+socio econo mic- diver sity- econo mics- phds.
+Sharpe RV. We’ve to Build the Pipeline. What’s the Problem? What’s
+Next? The Remix. Rev Black Polit Econ. 2018;45(3):191–215.
+Simms MC, Conrad CA. Diversity in the Dismal Science. Rev Black
+Polit Econ. 2019;46(4):362–78.
+Stevenson B, Zlotnik H. Representations of Men and Women in Introductory
+Economics Textbooks. AEA Papers and Proceedings.
+2018;108:180–5.
+Wessel D, Barcena LH, Salwati N. Gender and racial diversity of federal
+government economics: 2020 Data. Hutchins Center on Fiscal
+and Monetary Policy 2021.
+Wu AH. Gendered Language on the Economics Job Market Rumors
+Forum. AEA Papers and Proceedings. 2018;108:175–9.
+Yellen J. Opening remarks delivered at “The Gender and Racial Diversity
+of the Federal Government's Economists” hosted by the
+Hutchins Center on Fiscal & Monetary Policy at Brookings on
+September 23, 2019. https:// www. brook ings. edu/ resea rch/ formerfed-
+chair- janet- yellen- on- gender- and- racial- diver sity- of- the- feder
+al- gover nments- econo mists/
+Publisher's Note Springer Nature remains neutral with regard to
+jurisdictional claims in published maps and institutional affiliations.

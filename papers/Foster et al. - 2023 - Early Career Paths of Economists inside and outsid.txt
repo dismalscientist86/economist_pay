@@ -1,0 +1,1030 @@
+Journal of Economic Perspectives—Volume 37, Number 4—Fall 2023—Pages 231–250
+Over 20 years ago, Richard Freeman (1999) noted how much better the
+job market was for economists relative to other mathematical fields.
+He conjectured this was due in part to strong public and private sector
+demand for economists outside of academia. However, Freeman cautioned, “don’t
+tell anyone.” Wider knowledge of the comparatively attractive job market might
+attract more graduate students, creating less favorable job market conditions. In the
+decades that followed, the number of new PhDs in economics did increase. Yet the
+job market remains strong, in part due to growing demand for economists outside
+of academia.
+Currently just over half of PhD economists begin their careers as professors in
+research-
+oriented universities or teaching colleges. Nearly half begin other careers
+that encompass a wide range. Some work for technology companies, others alongside
+lawyers in consulting firms. There is vast career diversity within the public
+sector: economists there develop macroeconomic forecasts, work on antitrust
+cases, advise policymakers, and improve economic measurement. But despite a
+large share of nonacademic placements, study of the economics profession has
+mostly focused on academia. This imbalance means new PhD economists navigate
+Early Career Paths of Economists Inside
+and Outside of Academia
+■ Lucia Foster is Chief of the Center for Economic Studies and Chief Economist, Erika McEntarfer
+is Lead Economist for the Longitudinal Employer-Household Dynamics (LEHD), and
+Danielle H. Sandler is a Principal Economist, all at the US Census Bureau, Washington,
+DC. Parts of this paper were written while McEntarfer was on detail as a Senior Economist at
+the Council of Economic Advisers, Washington, DC. Their email addresses are lucia.s.foster@
+census.gov, erika.mcentarfer@census.gov, and danielle.h.sandler@census.gov.
+For supplementary materials such as appendices, datasets, and author disclosure statements, see the
+article page at https://doi.org/10.1257/jep.37.4.231.
+Lucia Foster, Erika McEntarfer, and
+Danielle H. Sandler
+232 Journal of Economic Perspectives
+significant unknowns during their job search; nonacademic job offers represent a
+diverse set of career paths about which they know comparatively little. The stakes
+of the decision are high: growing compensation gaps between academic and
+private sector jobs means the choice of career path has significant financial consequences.
+Career mobility is also a concern; many job candidates express fears they
+will be unable to return to academia if they accept a nonacademic offer.
+Our objective here is to fill some of these knowledge gaps by providing a
+broader look at economists’ early career paths—both in and outside of academia.
+We do this by developing a novel large panel dataset of earnings and employment
+after completing an economics PhD. This data allows us to look beyond the snapshot
+of initial placements to examine employment and earnings dynamics over the
+first ten years of a career. This ten-
+year period encompasses the standard tenure
+clock and early career job moves and thus provides more information about the ultimate
+career path.1 While our data cannot speak to whether a particular career path
+is right for a specific individual, we can make more explicit how different placements
+shape future financial outcomes and how much medium-
+term job stability or
+mobility to expect after initial placement.
+We also hope to shed additional light on the role that the rank of a PhD program
+plays in determining early career outcomes, both in and outside of academia. For
+undergraduates applying for admission to graduate schools, attending a top-
+ranked
+doctoral program appears a necessary, if not sufficient, condition for success
+at the top of the profession. In the United States, most tenure-
+track faculty at
+PhD-
+granting institutions earned their PhDs from one of the top 15 PhD programs
+(Jones and Sloan 2021). In addition, five top PhD programs have produced half
+of the members of the highly selective National Bureau of Economic Research
+(Kleemans and Thornton 2021). Graduate students from higher-ranked programs
+obtain more second-
+round interviews on the job market and receive higher initial
+academic and nonacademic salary offers (Stock and Alston 2000).2 Yet these facts
+mask a common observation of professional life: there is significant dispersion in
+outcomes for graduates of the same PhD program. Our data allow us to characterize
+some of that dispersion and also to explore whether salary gaps observed in initial
+placements grow or shrink over time. We were also curious whether PhD program
+rank is more important for some career paths and less important for others. Our
+data suggest that, at least with respect to early career earnings growth, PhD program
+matters more inside of academia than outside of it.
+1 Data limitations severely limit the study of economists’ careers after initial placements, especially
+outside of academia. Bedard, Lee, and Royer (2021) summarize the current literature as relying on
+cross-
+sectional data, short early career panels, or panels specific to a narrow set of institutions.
+2 The hierarchical nature of the economics profession has been extensively discussed (for example, in
+this journal by Fourcade, Ollion, and Algan 2015). Rankings play a crucial role in the lives of economists:
+the ranking of their PhD-granting department, the rankings of the journals in which they publish, the
+monthly rankings of individuals in Research Papers in Economics (RePEc), and the constantly updated
+implicit rankings via Google Scholar.
+Lucia Foster, Erika McEntarfer, and Danielle H. Sandler 233
+Before we describe our main findings, some background about our panel
+data seems useful. To identify PhD economists, we use the Survey of Earned
+Doctorates, an annual census conducted by the National Center for Science
+and Engineering Statistics (NCSES). This survey covers individuals receiving a
+research doctorate from an accredited US institution for that academic year; for
+example, the 2017 data cover the academic year from July 1, 2016, to June 30,
+2017. The coverage of PhD-
+granting departments in the survey is high, including
+over 90 percent of new economics PhDs in the United States. We then link respondents
+to administrative data on jobs sourced primarily from the Longitudinal
+Employer-
+Household Dynamics (LEHD) data, which cover over 95 percent of
+private-
+sector workers and almost all state and local government employment. We
+supplement this with Internal Revenue Service form W-
+2 data to obtain earnings
+for jobs not covered by LEHD, particularly federal workers. We link the Survey of
+Earned Doctorates person-
+level data to the jobs-
+level data using Protected Identification
+Keys assigned to individuals by the Census Bureau’s Person Identification
+Validation System.
+The resulting panel dataset covers approximately 12,000 new PhD economists
+who completed their degrees between 2001 and 2017 and were employed in
+the United States following graduation. While this panel is very large, it contains
+notable exclusions. In particular, economists trained outside of the United States
+are not represented in our data, nor are those trained in the United States who are
+employed outside of the country. More than one-
+third of economics PhDs from
+US institutions do not end up working in the United States. This in part reflects
+the international composition of economics graduate education. The majority of
+economics PhDs granted by US institutions are awarded to temporary visa-
+holders;
+about half of these students have initial placements in the United States.3 We
+assume the vast majority of graduates from US economics PhD programs for whom
+we do not observe subsequent earnings in our data have placements outside of
+the United States; where possible we compare our findings to available data that
+includes this group.4
+3 The share of economics PhDs granted by US institutions awarded to temporary visa-
+holders was
+52 percent in 2017 (NCSES 2018, Table 62). Fifty-
+five percent of these temporary visa-
+holders with
+definite post-
+graduation plans had initial placements in the United States, compared to 95 percent for
+US citizens and permanent residents (NCSES 2018, Table 51). The percentage of new PhD economists
+with definite postgraduation plans whose initial placement is in the United States has decreased over
+time, from 77 percent in 2007 to 72 percent in 2017 (NCSES 2008, Table S38; 2018, Table 51).
+4 The experiences of those who are not US citizens in economics PhD programs at US universities
+deserve further attention; that is, their motivations and expectations in coming to the United States
+for an economics PhD program, their experiences in the program (including their access to advisers,
+research assistant positions, and financial aid), and the jobs they take in other countries after graduation.
+The experiences of US citizens who end up moving abroad (a much smaller group) would also be of
+interest.
+234 Journal of Economic Perspectives
+Result 1: The share of academic placements is falling, even among
+graduates of top-
+ranked economics PhD programs.
+The traditional focus of the PhD job market is on academic jobs. However,
+academia now accounts for a declining share of new PhD economist placements.
+We observe this declining trend in our panel, but it is also notable in the broader
+census of new PhDs. The Survey of Earned Doctorates indicates a drop in initial
+placements among economists in academia and corresponding rise in placements in
+industry. In 2007, of those new PhD economists with definite employment commitments
+(including those both inside and outside the United States), 60 percent
+went into academia, 14 percent into government, 17 percent into industry, and
+4 percent into nonprofits. By 2017, those numbers changed to 53 percent for
+academia, 13 percent for government, 26 percent for industry, and 6 percent for
+nonprofits (NCSES 2008, Table S38; 2018, Table 63). Published results focusing
+on US placements (which are more comparable to our analyses) do not provide as
+much temporal or sectoral detail, but reveal that the share going into academia in
+2017 was 48 percent (NCSES 2018, Table 51).
+Turning to our data, we are able to provide some finer detail on economists’
+initial placements in Table 1. Just over half of the economists in our panel data
+begin their careers in academia, but this share is falling over time, declining from
+64 percent for 2001–
+2005 graduates to 56 percent for 2014–
+2017 graduates. Meanwhile,
+the share with initial placements in industry and government grew: placements
+in consulting firms increased from 9 percent to 13 percent, in government from
+5 percent to 11 percent, and in technology firms from 4 percent to 6 percent.5 The
+share of economists with initial placements in finance is relatively stable, at around
+9 percent. With the exception of growth in government placements, which may be
+unique to the United States (the global financial crisis spurred demand for economists
+in the public sector), broad patterns in initial placements and trends look very
+similar in the Survey of Earned Doctorates.
+We were curious whether the share of nonacademic placements varied by rank
+of the PhD-
+granting institution. Graduates from higher-ranked programs are more
+likely to receive multiple offers; these graduates are more likely to have their choice
+of options. Table 1 shows placements for 2014–
+2017 graduates by program rank.
+Surprisingly, the share of academic placements varies little across PhD program
+ranks. Among recent graduates of the top 5 PhD programs in economics, just over
+5 We define these sectors using NAICS codes as follows: academia (61, Educational Services), consulting
+(54, Professional, Scientific, and Technical Services but excluding 541511-541519), government (92,
+Public Administration), finance (52, Finance and Insurance), technology (454110, E-Commerce; 511210,
+Software Publishers, 517311-519190, Internet Publishing; 541511-541519 Computer System Design;
+485310 Taxi Service; and 721100, Traveler Accommodation), and other industry (all other NAICS codes).
+Over 95 percent of those in academia are employed in NAICS 6113, Colleges and Universities, with the
+remainder employed in community colleges and other educational services. If an economist works more
+than one job during the calendar year, we determine the sector using the employer that was the primary
+source of earnings in that year.
+Early Career Paths of Economists Inside and Outside of Academia 235
+half (56 percent) have their initial placement in academia, which is roughly similar
+to those in programs outside the top 20 (54 percent). The middle category of top
+6–
+20 programs have fewer academic placements (50 percent) and the highest share
+of government placements (11 percent).
+Some further explanation of how we categorize PhD program rank in Table 1
+and throughout this paper is needed here. We begin by recognizing that existing
+rankings of PhD programs are imperfect. While there is some consensus in the
+profession about which programs are “good” with respect to ordinal rankings,
+there are, as they say, “20 departments in the top 10.” Any attempt to bin programs
+using these rankings is subject to the criticism that they are measured imperfectly;
+we do our best. Our approach uses Research Papers in Economics’ (RePEc)
+US departmental rankings and bins them into three categories: top 5, top 6–
+20,
+and other.6 Careful examination of multiple ranking regimes and earnings fixed
+effects informed this approach. Our preliminary investigation indicated that the
+fixed effect on earnings from being a graduate of a particular program (conditional
+on sector of employment and other observable characteristics) was largest among
+schools typically ranked among the top 5, varied more considerably among schools
+outside the top 5, and was measurably different than zero in few programs outside
+of the top 20. A feature of most ranking methods is that they generally concur on
+the very top programs (a top 5 bin does appear to collect a set of schools widely
+believed to be among the best) as reflected in earnings and rankings. The choice
+6 We examined several different published department ranks, and our main results were robust to
+ranking methodology. This likely indicates they are mostly equally imperfect methods of ranking schools
+by student outcomes.
+Table 1
+Initial Placements by Sector and Career Mobility across Sectors
+Initial
+placement
+Across cohorts (2001–2017)
+By program rank
+(2014–2017 cohort)
+Ten years later
+(2001–2007 cohort)
+2001–
+2005
+2006–
+2009
+2010–
+2013
+2014–
+2017
+Top
+5
+Top
+6–20 Other Stay Move Destination
+Academia 63.64 58.62 60.00 55.56 55.56 50.00 54.17 84.21 5.26 Gov’t
+Consult 9.09 10.34 11.67 12.50 13.33 14.29 10.42 50.00 13.33 Academia
+Government 4.55 8.62 10.00 11.11 6.67 11.43 10.42 80.00 16.00 Academia
+Finance 9.09 8.62 8.33 9.72 4.44 5.71 12.50 80.00 8.00 Academia
+Other Ind. 9.09 6.90 6.67 6.94 4.44 7.14 6.25 45.00 25.00 Academia
+Tech 3.64 3.45 5.00 5.56 8.89 7.14 4.17 40.00 20.00 Academia
+N 2,200 2,900 3,000 3,600 450 700 2,400 3,100
+Source: Authors’ calculations from matched SED/LEHD microdata.
+Note: Shares are rounded using Census rounding rules, and columns may not sum to 100 percent.
+Share academic placements are monotonically decreasing over time in unrounded data. “Move”
+and “Destination” columns show only the most frequent industry destination and the share of initial
+placements working in that sector ten years later. Program rank defined by rank of PhD-granting
+institution.
+236 Journal of Economic Perspectives
+to place the cutoff for the second bin at 20 is more arbitrary—rankings and earnings
+fixed effects are notably noisier in this range and our results would not much
+change if we had set the cutoff at 25.
+Turning back to Table 1, we find that PhD department rank does impact the
+type of nonacademic career path chosen. In particular, graduates of top 5 programs
+are much less likely to seek careers in government (including the Federal Reserve
+Board), although this share is increasing. There are so few government placements
+among top 5 candidates in the first decade of our data that we have to drop this
+sector in some of our later analysis. Consulting firms are the most frequent nonacademic
+placement for candidates from top 5 and top 6–
+20 programs (13 percent
+and 14 percent respectively). We also find that the recruitment of economists by
+tech firms has increased in recent years, particularly from top 5 departments.7
+Nine percent of US placements of economics PhDs from the top 5 economics
+departments were at technology firms in 2014–
+2017, a higher share than placements
+in either finance or government. The recent dominance of technology firms
+in recruiting candidates from top programs may partly explain the outsized interest
+in these jobs, which remain a relatively small share of the overall economist job
+market. Given the recent layoffs at tech firms, it will be interesting to see whether
+these patterns change in the future.
+Result 2: Early career paths for PhD economists show considerable
+mobility; in particular, the door between academia and industry
+swings both ways.
+We find considerable job mobility for economics PhDs after initial placements,
+with many economists changing jobs, often multiple times, in the first ten years
+of their career. Movements across sectors are also not uncommon. Table 1 shows
+transitions across sectors from initial placement to placement ten years later for
+PhD economists for 2001–
+2007 graduates. Among career tracks, academia is the
+stickiest, 84 percent of initial placements in academic jobs are still in academia ten
+years later. Academia is also a draw for those in industry—a sizable share of economists
+move from industry jobs to academia in the early years of their career. Despite
+conventional wisdom that initial academic placements are preferred because the
+“door only swings one way,” the door very much does not.
+We provide a more granular look at early career paths in Figure 1. Panel A of
+Figure 1 graphs early career moves for new PhDs whose initial placement was at a
+research university.8 As shown in panel A, just over 40 percent of those who start
+7 In this journal, Athey and Luca (2019) note that Amazon, which hired over 150 economists from
+2014–2019, employs more economists than the largest economics departments.
+8 Specifically, we define a research university here as a top-70 department as ranked by RePEc. We choose
+the top 70 departments as it is a threshold that includes most PhD-granting departments and is expansive
+enough to allow us to capture some upward mobility. Also, while the population of graduates from top
+programs is large, initial placements in research universities are much smaller. Thus, it is largely for
+Lucia Foster, Erika McEntarfer, and Danielle H. Sandler 237
+their career in a research university remain in their initial placement ten years later.
+This is a much lower share than academic placements overall (64 percent). This
+disclosure reasons that when we categorize job mobility we expand our analysis to include those who
+place in a department ranked between 1 and 70 instead of using the more restrictive top 5 and top
+6–20 groupings in the previous section.
+0
+200
+400
+600
+800
+1,000
+1 2 3 4 5 6 7 8 9 10
+Number of economists
+Years since PhD
+1 2 3 4 5 6 7 8 9 10
+Years since PhD
+Moved to government
+Moved to industry
+Academia, moved down
+Academia, made
+lateral job move
+Academia, moved up
+Remains in initial
+academic placement
+0
+200
+400
+600
+800
+Number of economists
+Moves to academia
+Initial consulting 
+other industry job
+Initial nance 
+other industry job
+Remains in initial
+nance placement
+Remains in initial
+consulting placement
+Panel A. Initial placement in a top-70 academic department, 2001–2010 graduates
+Panel B. Initial placement in consulting or nance, 2001–2010 graduates
+41%
+5%
+5%
+14%
+23%
+14%
+16%
+9%
+26%
+37%
+11%
+Figure 1
+Early Career Moves after Initial Placement
+2001–2010 Graduates
+Source: Authors calculations from matched SED/LEHD microdata, 2001–2010 graduates with ten years
+of continuous earnings only.
+Note: Figure shows flows from initial placement to next employer type by industry and time.
+Top-70 departments as ranked in RePEc, movements up indicate new department is at least 15 ranks
+higher, movement down means new department at least 15 ranks lower, other moves are lateral moves.
+For industry moves in panel B, the very few moves into government are pooled with other industry jobs.
+238 Journal of Economic Perspectives
+difference appears to be driven in part by a greater likelihood of a negative tenure
+decision at research universities; there is an uptick in job change at year seven, as can
+be seen in panel A of Figure 1. But it also reflects greater early career mobility for
+faculty at research institutions pre-
+tenure. Among those placing in research departments,
+one-
+third have moved elsewhere by the fifth year of their career, compared
+to one-
+fifth among academic placements overall.
+Are job-
+changers at research departments generally moving up or down the job
+ladder? We find evidence of upward mobility for a few, with 5 percent moving up
+at least 15 ranks within ten years. However, the modal job-
+changer is moving down,
+with 23 percent working in a department at least 15 ranks lower than their initial
+placement in year ten. There are also many lateral moves (14 percent have moved
+laterally by year ten), disproportionately between the highest-
+ranked departments.
+Interestingly, candidates who place in research institutions are more likely to leave
+academia later than those who did not; 19 percent are working in industry or government
+in year ten, compared to 9 percent among academic placements overall.
+A potential draw for economists leaving academia is higher pay: academics at
+research institutions who move to industry or government experience higher earnings
+growth over their early career than those who remain in academia (7–
+8 percent
+annualized earnings growth, compared to 4–
+6 percent). But even within academia,
+those who change jobs generally experience greater early career earnings growth
+than those who remain with their initial placement, including those who move
+down in department rank (5–
+6 percent annualized earnings growth, compared to
+4 percent).9
+We now turn to early career paths outside of academia. Economists whose
+initial placement is in a consulting or finance firm change jobs earlier and more
+frequently than those in academia. Just one-
+quarter remain in their initial placement
+ten years later, as shown in panel B of Figure 1. Most job changers remain
+in the private sector, and job changers in industry appear to be moving up the job
+ladder, as evidenced by higher earnings growth among job switchers. However, a
+sizable minority (11 percent) move to academia. Those who move back to academia
+tend to do so fairly quickly: over half of moves to academia occur in the first three
+years after finishing the PhD.
+In additional analyses, we find that economists with initial placements in
+consulting are much more likely to move to academia in the first ten years of their
+career than those in finance (15 percent and 5 percent, respectively). Those who
+initially place in finance and banking are less likely to remain in their initial job,
+but generally remain in the same sector. Finance and banking jobs have very high
+salaries and high rates of wage growth compared to other sectors in which economists
+work, which likely deters leavers. Those who leave consulting for academia do
+9 One reason we may see slightly higher earnings growth among those stepping down the job ladder than
+those that remain with initial placements is that some of these moves may be resolving joint location
+problems. It seems plausible that such moves could relocate academics to larger labor markets and more
+expensive regions of the country.
+Early Career Paths of Economists Inside and Outside of Academia 239
+experience very low rates of early career wage growth (3 percent annualized earnings
+growth in first ten years), as these moves are often associated with an initial
+earnings loss and are presumably motivated by preferences for the nonpecuniary
+aspects of academic jobs.
+Because most technology firm placements are quite recent, we can only look at
+the first five years post-
+PhD for the cohort of 2001–
+2015 graduates. After five years,
+43 percent remain with their initial employer, another 17 percent remain in the
+tech sector with a different employer, and 11 percent have taken an academic
+job. Despite talk of high salaries in technology firms, the average economist who
+remains with their initial tech placement earned about $140,000 annually during
+the fifth year of their career. This income is certainly a good one, but not astronomical
+compensation for a PhD economist working in the private sector. However,
+while our earnings data include bonuses, they do not include the value of stock
+options that may be part of the compensation package for these economists.
+Result 3: Industry pays better than academia for PhD economists,
+but the distribution of earnings in each sector is broad and
+overlapping.
+Academia has long been viewed by many as the most prestigious career path
+for economists, but industry jobs are widely understood to be more lucrative. These
+generalities mask the fact that some economics professors are very highly compensated,
+and that not every private sector job is a path to wealth. In other words, the
+distribution of compensation within sectors is vast, and earnings distributions in
+academia and industry overlap. An advantage of our data is that we can show the
+entire earnings distribution for our panel of economists and track its evolution over
+time. We find that earnings and earnings growth for early-
+career economists varies
+widely across and within sectors, leading to large dispersions in pay in mid-
+career.
+Panel A of Figure 2 shows the annual earnings distributions for economists
+employed in academia, government, and industry for initial placements.10 We
+collapse the industries in which economists work into three broad sectors: academia,
+government, and “industry” (which combines consulting, finance, other industry,
+and tech). Economists working in academia generally have the lowest initial earnings,
+followed by those in government, then industry. The median real (2015)
+annual earnings are $83,270 for academia, $91,600 for government, and $108,600
+for industry.11 Industry has the highest earnings, but also the most dispersion; the
+10 Some differences between this analysis and the early career panel in the last section should be noted.
+The previous section looked at balanced panels of economists who worked continuously in the United
+States for all ten years after receiving their PhD (or five years, in the case of technology placements).
+Here we look at earnings for all economists working in the United States in a particular year.
+11 The Survey of Earned Doctorates also provides information on median annual salaries for doctorate
+recipients with definite postgraduation plans for employment in the United States: $75,000 for academia,
+$85,000 for non-profits, $95,000 for government, and $105,000 for industry (NCSES 2010, Table 45).
+240 Journal of Economic Perspectives
+difference between the 75th and 25th percentile is about $54,000 a year, compared
+to $46,000 in academia, and $36,000 in government. In Table 2, we summarize the
+25th percentile, median, 75th percentile, the interquartile range, and the percent
+difference for these earnings distributions.
+By mid-
+career, dispersion in earnings among economists has become quite
+large. Panel B of Figure 2 depicts the earnings distributions for economists who
+have been in their careers for ten years. One striking observation is the comparatively
+more rapid early-
+career wage growth for economists in industry. Specifically,
+median earnings for industry economists rise from $108,600 in their initial placement
+to $174,100 a decade later. Thus, while the median industry economist earns
+30 percent more than the median academic economist in their initial placement,
+this difference increases to 60 percent after ten years.
+We should note that our measure of earnings does not include self-
+employment.
+As noted by Fourcade, Ollion, and Algan (2015, p. 90), “[M]any prominent
+economists have the opportunity to obtain income from consulting fees, private
+investments and partnerships, and memberships on corporate boards.” These
+opportunities probably differ across sector, fields, and personal characteristics.
+Converting these to 2015 dollars as in Figure 2, these medians are very similar to what we show in panel
+A: $81,522 in academia, $103,261 in government, and $114,130 in industry.
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+Median academic $83,270
+Median govt. $91,600
+Median industry $108,600
+Median academic $109,600
+Median govt. $123,300
+Median industry $174,100
+Academic
+Government
+Industry
+Academic
+Government
+Industry
+Panel A. Economist earnings by sector,
+one year after receiving PhD
+Panel B. Economist earnings by sector,
+ten years after receiving PhD
+Figure 2
+Economist Earnings by Sector
+Source: Authors’ calculations from matched SED/LEHD microdata, 2001–2007 SED graduates only.
+Note: Figure shows earnings distribution of economists by sector at initial placement and ten years after
+PhD. Academic sector is defined as all economists working in NAICS 61 (almost all of whom work in
+colleges and universities), government is those employed in NAICS 92 (which includes the Federal
+Reserve Board and other federal agencies) and industry is all other sectors. As the y-axis in a kernel
+density plot represents an infinitesimal quantity of probability space, we removed the y-axis labels to
+improve legibility of the figure.
+Lucia Foster, Erika McEntarfer, and Danielle H. Sandler 241
+Weyl (2017) estimates that academic economists receive 20 percent of their income
+from outside activities, including consulting, and his rough estimates suggest
+outside income may be as high as 40 percent in fields such as finance and industrial
+organization. However, according to Del Rossi and Hersch (2020), while consulting
+is relatively common among economists (more than 40 percent reported legal
+consulting in the last five years), it contributes less than 10 percent of income, based
+on 1,205 responses to their survey sent to 8,157 faculty in economics departments.
+We do not capture this secondary income in our current analysis but acknowledge
+it could be important.
+Table 2
+Earnings Distribution Moments for Figures 2–3
+(in 2015 dollars)
+P25 P50 P75
+Dispersion
+P75–P25
+Pct. diff
+P75–P25
+Initial year after PhD (Fig. 2a)
+Academia 62,210 83,270 107,800 45,590 73 percent
+Government 73,880 91,600 110,100 36,220 49 percent
+Industry 80,060 108,600 134,300 54,240 68 percent
+Ten years after PhD (Fig. 2b)
+Academia 84,430 109,600 150,000 65,570 78 percent
+Government 98,170 123,300 166,700 68,530 70 percent
+Industry 116,600 174,100 213,800 97,200 83 percent
+Academia: initial year after PhD (Fig. 3a)
+Top-5 PhD 94,430 119,800 146,800 52,370 55 percent
+Top 6-20 PhD 74,100 104,800 127,800 53,700 72 percent
+Non-top 20 54,140 75,920 92,850 35,710 62 percent
+Academia: ten years after PhD (Fig. 3b)
+Top-5 PhD 127,600 189,000 230,200 102,600 80 percent
+Top 6-20 PhD 99,920 138,800 189,800 89,880 90 percent
+Non-top 20 79,000 99,170 125,300 46,300 59 percent
+Industry: initial year after PhD (Fig. 3c)
+Top-5 PhD 107,000 135,600 152,000 45,000 42 percent
+Top 6-20 PhD 95,720 124,900 147,200 51,480 54 percent
+Non-top 20 74,900 99,080 122,600 47,700 64 percent
+Industry: ten years after PhD (Fig. 3d)
+Top-5 PhD 175,900 208,500 237,000 61,100 35 percent
+Top 6-20 PhD 141,100 198,700 230,100 89,000 63 percent
+Non-top 20 107,000 157,000 203,000 96,000 90 percent
+Source: Authors calculations from matched SED/LEHD microdata, 2001–2007 SED graduates only.
+Notes: Industry is defined as all economists who work outside of NAICS 61 or 92, who are concentrated
+in consulting and finance. Dispersion P75–P25 is the absolute difference in dollars between the 75th and
+25th percentiles. Pct. diff is the percentage difference (“P75 is X percent higher than P25”) calculated
+as (P75–P25)/P25.
+242 Journal of Economic Perspectives
+Comparing panels A and B of Figure 2 displays a significant increase in
+earnings dispersion, reflecting within-
+sector differences in early-
+career earnings
+growth. Mid-
+career academic and government economists have right-
+skewed earnings
+distributions, indicating that wage gains have been uneven and concentrated
+among economists in the right tail. Mid-
+career industry economists, on the other
+hand, have a much flatter and unusually left-
+skewed earnings distribution, indicating
+larger dispersion in earnings gains, but favoring a larger share of industry
+economists.12
+Result 4: Initial earnings and earnings growth in academia is higher
+among those from top-
+ranked PhD-
+granting institutions. However,
+there is enormous dispersion in mid-
+career earnings among
+graduates of top programs.
+Graduating from a highly ranked economics PhD program could lead to higher
+earnings for three overlapping reasons: (1) selection effects imply that top programs
+are more likely to select highly talented candidates; (2) more prestigious programs
+might provide better training for job candidates; and (3) attending an elite program
+may give students access to powerful networks within the profession. Selection and
+signaling effects are likely to have a stronger impact on initial placements outside
+of academia where interviewers may not be as skilled in assessing candidate quality.
+Powerful networks, on the other hand, are most likely to benefit graduates who
+remain in academia.
+As we are unsure whether selection, training, or network effects dominate, we
+examine the role of rank for academic and nonacademic jobs separately. Panel A
+of Figure 3 shows earnings distributions for academic economists one year after
+receiving their PhD from top 5, top 6–
+20, and other programs. Median earnings
+for economists are $119,800 for those who received their PhD from a top 5 institution,
+$104,800 for those from a top 6–
+20 institution, and $75,920 for those from a
+non-
+top-20 institution. In short, the distributions show evidence of higher initial
+earnings for graduates from top departments in academia, although these distributions
+overlap considerably.
+Ten years later, differences in median earnings between top program graduates
+and others have grown and dispersion among classmates from similarly
+ranked programs has increased considerably. In panel B, the median earnings of
+a graduate from a top 5 PhD program working in academia is almost double that
+of a graduate from a school outside the top 20, and considerably higher than the
+median graduate from a top 6–
+20 program. But the differences in medians mask
+enormous dispersion in earnings for academics graduating from top programs.
+12 Our findings on the pattern of dispersion in academic earnings for PhD economists are consistent
+with the main alternative source of data from the Universal Academic Questionnaire (UAQ) which shows
+there is considerably higher pay and more dispersion in earnings at the top of the profession.
+Early Career Paths of Economists Inside and Outside of Academia 243
+As shown in Table 2, the interquartile range for top 5 and top 6–
+20 graduates is
+now 80 percent and 90 percent, respectively. Phrased differently, among graduates
+from top PhD programs, academics in the 75th percentile earn almost twice
+what their classmates make at the 25th percentile.
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+Median other $99,170
+Median top 20 $138,800
+Median top 5 $189,000
+Median other $75,920
+Median top 20 $104,800
+Median top 5 $119,800
+Median other $157,000
+Median top 20 $198,700
+Median other $99,080
+Median top 20 $124,900
+Top 5 PhD
+program
+Top 20 PhD
+program
+Other PhD
+programs
+Top 5 PhD
+program
+Top 20 PhD
+program
+Other PhD
+programs
+Top 5 PhD
+program
+Top 20 PhD
+program
+Other PhD
+programs
+Panel A. Economist earnings in academia by
+program rank, one year after receiving PhD
+Panel B. Economist earnings in academia by
+program rank, ten years after receiving PhD
+Panel C. Economist earnings in industry
+by granting-program rank, one year after
+receiving PhD
+Panel D. Economist earnings in industry
+by granting-program rank, ten years after
+receiving PhD
+Median top 5 $135,600
+Median top 5 $208,500
+Top 5 PhD
+program
+Top 20 PhD
+program
+Other PhD
+programs
+Figure 3
+Economist Earnings in Academia and Industry by PhD Program Rank
+Source: Authors’ calculations from matched SED/LEHD microdata, 2001–2007 SED graduates only.
+Notes: Figure shows earnings distribution by program rank of PhD-granting institution for economists
+working in academia and industry at initial placement and ten years after PhD. Academia is defined as
+all economists working in NAICS 61, almost all of whom work in colleges and universities. Industry is
+defined as all economists who work outside of NAICS 61 or 92, who are concentrated in consulting and
+finance. As the y-axis in a kernel density plot represents an infinitesimal quantity of probability space, we
+removed the y-axis labels to improve legibility of the figure.
+244 Journal of Economic Perspectives
+Result 5: For PhD economists in industry, wage disparities by rank of
+PhD-
+granting institution are lower than in academia.
+Panel C of Figure 3 shows initial earnings distributions in industry by
+program rank. One year after receiving a PhD, economists in industry have
+median earnings of $135,600 if they graduated from a top 5 institution, $124,900
+if they graduated from a top 6-
+20 institution, and $99,080 if they graduated from
+a non-
+top-20 institution. Compared to academia, the initial earnings distributions
+for graduates of top 5 and top 20 programs overlap a great deal more in industry, a
+pattern that holds throughout the early career. Panel D shows the distributions for
+industry ten years after receiving PhD. Median earnings for an economist working
+in industry ten years after receiving their PhD is $208,500 if from a top 5 program,
+$198,700 if from a top 6–
+20 program, and $157,000 if from a non-
+top-20 program.
+For graduates of top programs, the earnings risk in academia is much greater
+than in industry (as can be seen by comparing panels B and D). In academia
+at year ten, the 75th percentile graduate from top 5 program makes 80 percent
+more than their classmate in the 25th percentile, but in industry the 75th percentile
+earns only 35 percent more than their classmate in the 25th percentile
+(Table 2).
+In academia, the earnings gap between top graduates and everyone else
+grows markedly in the first ten years of their careers. For economists in industry,
+earnings gaps at the median are smaller for initial placements and shrink slightly
+during the first ten years of their careers. While PhD program rank does matter
+for earnings in industry, wage disparities are smaller.
+In both academia and industry, PhD program rank impacts initial placement
+earnings, with top program graduates earning more. This is consistent with
+program rank providing a quality signal for initial placements that fades as true
+productivity is revealed. The fact that graduates of top programs develop professional
+networks in graduate school that are more advantageous for promotion
+and wage growth within academia than outside of it may explain why program
+rank matters for earnings growth in academia but matters considerably less for
+promotion outside of academia.
+These dynamics mean that earnings penalties for remaining in academia after
+the PhD are much larger for graduates of non-
+top PhD programs. Ten years after
+their PhD, earnings for the median academic are only 66 percent of those for the
+median industry economist. However, these overall profession medians disguise
+the large dispersion in earnings gaps by program rank. Due to the different
+growth dynamics described above, the median graduate from a top-
+5 program in
+academia earns 90 percent of what a graduate from a top-
+5 program in industry
+earns ten years after graduation, while a graduate from a top-
+20 program earns
+only 70 percent, and a graduate outside the top-
+20 earns only 63 percent of what
+they would earn in industry. This is because earnings gaps in industry are far less
+pronounced, especially between top 5 and top 6–
+20 graduates, and do not grow
+larger over the course of the early career of PhD economists.
+Lucia Foster, Erika McEntarfer, and Danielle H. Sandler 245
+Result 6: Initial earnings and earnings growth are both lower for
+women with an economics PhD.
+Women remain underrepresented in the economics profession, accounting for
+roughly one-
+third of PhDs granted each year between 2001 and 2017.13 Although
+the share of women in the field has risen slightly over time, from 28 percent in 2001
+to 34 percent in 2017, the share has essentially remained steady since 2008 (NCSES
+2020, Table 15; 2012 Table 17). In this journal, Lundberg and Stearns (2019) offer
+a comprehensive overview of the “stalled progress” for women in the profession and
+research into the root causes of the issue.
+According to the Survey of Earned Doctorates for academic year 2017, greater
+shares of women say they plan to work in academia relative to men (55.4 percent
+compared to 51.9 percent) and smaller shares plan to work in government
+(9.2 percent versus 14.8 percent) (NCSES 2018, Table 63). Despite this, when we
+look at placement outcomes, we find that gender diversity is slightly better in government,
+with 38 percent of economists being women, and in industry, with 36 percent
+being women, than in academia where only 33 percent of economists are women.
+This difference may be driven by gender differences in flows between the sectors
+as well as US jobs versus jobs in other countries.14 An interesting question concerns
+whether there are differences in labor force participation of PhD economists by
+gender. Unfortunately, we cannot provide an answer to labor force status, because
+we are only able to see the outcomes for those who work in the United States and
+whose employment is captured by the Longitudinal Employer-
+Household Dynamics
+(LEHD) data. An individual who does not appear to be employed in our data could
+be in the United States and not employed, but could also be employed elsewhere.
+13 Underrepresentation by race and ethnicity in economics is also an issue, but we are unable to examine
+these dimensions for our exercises due to small sample sizes. See Foster, McEntarfer, and Sandler (2023)
+for related exercises by gender, race, and ethnicity of economists. Numerous organizations aim to
+improve diversity in the profession, and many of them monitor the placements and earnings of economists
+by demographic characteristics including gender, race, and ethnicity (for example, Hoover and
+Washington 2021).
+14 Our results are broadly similar to the survey conducted by the American Economic Association’s
+Committee on the Status of Women in Economics Profession (CSWEP), which is distributed to over 100
+doctoral and over 100 nondoctoral programs each year. The CSWEP annual report shows the job placements
+of new PhDs from the top 10 and top 20 economics departments. In 2017, 31.2 percent of women
+from top 10 departments were placed in academia in doctoral departments, 46.2 percent were placed in
+the public sector, and 25.0 percent were placed in the private sector. For women from top-20 departments
+the corresponding percentages were 26.4 percent in academia in doctoral departments, 31.8 percent
+in public sector, and 29.5 percent in private sector (CSWEP 2018, Table 3). Thus, women economists
+from top 10 departments are more likely to be in academia and the government and less likely to be in
+industry than women from top 20 departments. However, the same report shows that 28.8 percent of
+assistant professors, 26.1 percent of untenured associate professors, 23.0 percent of tenured associate
+professors, and 13.9 percent of full professors in economics at doctoral-granting institutions were women
+(CSWEP 2018, Table 1). Our finding that 33 percent of our sample of 2001–2017 PhD recipients working
+in academia are women indicates both that the more recent sample of recipients have more female
+representation and that there is higher female representation at the lower-ranked schools not included
+in the report’s placement tables.
+246 Journal of Economic Perspectives
+We also do not find that women are disproportionately employed in particular
+sectors when examining a single-
+year snapshot of the employment of all economists
+in our sample: there is a roughly one-
+third share in academia, government, and in
+industry jobs (Foster, McEntarfer, and Sandler 2023).
+Even at initial placement, the earnings for women economists are lower than
+that of men economists. The Survey of Earned Doctorates provides median expected
+annual salary for doctorate recipients with definite post-
+graduation plans. In 2017,
+these medians for new PhD economists were $109,000 for men and $100,000 for
+women (NCSES 2018, Table 48). These gaps differ by sector, with the largest gender
+earnings gaps for economists entering academia from top-
+20 PhD programs and
+lower gaps for those from lower-
+ranked programs and those entering government.
+To understand the career progression for economists by gender both within
+and outside of academia, we present descriptive evidence on mid-
+career earnings,
+ten years after PhD receipt, by sector. Figure 4 displays the earning distributions
+for men and women in government (panel A), industry (panel B), academia for
+graduates from non-
+top-20 programs (panel C), and academia for graduates from
+top-
+20 programs (panel D). We also provide the median and 75th percentile earnings
+for men and women in each panel. We split the academic earnings distribution
+by program rank.
+Starting with government, the level of median earnings for mid-
+career women
+economists is $117,900 while for men it is $126,400—that is, median earnings for
+women is 7 percent less than median earnings for men. The gender gap in median
+earnings in government is relatively small, but it grows larger at the upper tail. At
+the 75th percentile, women economists earn $152,700 and men economists earn
+$173,800, a 14 percent gap. In industry, the earnings distributions are left-
+skewed,
+which means that the gender gap narrows at higher points in the distribution and
+the gender gap manifests as a fatter left tail instead of a thinner right tail. The
+median earnings are $156,000 for women and $182,300 for men, a 17 percent gap.
+At the 75th percentile, women economists earn $205,100 while men economists earn
+$216,500, so women earn 6 percent of the earnings for men at the 75th percentile.
+In industry, mid-
+career men and women have very different earnings distributions,
+but gaps narrow as one moves further up the distribution. Although consulting,
+tech, and finance are not sectors known for being particularly friendly to women,
+we find gender earnings gaps are more pronounced in academia, both in initial
+placement earnings and earnings growth over time.
+Given that most of the dispersion in earnings in academia is among graduates
+from top programs, it is not surprising that this is where we find the largest gaps
+between men and women. For academics from programs outside the top 20, median
+earnings for mid-
+career women is $93,350 while for men it is $101,400, or median
+earnings for women is 9 percent less than median earnings for men. For graduates
+from programs in the top 20, the median earnings for women is $132,200 and median
+earnings for men is $166,600, or median earnings for women is 26 percent less than
+median earnings for men. The general takeaway from Figure 4 is that earnings gaps
+are largest for women in academia, especially among graduates of top programs.
+Early Career Paths of Economists Inside and Outside of Academia 247
+Result 7: The gender gap in growth rates of early career earnings for
+women PhDs stems from a combination of initial earnings gaps and
+lower earnings growth.
+The gaps in earnings growth by gender could either come from smaller and
+less frequent promotions, changes in earnings within an employer, or differences in
+Figure 4
+Economist Earnings by Sex, Ten Years after Receiving PhD
+Source: Authors’ calculations from matched SED/LEHD microdata, 2001–2007 SED graduates only.
+Notes: Figure shows earnings distribution by gender across sector for mid-career economists (ten years
+after PhD). Academic sector is defined as all economists working in NAICS 61 (almost all of whom work
+in colleges and universities), government is those employed in NAICS 92 (which includes the Federal
+Reserve Board and other federal agencies), and industry is all other sectors. As the y-axis in a kernel
+density plot represents an infinitesimal quantity of probability space, we removed the y-axis labels to
+improve legibility of the figure.
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+$0 $100,000 $200,000 $300,000 $400,000
+Real annual earnings (2015 dollars)
+Median female $156,000
+Median male $182,300
+P75 female $205,100
+P75 male $216,500
+Median female $132,200
+Median male $166,600
+P75 female $186,900
+P75 male $218,500 Male
+Female
+Male
+Female
+Male
+Female
+Male
+Female
+Median male $101,400
+P75 female $113,600
+P75 male $129,200
+Median female $117,900
+Median male $126,400
+P75 female $152,700
+P75 male $173,800
+Panel A. Government: Tenth year after PhD Panel B. Academia: Tenth year after PhD
+Non-top-20 programs graduates
+Panel C. Industry: Tenth year after PhD Panel D. Academia: Tenth year after PhD
+Top 20 economics programs graduates
+Median female $93,350
+248 Journal of Economic Perspectives
+movement between employers. Bedard, Lee, and Royer (2021) conducted a study of
+1,356 academic economists at the top 50 institutions as ranked by US News & World
+Report. They find that gender gaps in salary are very small at the start of careers, but
+become visible within ten years of PhD attainment. Using panel data, they delve
+deeper into this pattern and find that women’s promotions occur more slowly than
+men’s. This timing difference could also explain the gaps we see. Over a ten-
+year
+period, if men are promoted in year seven and women are promoted in year nine,
+women have not been in their tenured position as long, so have not accumulated
+the same earnings growth as men.
+We use our data on newly minted US-
+based PhD economists to look at these
+patterns by gender for the sectors where we see the biggest differences in earnings
+gaps and largest employment shares: academia and industry. Looking at career
+ladder earnings does not provide a clear story on why the gender gap grows so much
+in academia relative to industry. Women are more likely to stay with their initial
+employer, which is associated with lower earnings, and they receive even lower earnings
+than men when they stay with their initial employer, but these differences are
+not large. For example, the annualized earnings change in the first ten years of
+a woman economist’s career when staying with the initial academic employer is
+4 percent, while men’s is 5 percent.
+Both men and women economists benefit from moving from their initial
+employer, both within academia and to other sectors, but men benefit slightly more
+for every type of move. For example, men who move out of academia earn 10 percent
+more per year than their initial earnings, whereas women only earn 6 percent more.
+As a result, women moving from academia to industry have earnings at year ten that
+are only 75 percent of the earnings level of similar men ($146,000 versus $195,800).
+Moreover, women who move back into academia from industry experience less
+wage growth than men who make that transition. Male economists who move from
+industry have earnings growth of around 3 percent based on their previous earnings
+in industry, whereas women only experience 1 percent earnings growth over
+ten years if they move from industry to academia.
+Ginther and Kahn (2021) use data from the research firm Academic Analytics
+and also find the gender promotion gap is small in research-
+intensive universities, but
+larger in less research-
+intensive universities. However, they note that their measure
+of promotion includes promotions that occur when switching academic institutions,
+so this unusual finding might reflect that fact. In our data, when we disaggregate
+between movements between academic departments, focusing on top-
+70 ranked
+departments, we find small gender gaps in earnings for both those who remain in
+their initial placement employer and those that change employers. The exception
+is for women who move to higher-
+ranked departments, where women earn a small
+premium of 7 percent annualized growth versus men’s 5 percent.
+Overall, the gender gap in women’s earnings in academic economics seems
+to come from a combination of initial earnings gaps and lower earnings growth.
+Although the earnings growth differences between men and women are not large,
+they persist across paths. Women who stay with their initial employer, move to a
+Lucia Foster, Erika McEntarfer, and Danielle H. Sandler 249
+similarly ranked employer, or move to a lower ranked employer all have lower
+earnings growth than men following similar paths. Only women who move to a
+higher-
+ranked employer have higher earnings growth than men, and movements
+up academic rankings are relatively rare.
+■ Any opinions and conclusions expressed herein are those of the authors and do not represent
+the views of the US Census Bureau or the White House Council of Economic Advisors. The
+Census Bureau has reviewed this data product for unauthorized disclosure of confidential
+information and has approved the disclosure avoidance practices applied to this release
+(DRB Clearance Numbers: CBDRB-
+FY23-CES004-
+014, CBDRB-
+FY2022-CES005-
+001
+and CBRDB-
+FY2022-CES-
+005-004). The National Center for Science and Engineering at
+the National Science Foundation (NSF) has reviewed this data product for unauthorized
+disclosure and has approved its release. The use of NSF data does not imply NSF endorsement
+of the research, research methods, or conclusions contained in this paper. This paper is a further
+development of one part of our working paper “Diversity and Labor Market Outcomes in the
+Economics Profession.” We thank participants in the Census Brown Bag Series; Southern
+Economics Association Conference; Conference on Diversity and Inclusion in Economics,
+Finance, and Central Banking; John Abowd; John Finamore, Kristin McCue; Martha
+Stinson; and Sonya R. Porter for their helpful comments on the earlier draft. We thank John
+Eltinge, John Finamore, and Martha Stinson for their comments on the penultimate draft.
+Finally, we thank the editors of the Journal of Economic Perspectives for their helpful comments
+on the final draft of this paper.
+References
+Athey, Susan, and Michael Luca. 2019. “Economists (and Economics) in Tech Companies.” Journal of
+Economic Perspectives 33 (1): 209–30.
+Bedard, Kelly, Maxine Lee, and Heather Royer. 2021. “Using Longitudinal Data to Explore the Gender
+Gap for Academic Economists.” AEA Papers and Proceedings 111: 69–73.
+Committee on the Status of Women in the Economics Profession (CSWEP). 2018. “2017 CSWEP Annual
+Report.” CSWEP Reports 1: 1–16.
+Del Rossi, Alison F., and Joni Hersch. 2020. “Gender and the Consulting Academic Economist.” Economic
+Inquiry 58 (3): 1200–1216.
+Foster, Lucia, Erika McEntarfer, and Danielle H. Sandler. 2023. “Diversity and Equity in Labor Market
+Outcomes for Economists.” Journal of Economics, Race, and Policy https://doi.org/10.1007/s41996-
+023-00117-z.
+Foster, Lucia, Erika McEntarfer, and Danielle H. Sandler. 2023. “Replication data for: Early Career Paths
+of Economists Inside and Outside of Academia.” American Economic Association [publisher],
+Inter-university Consortium for Political and Social Research [distributor]. https://doi.
+org/10.3886/E193216V1.
+250 Journal of Economic Perspectives
+Fourcade, Marion, Etienne Ollion, and Yann Algan. 2015. “The Superiority of Economists.” Journal of
+Economic Perspectives 29 (1): 89–114.
+Freeman, Richard B. 1999. “It’s Better Being an Economist (But Don’t Tell Anyone).” Journal of Economic
+Perspectives 13 (3): 139–45.
+Ginther, Donna K., and Shulamit Kahn. 2004. “Women in Economics: Moving Up or Falling Off the
+Academic Career Ladder?” Journal of Economic Perspectives 18 (3): 193–214.
+Ginther, Donna K., and Shulamit Kahn. 2021. “Women in Academic Economics: Have We Made Progress?”
+AEA Papers and Proceedings 111: 138–42.
+Hoover, Gary A., and Ebonya Washington. 2021. “Report: Committee on the Status of Minority Groups
+in the Economics Profession (CSMGEP).” AEA Papers and Proceedings 111: 764–79.
+Internal Revenue Service (IRS). 2021. “W2 record data.” https://www.irs.gov/forms-pubs/about-formw-
+2.
+Jones, Todd, and Arielle Sloan. 2021. “The Academic Origins of Economics Faculty.” IZA Discussion
+Paper 14965.
+Kleemans, Marieke, and Rebecca L. Thornton. 2021. “Who Belongs? The Determinants of Selective
+Membership into the National Bureau of Economic Research.” American Economic Association
+Papers and Proceedings 111: 117–22.
+Lundberg, Shelly, and Jenna Stearns. 2019. “Women in Economics: Stalled Progress.” Journal of Economic
+Perspectives 33 (1): 3–22.
+National Center for Science and Engineering Statistics (NCSES). 2017. “Survey of Earned Doctorates—
+microdata.” https://www.nsf.gov/statistics/srvydoctorates/.
+National Center for Science and Engineering Statistics (NCSES). 2020, 2018, 2012, 2010, 2008. “Survey
+of Earned Doctorates.” https://www.nsf.gov/statistics/srvydoctorates/ (accessed on December 1,
+2020; December 4, 2018; April 15, 2013; November 29, 2010; and November 18, 2009).
+Research Papers in Economics (RePEc). “Top US Economics Departments.” https://ideas.repec.org/
+top/top.usecondept.html (accessed on September 15, 2021).
+Scott, Charles E., and John J. Siegfried. 2008. “American Economic Association Universal Academic
+Questionnaire Summary Statistics.” American Economic Review 98 (2): 630–33.
+Scott, Charles E., and John J. Siegfried. 2018. “American Economic Association Universal Academic
+Questionnaire Summary Statistics.” AEA Papers and Proceedings 108: 616–18.
+Siegfried, John J. 2002. “Report of the Director: Job Openings for Economists.” American Economic Review
+92 (2): 511–13.
+Siegfried, John J. 2016. “Report of the Director: Job Openings for Economists.” American Economic Review
+106 (5): 740–42.
+Siegfried, John J. 2018. “Report: Job Openings for Economists.” AEA Papers and Proceedings 108: 694–96.
+Siegfried, John J. 2022. “Report: Job Openings for Economists.” AEA Papers and Proceedings 112: 737–39.
+Stock, Wendy A., and Richard M. Alston. 2000. “Effect of Graduate-Program Rank on Success in the Job
+Market.” Journal of Economic Education 31 (4): 389–401.
+US Census Bureau. 2021. “Longitudinal-Employer Household Dynamics (LEHD) microdata.” https://
+lehd.ces.census.gov/data/lehd-snapshot-doc/latest/.
+Weyl, E. Glen. 2017. “Finance and the Common Good.” In After the Flood: How the Great Recession Changed
+Economic Thought, edited by Edward L. Glaeser, Tano Santos, and E. Glen Weyl, 277–301. Chicago:
+University of Chicago Press.
+This article has been cited by:
+1. Ariel J. Binder, Amanda Eng, Kendall Houghton, Andrew Foote. 202⒋ Is the Gender Pay Gap Largest
+at the Top?. AEA Papers and Proceedings 114, 248-25⒊ [Abstract] [View PDF article] [PDF with links]
