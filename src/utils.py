@@ -43,7 +43,7 @@ def parse_first_name(name: str) -> str:
         if len(thirdname) > 1:
             return thirdname
 
-    return firstname
+    return firstname.title()
 
 
 def parse_first_name_natural(name: str) -> str:
@@ -59,8 +59,8 @@ def parse_first_name_natural(name: str) -> str:
         return ""
     first = tokens[0].rstrip(".")
     if len(first) <= 1 and len(tokens) > 1:
-        return tokens[1].rstrip(".")
-    return first
+        return tokens[1].rstrip(".").title()
+    return first.title()
 
 
 def clean_numeric(val) -> float | None:
