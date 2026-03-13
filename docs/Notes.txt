@@ -1,0 +1,4 @@
+Dani (7/19/18)
+I decided to try to get full pay histories for the economists in the public data. I started by just going alphabetically (that's in FederalPay.xlsx)
+But I decided that task took too much time relative to it's value. Instead, I decided to target Census, BLS, and BEA economists that have researcher profiles
+on their respective websites. Then I could also get Ph.D. dates for them.
