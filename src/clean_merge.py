@@ -109,7 +109,7 @@ def merge_all_years(start: int = 2015, end: int = 2024) -> pd.DataFrame:
     panel_path = PROCESSED_DIR / "economists_panel.csv"
     panel.to_csv(panel_path, index=False)
     print(f"\nPanel saved: {len(panel)} records across {panel['fiscal_year'].nunique()} years "
-          f"→ {panel_path.name}")
+          f"to {panel_path.name}")
     return panel
 
 
