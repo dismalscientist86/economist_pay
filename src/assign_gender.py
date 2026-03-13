@@ -92,7 +92,7 @@ def build_gender_cache(overwrite: bool = False) -> pd.DataFrame:
 
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     gender_df.to_csv(GENDER_CACHE, index=False)
-    print(f"  Cache saved → {GENDER_CACHE.name}")
+    print(f"  Cache saved to {GENDER_CACHE.name}")
     return gender_df
 
 
