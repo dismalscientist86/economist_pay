@@ -1,0 +1,452 @@
+American Economic Association
+Employment and Earnings for Federal Government Economists
+Author(s): Lucia Foster, Julia Manzella, Erika McEntarfer and Danielle H. Sandler
+Source: AEA Papers and Proceedings, MAY 2020, Vol. 110, PAPERS AND PROCEEDINGS OF THE One Hundred Thirty-Second Annual Meeting OF THE AMERICAN ECONOMIC ASSOCIATION (MAY 2020), pp. 210-214
+Published by: American Economic Association
+Stable URL: https://www.jstor.org/stable/10.2307/27042550
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org. Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at https://about.jstor.org/terms
+American Economic Association is collaborating with JSTOR to digitize, preserve and extend access
+to AEA Papers and Proceedings
+This content downloaded from
+108.192.168.13 on Fri, 13 Mar 2026 21:05:44 UTC
+All use subject to https://about.jstor.org/terms
+210
+AEA Papers and Proceedings 2020, 110: 210–214
+https://doi.org/10.1257/pandp.20201122
+* Foster: US Census Bureau (email: lucia.s.foster@
+census.gov); Manzella: US Census Bureau (email:
+Julia.a.manzella@census.gov); McEntarfer: US Census
+Bureau (email: Erika.mcentarfer@census.gov); Sandler:
+US Census Bureau (email: danielle.h.sandler@census.gov).
+Any opinions and conclusions expressed herein are those
+of the authors and not the US Census Bureau. All results
+have been reviewed to ensure that no confidential information
+is disclosed. Results of this paper were approved with
+Delegated Authority under CBDRB-FY2020-CES005-007.
+We thank Kristin McCue, John Eltinge, Bhash Mazumder,
+and participants at the ASSA Gender and the Economics
+Profession Session and the Center for Economic Studies
+Brown Bag Seminar for useful comments.
+† Go to https://doi.org/10.1257/pandp.20201122 to visit
+the article page for additional materials and author disclosure
+statement(s).
+Employment and Earnings for Federal Government Economists: Empirical Evidence by Gender and Race†
+By Lucia Foster, Julia Manzella, Erika McEntarfer, and Danielle H. Sandler*
+We contribute to the literature on diversity
+in the economics profession, which has mostly
+focused on academia, by providing a first look
+at the employment and earnings of federal
+government economists by gender and race.
+Combining micro-
+level data on federal workers
+with information on their earnings in federal and private sector jobs, we examine the share of federal
+government economists by race and gender,
+earnings differences by race and gender, and
+whether earning gaps differ during their federal
+government tenures.
+I. Diversity of the Economics Profession
+A large literature has shown that economics
+has a pervasive diversity problem; women and
+minorities are underrepresented throughout
+the economics profession.1 Bayer and Rouse
+(2016) elucidates the importance of diversity
+for the economics profession, noting that it
+“ensure[s] the profession produces robust and
+relevant knowledge” (p. 232). Whereas much of
+1 Recent examples: Lundberg and Stearns (2019),
+Stevenson and Zlotnik (2018), and Bayer and Rouse (2016).
+There are also concerns that economics lacks diversity over
+other characteristics.
+the existing literature on diversity of economists
+focuses on the academic market, we focus on the
+federal government, which employs a significant
+number of PhD economists. Our data allows us
+to follow federal economists when they leave
+government employment to see if earnings gaps
+increase for women and minorities when they
+work in other sectors.
+While in the past the majority of doctoral
+recipients in economics worked in academia
+after graduation, this may no longer be true.
+Over the period 2012 to 2017, the share of
+new doctoral recipients in economics with
+postgraduation
+commitments in the United
+States who are going into academia fell from
+49 percent to 42 percent; at the same time, the
+share going into industry rose from 18 percent to
+24 percent (NCSES 1957–2018, 2013 and 2018
+statistical tables).2 Others move out of academia
+and into these other sectors later in their careers.
+The current focus on academic economists in
+the literature thus misses a large and growing
+share of the economics profession.
+This paper provides a more formal accounting
+of economists in the federal government, their
+gender and racial distribution, and their pay. We
+start with some basic statistics on the diversity
+of PhD economists in the federal government
+and other labor markets. We then explore some
+of the career dynamics of those economists,
+including employment flows into and out of the
+federal government.
+We show that the diversity of US government
+economists has grown over time but still remains
+low relative to other disciplines and is broadly
+comparable to the profession at large, with
+32 percent female and only 7.3 percent from
+underrepresented
+minorities (URM), which
+2 It is not possible to provide information on the government
+sector, but the combined sector of “other,” which also
+includes nonprofits,
+has fallen from 21 percent to 16 percent
+over this time.
+This content downloaded from
+108.192.168.13 on Fri, 13 Mar 2026 21:05:44 UTC
+All use subject to https://about.jstor.org/terms
+VOL. 110 EMPLO 211 YMENT AND EARNINGS FOR FEDERAL GOVERNMENT ECONOMISTS
+includes black, Hispanic, Native American.
+There are small but statistically significant differences
+in earnings between white male government
+economists and other race and gender
+subgroups, especially URM
+men. Earnings gaps
+for government economists pre- and post-
+federal
+employment are far larger. While the results for nonwhite
+economists who leave the federal government
+are fairly noisy due to small samples,
+white female economists (a larger group) go
+from having no earnings gap relative to white
+men in the federal government (controlling for
+experience) to a 36 percent earnings gap in their
+future employment. We also observe a large
+earnings gap in pre-
+federal employment for
+URM men and women that is greatly reduced
+when they enter the federal government.
+Comparing Academia and Federal Govern-
+ment Economists.—
+Women and minorities are
+underrepresented within academic economics
+departments, especially full-
+time tenured faculty
+at research institutions. In 2017, women
+made up only 14 percent of full professors at
+economics departments granting doctorates.
+The female shares are higher at lower levels
+(assistant professor: 29 percent; associate professor:
+23 percent) and nondoctoral programs
+(assistant professor: 43 percent; associate professor:
+40 percent; full professor: 24 percent)
+(Lundberg 2018).
+In 2017, minority representation for full professors
+at economics departments granting doctorates
+was 6.5 percent. The minority shares are
+also higher at lower levels: assistant professor at
+10 percent and associate professor at 9 percent
+(CSMGEP 2018).
+There have been many papers examining the causes of these disparities by gender and/or
+race in academia (for example, see Lundberg and Stearns 2019 and Bayer and Rouse 2016).
+We do not address the causes for these differences
+in this descriptive paper but only note that differences in the labor markets by sector
+may lead us to expect some differences in demographics over the sectors. For example, the importance of publications in academia
+relative to the federal government could lead to differences in hiring and promotion by gender given differences in publication rates (see Hengel 2017). In terms of workplace culture, results from the recent American Economic Association climate survey suggest that academia
+is less welcoming of women and
+minorities (Allgood et al. 2019).
+Among economists in the federal government,
+the female and minority shares are higher
+but still low relative to the general population.
+Wessel, Sheiner, and Ng (2019) finds that in its
+collection of publicly available data on US government
+economists, 30 percent are female and
+24 percent are minority (black, Hispanic, Asian,
+and other minorities).
+II. Data
+Our empirical exercises use data from the
+Office of Personnel Management (OPM)
+matched to the Longitudinal Employer-
+Household Dynamics (LEHD) administrative
+earnings data.
+The OPM data cover years from 2000–
+2015
+and provide information on gender, age, race,
+educational level, field of degree, year of degree
+receipt, earnings, and agency identifiers. We
+identify economists in two ways: one by using
+the people working in the occupation series
+“economist” (0110) and the other by identifying
+anyone with “economics” listed as their field of
+degree. We restrict the sample to those with a
+PhD in either case. This data does not include
+US government economists not in OPM; notable
+exclusions are the White House, the Federal
+Reserve Board, and legislative branch agencies
+such as the Congressional Budget Office. 3
+We link this data to the LEHD administrative
+earnings data by Protected Identification
+Key (PIK), a Census-
+specific person identifier,
+to capture pre- and post-
+OPM employment.
+The LEHD data is an administrative dataset
+on employment and earnings that comes from
+state unemployment insurance (UI) records and
+other administrative data sources. LEHD data
+cover 96 percent of employment in the United
+States, including the federal workforce. From
+the LEHD data, we use information on average
+annual earnings and the industry (six-
+digit
+North American Industry Classification System
+3 In the OPM data, economists are concentrated in
+Treasury, Agriculture, Commerce, Health and Human
+Services, and the independent agencies. A list of excluded
+agencies in OPM can be found in table 6.7 of the LEHD
+Infrastructure S2014 documentation (Vilhuber 2018).
+Federal Reserve Banks are covered by UI and are in the
+LEHD data; we treat them as nongovernment employment.
+This content downloaded from
+108.192.168.13 on Fri, 13 Mar 2026 21:05:44 UTC
+All use subject to https://about.jstor.org/terms
+MAY 2020 212 AEA PAPERS AND PROCEEDINGS
+code) of the primary (highest-paying) employer
+for each calendar year.
+III. Results
+As in the overall profession, the diversity of
+OPM economists is growing but growing slowly.
+In 1998, 19 percent of OPM economists were
+women; that number has risen to 32 percent as
+of 2018. The racial distribution was 85 percent
+white, 10 percent Asian, and 4 percent URM in
+2006. In 2018, 75 percent of OPM economists
+were white, 16 percent Asian, and 7 percent
+URM. Relative to the economics profession as
+a whole, federal economists are slightly more
+diverse and about on par with the diversity of
+new-PhD economists.4
+A. Earnings Differences
+Table 1 shows the log real (in 2015 dollars,
+CPI adjusted) earnings differences of OPM
+economists by race and gender subcategories,
+with white male economists as the excluded
+category. With no controls in the first column,
+only the earnings of URM males are statistically
+and economically different from those of white
+males. Race and gender categories explain a
+very small amount of the variation in earnings,
+with an R2 of 0.005. Column 2 adds year fixed
+effects, which does not change the URM male
+coefficient but increases the magnitudes of the
+other coefficients. Since diversity is higher
+in more recent years and economist pay has
+increased over time, even in inflation-adjusted
+terms, the timing of employment of minority
+and nonminority
+women economists masks
+some of the pay inequality between the groups.
+Some of the earnings inequality is explained by
+sorting into different agencies, as can be seen in
+column 3. Column 4 includes a polynomial of
+experience, measured in years since PhD receipt,
+in addition to year fixed effects. Controlling for
+experience reduces the estimated differences in
+earnings between white men and some of the
+race-by-gender subgroups, but the gap in URM
+male earnings remains at around 10 percent.
+4 In 2017, 7.3 percent of new-PhD economists were
+underrepresented minorities (CSMGEP 2018) and 34.2 percent
+were female (NCSES 1957–2018, 2018 statistical
+tables).
+B. Job-
+to-Job Flows into and out of OPM
+Using the LEHD database, we can match
+economists in OPM to their employment and
+earnings pre- and post-OPM. This analysis
+sheds some light on whether pay norms in the
+federal government result in smaller earnings
+gaps for federal economists. Our pre-
+OPM
+sample includes economists who have LEHD
+earnings after PhD receipt and before starting
+in OPM. Approximately one-
+third of our OPM
+economists have some post-
+PhD employment
+before joining the federal government.
+Our post-
+OPM sample includes all economists
+who we observe with UI earnings after
+leaving OPM employment. Despite the federal
+government’s reputation for low turnover, about one-
+fourth of our OPM economists leave the
+Table 1— log Earnings of Federal Government PhD Economists
+Base
+Year
+FE
+Agency
+FE
+Experience
+control
+Asian male −0.0405 −0.132 −0.100−0.0648
+(0.0251) (0.0222) (0.0160) (0.0223)
+URM male −0.105−0.104−0.0863−0.0983
+(0.0192) (0.0181) (0.0155) (0.0158)
+White female −0.0141−0.0493−0.0386−0.00534
+(0.0116) (0.0113) (0.0098) (0.0098)
+Asian female −0.00846−0.139−0.151−0.0159
+(0.0259) (0.0234) (0.0165) (0.0227)
+URM female −0.0579−0.138−0.104−0.0659
+(0.0296) (0.0303) (0.0235) (0.0261)
+Experience 0.0399
+(0.0024)
+Experience2 −0.00110
+(0.0001)
+Experience3 0.0000103
+(0.0000)
+Constant 11.5011.010.8410.63
+(0.0057) (0.0076) (0.0391) (0.0106)
+Year FENo YesYesYes
+Agency FENoNo Yes No
+R2
+0.005 0.5490.6990.685
+Observations3,3003,3003,3003,300
+Notes: Coefficient of OLS estimates of log earnings on indicators
+for gender and race for PhD economists, with white
+male economists as excluded category. The first column is
+the baseline estimate with no controls, the second controls
+for year fixed effects, the third controls for year and agency
+fixed effects, and the fourth controls for year fixed effects
+and a polynomial of experience, measured by years since
+PhD.
+Source: Author calculations; OPM administrative data, 2000–
+2015
+This content downloaded from
+108.192.168.13 on Fri, 13 Mar 2026 21:05:44 UTC
+All use subject to https://about.jstor.org/terms
+VOL. 110 EMPLO 213 YMENT AND EARNINGS FOR FEDERAL GOVERNMENT ECONOMISTS
+federal government for outside opportunities.
+Of those who moved to a new employer within a
+year of leaving the federal government, 35 percent
+moved to academia, and the other 65 percent
+moved to the private sector or other public
+sector employment. A slightly higher percentage
+of white men moved from OPM into academia
+(37 percent) relative to other groups.
+Figure 1 shows three specifications for each
+of the pre-
+OPM, OPM, and post-
+OPM sample
+periods. The first shows the baseline differences
+in log real earnings between subgroups with no
+other controls. The second includes controls for year and agency/industry fixed effects (column
+3 of Table 1). The third includes year fixed
+effects and controls for a polynomial of experience,
+measured in years since PhD receipt. We
+see that the baseline differences between race-
+by-gender subgroups are much larger outside of
+OPM than within OPM.
+Pre-
+OPM earnings differences for URM
+men remain consistently large and precise at
+−40 percent across specifications. Estimates for
+URM women are similar but less precise and fall
+more with controls for experience.Post-
+OPM URM males once again appear
+to be disadvantaged relative to white men in most specifications, although within industry
+the earnings differences are lower. White women also appear to be disadvantaged relative to white men in the post-
+OPM period, and that
+effect persists even with industry and experience
+controls.
+IV. Conclusions and Future Work
+Combining micro-
+level personnel data from
+OPM with work history data from LEHD, we
+are able to provide a first look at the employment
+dynamics of federal government economists by
+gender and race. We find that the diversity of
+government economists is growing over time
+in terms of both gender and race. There are
+differences in earnings between white male
+economists and other race-by-gender groups,
+particularly for URM men. Finally, we find that
+the differences in earnings between race-by-
+gender groups appear to be larger for non-
+OPM
+employment.
+In future work using this data, we plan to
+further examine differences in degree of managerial
+duties and across agencies (e.g., whether
+they are more research or regulatory focused).
+We have seen that industry is becoming an
+increasingly important sector for economists.
+In future work, we hope to expand our analysis
+to all sectors of the economy using micro-
+level
+data in the Survey of Earned Doctorates. By
+linking the the Survey of Earned Doctorates to
+LEHD (again, through PIKs), we will be able
+to conduct empirical exercises following the
+employment trajectory for all PhD economists
+who earned degrees in the United States and
+work in jobs covered by LEHD.
+It is our hope that this descriptive work and
+the underlying databases can be used to better
+understand the complete picture of the state of
+diversity in the economics profession.
+REFERENCES
+Allgood, Sam, Lee Badgett, Amanda Bayer, Marianne
+Bertrand, Sandra E. Black, Nick Bloom,
+and Lisa D. Cook. 2019. AEA Professional Climate
+Survey: Final Report. Nashville: American
+Economic Association Committee on Equity, Diversity and Professional Conduct. Bayer, Amanda, and Cecilia Elena Rouse. 2016.
+“Diversity in the Economics Profession: A New Attack on an Old Problem.” Journal of Economic Perspectives 30 (4): 221–42.
+Figure 1. log Earnings of PhD Economists
+Notes: Coefficient of OLS estimates of log earnings on indicators
+for gender and race for PhD economists, with white
+male economists as excluded category. First estimate in each
+group is the baseline estimate with no controls, the second
+controls for year and agency/industry fixed effects, and the
+third controls for year fixed effects and a polynomial of
+experience, measured by years since PhD. Bars represent
+95 percent confidence bounds.
+−1
+−0.5
+0
+0.5
+1
+White female
+URM female
+Asian female
+URM male
+Asian male
+Pre-OPM OPMPost-OPM
+Differences by race and gender
+This content downloaded from
+108.192.168.13 on Fri, 13 Mar 2026 21:05:44 UTC
+All use subject to https://about.jstor.org/terms
+MAY 2020 214 AEA PAPERS AND PROCEEDINGS
+CSMGEP. 2018. Report of the Committee on the
+Status of Minority Groups in the Economics Profession (CSMGEP). Nashville: CSMGEP.
+Hengel, Erin. 2020. “Publishing While Female: Are Women Held to Higher Standards? Evidence
+from Peer Review.” http://www.erinhengel.
+com/research/publishing_female.pdf.
+Lundberg, Shelly. 2018. The 2018 Report of the
+Committee on the Status of Women in the Economics
+Profession. Nashville: CSWEP. Lundberg, Shelly, and Jenna Stearns. 2019.
+“Women in Economics: Stalled Progress.” Journal of Economic Perspectives 33 (1):
+3–22.
+National Center for Science and Engineering
+Statistics. 1957–2018. “Survey of Earned Doctorates.” National Science Foundation. https://www.nsf.gov/statistics/srvydoctorates/
+(accessed November 18, 2019).
+Stevenson, Betsey, and Hanna Zlotnik. 2018.
+“Representations of Men and Women in Introductory
+Economics Textbooks.” AEA Papers and Proceedings 108: 180–85.
+Vilhuber, Lars. 2018. “LEHD Infrastructure
+S2014 files in the FSRDC.” Center for Economic
+Studies Working Paper 18-27. Wessel, David, Louise Sheiner, and Michael Ng.
+2019. Gender and Racial Diversity of Federal Government Economists. Washington, DC: Brookings Institution.
+This content downloaded from
+108.192.168.13 on Fri, 13 Mar 2026 21:05:44 UTC
+All use subject to https://about.jstor.org/terms
