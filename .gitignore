@@ -1,0 +1,7 @@
+# FedScope raw download cache — large (~1 GB unzipped). Re-create with
+# `python src/fetch_fedscope.py`. The extracted economist CSVs are committed.
+data/raw/fedscope/_downloads/
+
+# Python
+__pycache__/
+*.pyc

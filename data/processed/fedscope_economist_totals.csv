@@ -1,0 +1,5 @@
+snapshot,series,series_label,occupation,headcount,mean_salary,mean_los
+202409,0110,economist,ECONOMIST,4998,146952,12.4
+202503,0110,economist,ECONOMIST,4888,151094,12.6
+202409,0119,economics_assistant,ECONOMICS ASSISTANT,335,55149,8.9
+202503,0119,economics_assistant,ECONOMICS ASSISTANT,331,56502,8.8
