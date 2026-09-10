@@ -507,6 +507,46 @@ def fig_econ_flows_2025():
     save("econ_flows_2025")
 
 
+# ── 14. Separations by reason, by quarter ─────────────────────────────────
+def fig_econ_separation_reasons_2025():
+    df = pd.read_csv(TABLES / "fedscope_flows_by_reason_2025.csv")
+    sep = df[df["direction"] == "separation"].copy()
+    quarters = ["2024Q2", "2024Q3", "2024Q4", "2025Q1"]
+
+    # Group the seven reason codes into five readable buckets
+    bucket = {
+        "Quit": "Quit",
+        "Retirement - Voluntary": "Retirement",
+        "Retirement - Early Out": "Retirement",
+        "Retirement - Other": "Retirement",
+        "Termination (Expired Appt/Other)": "Term-appt ended",
+        "Transfer Out - Individual Transfer": "Transfer to another agency",
+        "Other Separation": "Other",
+    }
+    sep["bucket"] = sep["action_type"].map(bucket)
+    m = sep.groupby("bucket")[quarters].sum()
+
+    order = ["Quit", "Retirement", "Term-appt ended", "Other", "Transfer to another agency"]
+    colors = {"Quit": RED, "Retirement": "#FD8D3C", "Term-appt ended": "#B2182B",
+              "Other": GRAY, "Transfer to another agency": "#6BAED6"}
+
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    bottom = np.zeros(len(quarters))
+    for b in order:
+        vals = m.loc[b, quarters].values if b in m.index else np.zeros(len(quarters))
+        ax.bar(quarters, vals, bottom=bottom, label=b, color=colors[b], alpha=0.9)
+        bottom += vals
+    ax.set_ylabel("Economist separations")
+    ax.set_title("Why Federal Economists Left, by Quarter (series 0110)")
+    ax.legend(frameon=False, fontsize=8.5, loc="upper left")
+    ax.grid(axis="y")
+    note = ("2025 Q1 holds 86% of the year's early-out retirements, 64% of term-appointment\n"
+            "endings, 42% of voluntary retirements and 37% of quits; transfers to other\n"
+            "agencies fell — economists left government rather than moving within it.")
+    ax.text(0.0, -0.17, note, transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    save("econ_separation_reasons_2025")
+
+
 # ── Run all ──────────────────────────────────────────────────────────────────
 def _gender_figures():
     fig_salary_trends()
@@ -525,6 +565,7 @@ def _fedscope_2025_figures():
     fig_econ_agency_change_2025()
     fig_econ_grade_mix_2025()
     fig_econ_flows_2025()
+    fig_econ_separation_reasons_2025()
 
 
 if __name__ == "__main__":

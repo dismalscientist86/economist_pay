@@ -15,8 +15,11 @@ snapshot still counts employees on administrative leave pending
 resignation/retirement as employed. The **flow data** — actual hires and
 departures — shows the turn clearly: in the first quarter of 2025, economist
 hiring collapsed while departures roughly doubled, for a net loss of ~100
-economists in three months, and the people leaving were experienced
-mid-career staff (mean 12.8 years of federal service), not junior hires.
+economists in three months. The people leaving were experienced mid-career
+staff (mean 12.8 years of federal service), and the reason mix — a surge in
+early-out retirements, term-appointment terminations, voluntary retirements and
+quits, with agency-to-agency transfers falling — is the signature of a
+reduction-in-force and buyout, not ordinary turnover.
 
 ## Data and method
 
@@ -86,8 +89,9 @@ six months. The pay increase is the statutory raise.
 
 ### 3. Flows — the clearest signal
 
-`fedscope_flows_quarterly_2025.csv`, `fedscope_flows_profile_2025.csv`,
-figure `econ_flows_2025.pdf`. Covers April 2024 – March 2025.
+`fedscope_flows_quarterly_2025.csv`, `fedscope_flows_by_reason_2025.csv`,
+`fedscope_flows_profile_2025.csv`, figures `econ_flows_2025.pdf` and
+`econ_separation_reasons_2025.pdf`. Covers April 2024 – March 2025.
 
 | quarter | hires | departures | net |
 |---|---:|---:|---:|
@@ -103,6 +107,24 @@ Over the full year, 317 economists were hired and 356 left.
   established mid-career economists, consistent with the deferred-resignation
   program rather than ordinary probationary attrition.
 - **Joiners**: mean **1.9 years** of service, mean pay **$114,890** — junior.
+
+**Why they left.** 2025 Q1 is one of four quarters but holds a lopsided share of
+the year's departures by reason:
+
+| reason | full year | 2025 Q1 | Q1 share |
+|---|---:|---:|---:|
+| Quit | 136 | 50 | 37% |
+| Retirement – Voluntary | 90 | 38 | 42% |
+| Retirement – Early Out | 7 | 6 | 86% |
+| Termination (term appointment ended) | 28 | 18 | 64% |
+| Transfer to another agency | 66 | 13 | 20% |
+
+Quits, voluntary and early-out retirements, and term-appointment endings all
+spiked; only agency-to-agency **transfers fell** (20% of the year's total landed
+in Q1, below the 25% an even quarter would carry). Economists were leaving
+federal employment altogether, not moving within it — the early-out retirements
+and term terminations point to reduction-in-force and buyout activity, not
+ordinary turnover.
 
 ### 4. Where economists were gained and lost
 

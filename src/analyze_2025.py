@@ -387,14 +387,42 @@ def flows(fl: pd.DataFrame) -> pd.DataFrame:
     _write(prof, "fedscope_flows_profile_2025.csv")
 
     q = fl.copy()
-    q["quarter"] = np.where(q["month"] <= 202406, "2024Q2",
-                    np.where(q["month"] <= 202409, "2024Q3",
-                     np.where(q["month"] <= 202412, "2024Q4", "2025Q1")))
+    q["quarter"] = _fiscal_quarter(q["month"])
     quarterly = (q.groupby(["quarter", "direction"]).size().unstack(fill_value=0)
                    .rename(columns={"accession": "accessions", "separation": "separations"}))
     quarterly["net"] = quarterly["accessions"] - quarterly["separations"]
     _write(quarterly, "fedscope_flows_quarterly_2025.csv")
     return monthly
+
+
+def _fiscal_quarter(month: pd.Series) -> pd.Series:
+    return np.select(
+        [month <= 202406, month <= 202409, month <= 202412],
+        ["2024Q2", "2024Q3", "2024Q4"], default="2025Q1")
+
+
+def flows_by_reason(fl: pd.DataFrame) -> pd.DataFrame:
+    """
+    Separation reason (and accession type) by quarter. The reason mix is what
+    separates the early-2025 exodus from ordinary turnover: quits, voluntary and
+    early-out retirements, and term-appointment terminations all rise in
+    2025 Q1, while agency-to-agency transfers fall (people leave government
+    rather than move within it).
+    """
+    fl = fl.copy()
+    fl["quarter"] = _fiscal_quarter(fl["month"])
+
+    out = (fl.groupby(["direction", "action_type", "quarter"]).size()
+             .unstack("quarter", fill_value=0))
+    for qcol in ("2024Q2", "2024Q3", "2024Q4", "2025Q1"):
+        if qcol not in out.columns:
+            out[qcol] = 0
+    out = out[["2024Q2", "2024Q3", "2024Q4", "2025Q1"]]
+    out["total"] = out.sum(axis=1)
+    out["q1_2025_share"] = (out["2025Q1"] / out["total"]).round(3)
+    out = out.sort_values(["direction", "total"], ascending=[True, False])
+    _write(out, "fedscope_flows_by_reason_2025.csv")
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -440,6 +468,10 @@ def run_all() -> None:
 
     print("8. flows")
     flows(fl)
+
+    print("9. flows by reason")
+    r = flows_by_reason(fl)
+    print(r.to_string(), "\n")
 
     print(f"\nAll tables -> {TABLES}/")
     print("Figures: python src/make_figures.py")
