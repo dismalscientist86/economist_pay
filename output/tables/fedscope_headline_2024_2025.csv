@@ -1,0 +1,6 @@
+measure,sep_2024,mar_2025,change,pct_change,cpi_inflation_6mo,eci_inflation_6mo
+headcount,4998.0,4888.0,-110.0,-0.022,0.0143,0.0166
+mean_salary_nominal,146952.0,151094.0,4142.0,0.0282,0.0143,0.0166
+mean_salary_real_cpi,146952.0,148968.85010272075,2016.9,0.0137,0.0143,0.0166
+mean_salary_real_eci,146952.0,148632.89936009306,1680.9,0.0114,0.0143,0.0166
+mean_length_of_service,12.4,12.6,0.2,0.0161,0.0143,0.0166

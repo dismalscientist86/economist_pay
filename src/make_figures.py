@@ -16,8 +16,9 @@ import matplotlib.ticker as mticker
 import numpy as np
 import pandas as pd
 
-TABLES  = Path(__file__).parent.parent / "output" / "tables"
-FIGURES = Path(__file__).parent.parent / "output" / "figures"
+TABLES    = Path(__file__).parent.parent / "output" / "tables"
+FIGURES   = Path(__file__).parent.parent / "output" / "figures"
+PROCESSED = Path(__file__).parent.parent / "data" / "processed"
 FIGURES.mkdir(parents=True, exist_ok=True)
 
 # ── Colour palette ──────────────────────────────────────────────────────────
@@ -342,9 +343,172 @@ def fig_salary_comparison_paper():
     save("salary_comparison_paper")
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# 2025 update (FedScope): has the number and pay of federal economists changed?
+# Tables come from src/analyze_2025.py. September 2024 vs. preliminary
+# March 2025, occupational series 0110. No gender in this source.
+# ═══════════════════════════════════════════════════════════════════════════
+
+ORANGE = "#E08214"   # FedScope series, to set it apart from FedsDataCenter
+
+
+# ── 9. Headcount and mean pay, long run + 2025 ──────────────────────────────
+def fig_fed_economists_2025():
+    tr = pd.read_csv(TABLES / "fedscope_headcount_pay_trend.csv")
+    fdc = tr[tr["source"].str.startswith("FedsDataCenter")].copy()
+    fdc["year"] = fdc["period"].str.slice(2).astype(int)
+    fs = tr[tr["source"].str.startswith("FedScope")].copy()
+    fs_x = {"Sep 2024": 2024.5, "Mar 2025": 2025.0}
+    fs["x"] = fs["period"].map(fs_x)
+
+    hl = pd.read_csv(TABLES / "fedscope_headline_2024_2025.csv").set_index("measure")
+    real_mar = hl.loc["mean_salary_real_cpi", "mar_2025"]
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+
+    ax = axes[0]
+    ax.plot(fdc["year"], fdc["headcount"], color=BLUE, marker="o", label="FedsDataCenter (FOIA annual)")
+    ax.plot(fs["x"], fs["headcount"], color=ORANGE, marker="D", markersize=7,
+            linestyle="-", label="FedScope (EHRI month-end)")
+    for _, r in fs.iterrows():
+        ax.annotate(f"{int(r['headcount']):,}", (r["x"], r["headcount"]),
+                    textcoords="offset points", xytext=(0, 8), ha="center", fontsize=9)
+    ax.set_title("Number of Federal Economists (series 0110)")
+    ax.set_ylabel("Headcount")
+    ax.set_xlabel("Fiscal Year")
+    ax.set_ylim(3800, 5200)
+    ax.legend(frameon=False, fontsize=8.5, loc="lower left")
+    ax.grid(axis="y")
+
+    ax = axes[1]
+    ax.plot(fdc["year"], fdc["mean_salary"] / 1000, color=BLUE, marker="o", label="FedsDataCenter")
+    ax.plot(fs["x"], fs["mean_salary"] / 1000, color=ORANGE, marker="D", markersize=7,
+            label="FedScope (nominal)")
+    ax.plot([fs_x["Mar 2025"]], [real_mar / 1000], color=ORANGE, marker="o",
+            markerfacecolor="white", markersize=8, label="Mar 2025, real (Sep-2024 $)")
+    ax.set_title("Mean Adjusted Basic Pay")
+    ax.set_ylabel("Mean Salary ($ thousands)")
+    ax.set_xlabel("Fiscal Year")
+    ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("$%g"))
+    ax.legend(frameon=False, fontsize=8.5, loc="upper left")
+    ax.grid(axis="y")
+
+    note = ("FedScope and FedsDataCenter are different universes (EHRI month-end status vs. annual FOIA extract);\n"
+            "the March 2025 snapshot is preliminary and still counts administrative-leave / deferred-resignation staff.")
+    fig.text(0.01, -0.04, note, fontsize=7.5, color=GRAY, va="top")
+    save("fed_economists_2025")
+
+
+# ── 10. March 2025 pay distribution ────────────────────────────────────────
+def fig_econ_pay_distribution_2025():
+    df = pd.read_csv(PROCESSED / "fedscope_economists_202503.csv",
+                     dtype={"series": str, "grade": str})
+    sal = df.loc[df["series_label"] == "economist", "salary"].dropna() / 1000
+
+    hl = pd.read_csv(TABLES / "fedscope_headline_2024_2025.csv").set_index("measure")
+    sep_mean = hl.loc["mean_salary_nominal", "sep_2024"] / 1000
+    mar_mean = hl.loc["mean_salary_nominal", "mar_2025"] / 1000
+
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    ax.hist(sal, bins=40, color=BLUE, alpha=0.75, edgecolor="white", linewidth=0.4)
+    ax.axvline(sal.median(), color="black", linestyle="-", linewidth=1.4,
+               label=f"Mar 2025 median  ${sal.median():,.0f}k")
+    ax.axvline(mar_mean, color=ORANGE, linestyle="--", linewidth=1.4,
+               label=f"Mar 2025 mean  ${mar_mean:,.0f}k")
+    ax.axvline(sep_mean, color=GRAY, linestyle=":", linewidth=1.6,
+               label=f"Sep 2024 mean  ${sep_mean:,.0f}k")
+    ax.set_xlabel("Adjusted Basic Pay ($ thousands)")
+    ax.set_ylabel("Economists")
+    ax.set_title("Federal Economist Pay Distribution, March 2025 (record-level, series 0110)")
+    ax.legend(frameon=False, fontsize=9)
+    ax.grid(axis="y")
+    save("econ_pay_distribution_2025")
+
+
+# ── 11. Headcount change by agency, Sep 2024 → Mar 2025 ────────────────────
+def fig_econ_agency_change_2025():
+    df = pd.read_csv(TABLES / "fedscope_by_agency_change.csv")
+    df = df[df["coverage"] == "ok"].copy()
+
+    fixups = {
+        "Department Of Housing And Urban Developm": "Housing & Urban Dev.",
+        "Department Of The Army": "Army",
+    }
+
+    def label(name):
+        if name in fixups:
+            return fixups[name]
+        if name.isupper():                       # BLS, BEA, ERS
+            return name
+        return name.replace("Department Of ", "").replace(" And ", " & ")
+
+    df["label"] = df["agency_group"].map(label)
+    df = df.sort_values("headcount_change")
+
+    colors = [RED if c < 0 else PAPER for c in df["headcount_change"]]
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.barh(df["label"], df["headcount_change"], color=colors, alpha=0.85)
+    ax.axvline(0, color="black", linewidth=0.8)
+    ax.set_xlabel("Change in economists, Sep 2024 → Mar 2025")
+    ax.set_title("Where Federal Economists Were Gained and Lost")
+    ax.grid(axis="x")
+    for y, c in enumerate(df["headcount_change"]):
+        ax.text(c + (0.4 if c >= 0 else -0.4), y, f"{c:+d}",
+                va="center", ha="left" if c >= 0 else "right", fontsize=8)
+    note = ("Agency × pay-plan × grade cells with ≤10 staff are suppressed, so this covers ~76% of\n"
+            "economists; agencies whose count is small on either date are omitted.")
+    ax.text(0.0, -0.13, note, transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    save("econ_agency_change_2025")
+
+
+# ── 12. GS grade mix, Sep 2024 vs Mar 2025 ─────────────────────────────────
+def fig_econ_grade_mix_2025():
+    df = pd.read_csv(TABLES / "fedscope_by_grade_change.csv")
+    df = df[df["gs_grade"].between(7, 15)]
+    x = np.arange(len(df))
+    w = 0.38
+
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    ax.bar(x - w/2, df["share_sep_2024"] * 100, w, color=GRAY, alpha=0.8, label="Sep 2024")
+    ax.bar(x + w/2, df["share_mar_2025"] * 100, w, color=ORANGE, alpha=0.9, label="Mar 2025")
+    ax.set_xticks(x)
+    ax.set_xticklabels([f"GS-{int(g)}" for g in df["gs_grade"]])
+    ax.set_xlabel("GS Grade")
+    ax.set_ylabel("Share of GS economists (%)")
+    ax.set_title("Grade Mix of GS Economists (shown cells, ~76% coverage)")
+    ax.legend(frameon=False)
+    ax.grid(axis="y")
+    save("econ_grade_mix_2025")
+
+
+# ── 13. Monthly accessions vs separations ──────────────────────────────────
+def fig_econ_flows_2025():
+    df = pd.read_csv(TABLES / "fedscope_flows_monthly_2025.csv")
+    df["date"] = pd.to_datetime(df["month"].astype(str), format="%Y%m")
+    prof = pd.read_csv(TABLES / "fedscope_flows_profile_2025.csv")
+
+    fig, ax = plt.subplots(figsize=(9, 4.5))
+    ax.bar(df["date"], df["accessions"], width=20, color=PAPER, alpha=0.85, label="Accessions (hires)")
+    ax.bar(df["date"], -df["separations"], width=20, color=RED, alpha=0.85, label="Separations (departures)")
+    ax.axhline(0, color="black", linewidth=0.8)
+    ax.axvspan(pd.Timestamp("2025-01-01"), pd.Timestamp("2025-03-31"),
+               color=GRAY, alpha=0.15)
+    ax.set_ylabel("Economists per month")
+    ax.set_title("Federal Economist Hires and Departures, April 2024 – March 2025")
+    ax.legend(frameon=False, fontsize=9, loc="lower left")
+    ax.grid(axis="y")
+
+    acc = prof.set_index("direction").loc["accession"]
+    sep = prof.set_index("direction").loc["separation"]
+    note = (f"Shaded: Jan-Mar 2025. Joiners: mean {acc['mean_los']:.0f} yr service, "
+            f"\\${acc['mean_salary']:,.0f}.  Leavers: mean {sep['mean_los']:.0f} yr, "
+            f"\\${sep['mean_salary']:,.0f} (mid-career departures, not juniors).")
+    ax.text(0.0, -0.15, note, transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    save("econ_flows_2025")
+
+
 # ── Run all ──────────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    print("Generating figures...")
+def _gender_figures():
     fig_salary_trends()
     fig_female_share_agency()
     fig_grade_salary()
@@ -353,4 +517,26 @@ if __name__ == "__main__":
     fig_placement_trends()
     fig_female_sector_comparison()
     fig_salary_comparison_paper()
+
+
+def _fedscope_2025_figures():
+    fig_fed_economists_2025()
+    fig_econ_pay_distribution_2025()
+    fig_econ_agency_change_2025()
+    fig_econ_grade_mix_2025()
+    fig_econ_flows_2025()
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--only", choices=["gender", "fedscope2025"],
+                        help="Generate just one group of figures")
+    args = parser.parse_args()
+
+    print("Generating figures...")
+    if args.only in (None, "gender"):
+        _gender_figures()
+    if args.only in (None, "fedscope2025"):
+        _fedscope_2025_figures()
     print(f"Done. All figures saved to {FIGURES}/")

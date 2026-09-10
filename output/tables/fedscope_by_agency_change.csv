@@ -1,0 +1,25 @@
+agency_group,headcount_sep_2024,headcount_mar_2025,headcount_change,mean_salary_sep_2024,mean_salary_mar_2025,coverage,pct_change
+BLS,1180,1156,-24,120905.0,124500.0,ok,-0.02
+Department Of Treasury,557,544,-13,170378.0,174397.0,ok,-0.023
+BEA,286,272,-14,147416.0,152044.0,ok,-0.049
+ERS,192,195,3,143717.0,148010.0,ok,0.016
+Department Of Energy,158,175,17,141310.0,136687.0,ok,0.108
+Department Of The Army,160,163,3,118097.0,119990.0,ok,0.019
+Department Of Health And Human Services,145,152,7,145099.0,150631.0,ok,0.048
+Census Bureau,118,124,6,147900.0,144363.0,ok,0.051
+Department Of Agriculture,129,116,-13,130469.0,136026.0,ok,-0.101
+Securities And Exchange Commission,119,115,-4,240014.0,240182.0,ok,-0.034
+Environmental Protection Agency,98,101,3,154255.0,156543.0,ok,0.031
+Department Of Commerce,80,81,1,144729.0,148565.0,ok,0.012
+Federal Trade Commission,87,78,-9,178185.0,187083.0,ok,-0.103
+Federal Deposit Insurance Corporation,58,70,12,190540.0,191972.0,ok,0.207
+U.S. International Trade Commission,71,69,-2,150251.0,153169.0,ok,-0.028
+Department Of Homeland Security,42,53,11,159170.0,155265.0,ok,0.262
+Department Of Transportation,57,46,-11,147786.0,159268.0,ok,-0.193
+Federal Housing Finance Agency,42,45,3,207442.0,211904.0,ok,0.071
+Department Of Justice,40,43,3,187032.0,190774.0,ok,0.075
+Federal Communications Commission,44,41,-3,178047.0,180040.0,ok,-0.068
+Department Of Housing And Urban Developm,34,34,0,144168.0,148677.0,ok,0.0
+Federal Reserve System,35,34,-1,203208.0,213479.0,ok,-0.029
+Commodity Futures Trading Commission,20,20,0,233934.0,243715.0,partial - small-cell suppression,
+Social Security Administration,24,0,-24,150768.0,,partial - small-cell suppression,
