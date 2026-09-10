@@ -3,7 +3,9 @@
 **Question.** Has the number and pay of economists in the federal government changed in the
 last year?
 
-**Status.** Plan approved 2026-09-09. Not yet implemented. Decisions locked:
+**Status.** Implemented 2026-09-09 (branch `fedscope-2025-update`, commits b0332bf,
+8498053, cdc03e0). Phases 1–5 done; the findings memo is `docs/2025_update.md`.
+Decisions locked:
 
 - **Aggregate-only for 2025.** No gender dimension for the new data (see "Data landscape"
   below). The existing gender analysis (`src/analyze.py`, `economists_panel.csv`) is left
@@ -193,11 +195,20 @@ Original plan for reference:
 - `econ_grade_mix_2025.pdf`
 - `econ_flows_2025.pdf` — monthly hires vs departures
 
-**Narrative** ⬜ *(not started)*
-- `docs/2025_update.md` — findings memo (headline, method, all caveats).
-- New section in `slides/slides.tex` after "Comparison to Prior Work".
+**Narrative** ✅
+- `docs/2025_update.md` — findings memo (headline, method, results, Foster reconciliation,
+  8 limitations, refresh checklist).
+- `slides/slides.tex` — "The 2025 Update" section (5 frames) + a summary bullet; 25 pp.
 
-### Phase 3 — context and robustness ⬜ *(not started)*
+### Phase 3 — context and robustness ✅ done (2026-09-09)
+
+- `fedscope_definition_sensitivity.csv`: headline holds under 0110, 0110+0119, and a
+  PhD-only proxy (0110 with a doctorate ≈ 1,386, mean $179k).
+- Foster et al. reconciliation: they restrict to **PhD** federal economists (≈ the 1,386
+  doctorate holders here, 28% of 0110); BLS's non-PhD survey economists explain why they
+  centre on Treasury/Agriculture/HHS while this dataset is BLS-heavy. Shared universe
+  exclusions: CEA, Federal Reserve Board, CBO, USPS, intelligence.
+- Eight limitations + a refresh checklist are in `docs/2025_update.md`.
 
 ### Phase 5 — integration ✅ done (2026-09-09)
 
