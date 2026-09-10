@@ -120,19 +120,24 @@ def download(key: str, overwrite: bool = False) -> Path:
 # --------------------------------------------------------------------------
 
 def filter_records_from_zip(zip_path: Path, member_suffix: str, out_path: Path,
-                            occ_field: str = "OCC", keep: set = ECON_SERIES) -> int:
+                            occ_field: str = "OCC", keep: set = ECON_SERIES,
+                            delimiter: str = "|") -> int:
     """
-    Stream a large pipe-delimited member out of `zip_path`, keep only rows whose
+    Stream a large delimited member out of `zip_path`, keep only rows whose
     `occ_field` is in `keep`, and append them to `out_path` (CSV). Returns the
     number of rows written. Writes the header on first call (out_path absent).
+
+    New FedScope files are pipe-delimited; the pre-2025 coded "cube" files
+    (SEPDATA/ACCDATA/FACTDATA) are comma-delimited -- pass delimiter=",".
     """
     with zipfile.ZipFile(zip_path) as zf:
-        member = next(n for n in zf.namelist() if n.endswith(member_suffix))
+        member = next(n for n in zf.namelist()
+                      if n.endswith(member_suffix) or member_suffix in n)
         write_header = not out_path.exists()
         n = 0
         with zf.open(member) as raw:
             text = io.TextIOWrapper(raw, encoding="latin-1", newline="")
-            reader = csv.reader(text, delimiter="|", quotechar='"')
+            reader = csv.reader(text, delimiter=delimiter, quotechar='"')
             header = next(reader)
             try:
                 occ_idx = header.index(occ_field)

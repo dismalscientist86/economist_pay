@@ -547,6 +547,103 @@ def fig_econ_separation_reasons_2025():
     save("econ_separation_reasons_2025")
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# Long-run history (analyze_history.py): federal economists since 1998
+# ═══════════════════════════════════════════════════════════════════════════
+
+def fig_econ_headcount_since_1998():
+    df = pd.read_csv(TABLES / "fedscope_economists_since_1998.csv")
+    df["year"] = (df["date"] // 100).astype(float)
+    df.loc[df["period"] == "Mar 2025", "year"] = 2025.25
+    pre = df[df["date"] // 100 <= 2005]
+    post = df[(df["date"] // 100 >= 2006) & (df["period"] != "Mar 2025")]
+    mar = df[df["period"] == "Mar 2025"]
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(9, 6.5), sharex=True)
+
+    ax1.plot(pre["year"], pre["headcount"], color=GRAY, marker="o", ms=4,
+             label="pre-2006 (incl. ~550 State posts later reclassified)")
+    ax1.plot(post["year"], post["headcount"], color=BLUE, marker="o", ms=4,
+             label="FedScope cube (September)")
+    ax1.plot(mar["year"], mar["headcount"], color=ORANGE, marker="D", ms=8,
+             label="March 2025")
+    ax1.axvline(2005.5, color=GRAY, ls=":", lw=1)
+    ax1.set_ylim(4050, 5550)
+    ax1.annotate("~550 State Dept posts\nreclassified out of 0110", (2005.5, 5250),
+                 fontsize=7.5, color=GRAY, ha="center")
+    ax1.annotate("ERS relocated to\nKansas City (FY2019)", (2019, 4281),
+                 fontsize=7.5, color=GRAY, ha="center",
+                 xytext=(2016.5, 4120), textcoords="data",
+                 arrowprops=dict(arrowstyle="->", color=GRAY, lw=0.6))
+    ax1.set_ylabel("Federal economists (series 0110)")
+    ax1.set_title("Federal Economists, September 1998 – March 2025")
+    ax1.legend(frameon=False, fontsize=8, loc="lower right", ncol=1)
+    ax1.grid(axis="y")
+
+    ax2.plot(post["year"], post["mean_salary_2025usd"] / 1000, color=PAPER,
+             marker="o", ms=4, label="mean")
+    ax2.plot(post["year"], post["median_salary_2025usd"] / 1000, color=PAPER,
+             marker="o", ms=3, ls="--", alpha=0.6, label="median")
+    ax2.plot(pre["year"], pre["mean_salary_2025usd"] / 1000, color=GRAY, marker="o", ms=3)
+    ax2.plot(mar["year"], mar["mean_salary_2025usd"] / 1000, color=ORANGE, marker="D", ms=8)
+    ax2.set_ylabel("Pay (2025 $ thousands)")
+    ax2.set_xlabel("Year")
+    ax2.set_title("Real Adjusted Basic Pay (CPI-U, March 2025 dollars)")
+    ax2.yaxis.set_major_formatter(mticker.FormatStrFormatter("$%g"))
+    ax2.legend(frameon=False, fontsize=8, loc="lower right")
+    ax2.grid(axis="y")
+    save("econ_headcount_since_1998")
+
+
+def fig_econ_separations_history():
+    df = pd.read_csv(TABLES / "fedscope_separations_by_fy_reason.csv")
+    buckets = ["Quit", "Retirement", "Termination", "Transfer", "Other", "Death"]
+    colors = {"Quit": RED, "Retirement": "#FD8D3C", "Termination": "#B2182B",
+              "Transfer": "#6BAED6", "Other": GRAY, "Death": "#333333"}
+
+    fig, ax = plt.subplots(figsize=(9, 4.5))
+    bottom = np.zeros(len(df))
+    for b in buckets:
+        v = df[b].values if b in df.columns else np.zeros(len(df))
+        ax.bar(df["fiscal_year"], v, bottom=bottom, color=colors[b], label=b,
+               alpha=0.9, width=0.7)
+        bottom += v
+    # hatch the partial FY2025 bar
+    ax.bar([2025], [df.loc[df.fiscal_year == 2025, "total"].iloc[0]], width=0.7,
+           fill=False, hatch="///", edgecolor="black", lw=0.8)
+    ax.set_xticks(df["fiscal_year"])
+    ax.set_ylabel("Economist separations")
+    ax.set_title("Federal Economist Separations by Reason and Fiscal Year")
+    ax.legend(frameon=False, fontsize=8.5, ncol=3)
+    ax.grid(axis="y")
+    ax.text(0.0, -0.16, "FY = Oct–Sep. FY2025 (hatched) is Oct 2024 – Mar 2025 only "
+            "— half a year already near a full prior year. FY2019's spike was the "
+            "USDA/ERS relocation to Kansas City.",
+            transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    save("econ_separations_history")
+
+
+def fig_econ_q1_history():
+    df = pd.read_csv(TABLES / "fedscope_flows_q1_2015_2025.csv")
+    fig, ax = plt.subplots(figsize=(9, 4.5))
+    ax.bar(df["jan_mar"], df["accessions"], width=0.7, color=PAPER, alpha=0.85,
+           label="Accessions (Jan–Mar)")
+    ax.bar(df["jan_mar"], -df["separations"], width=0.7, color=RED, alpha=0.85,
+           label="Separations (Jan–Mar)")
+    ax.axhline(0, color="black", lw=0.8)
+    ax.text(2017, -128, "1st Trump\ntransition", ha="center", va="top",
+            fontsize=7.5, color=GRAY)
+    ax.text(2025, -140, "hiring freeze +\ndeferred resignation", ha="center",
+            va="top", fontsize=7.5, color=GRAY)
+    ax.set_xticks(df["jan_mar"])
+    ax.set_ylabel("Economists (Jan–Mar)")
+    ax.set_title("First-Quarter Hires and Departures, 2015–2025")
+    ax.legend(frameon=False, fontsize=8.5, loc="upper left")
+    ax.set_ylim(-165, 110)
+    ax.grid(axis="y")
+    save("econ_q1_history")
+
+
 # ── Run all ──────────────────────────────────────────────────────────────────
 def _gender_figures():
     fig_salary_trends()
@@ -566,6 +663,9 @@ def _fedscope_2025_figures():
     fig_econ_grade_mix_2025()
     fig_econ_flows_2025()
     fig_econ_separation_reasons_2025()
+    fig_econ_headcount_since_1998()
+    fig_econ_separations_history()
+    fig_econ_q1_history()
 
 
 if __name__ == "__main__":

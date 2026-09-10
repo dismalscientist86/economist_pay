@@ -2,5 +2,5 @@
 \beamer@sectionintoc {2}{Federal Salary Analysis}{6}{0}{2}
 \beamer@sectionintoc {3}{Comparison to Prior Work}{10}{0}{3}
 \beamer@sectionintoc {4}{The 2025 Update}{12}{0}{4}
-\beamer@sectionintoc {5}{PhD Placement Analysis}{18}{0}{5}
-\beamer@sectionintoc {6}{Summary}{24}{0}{6}
+\beamer@sectionintoc {5}{PhD Placement Analysis}{20}{0}{5}
+\beamer@sectionintoc {6}{Summary}{26}{0}{6}

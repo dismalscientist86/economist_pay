@@ -21,6 +21,14 @@ early-out retirements, term-appointment terminations, voluntary retirements and
 quits, with agency-to-agency transfers falling — is the signature of a
 reduction-in-force and buyout, not ordinary turnover.
 
+In historical perspective (§6): the March 2025 headcount is still near the top
+of the post-2006 range — the drop so far has unwound about a year of growth, not
+decades. But the *outflow* is extreme. FY2025's first six months already saw 215
+economist separations (78% of all of FY2024), and January–March 2025 had the
+most departures and nearly the fewest hires of any first quarter since 2015 —
+worse than the FY2019 ERS relocation on a rate basis and worse than the 2017
+transition on Q1 departures. No separations yet carry a formal RIF code.
+
 ## Data and method
 
 | | |
@@ -29,6 +37,7 @@ reduction-in-force and buyout, not ordinary turnover.
 | Snapshots | September 2024 and **preliminary** March 2025, bundled in one OPM release |
 | Population | Occupational series **0110 (Economist)**, executive branch, active pay status |
 | Pipeline | `python main.py --fedscope` → `src/analyze_2025.py` → `output/tables/fedscope_*` |
+| Long-run context | `src/fetch_fedscope_history.py` → `src/analyze_history.py` (employment cubes to Sep 1998; separations/accessions to FY2015) |
 | Figures | `python src/make_figures.py --only fedscope2025` |
 
 FedsDataCenter.com — the source for the FY2015–2024 gender panel — stops at
@@ -151,6 +160,58 @@ energy agencies grew. This is net reallocation on top of the overall decline.
   average $179,524 and cluster at HHS, Treasury, ERS, SEC, FTC.
 - **Age:** 25% under 35; 21% 55 or older.
 
+### 6. Historical context (1998–2025)
+
+`fedscope_economists_since_1998.csv`, `fedscope_separations_by_fy_reason.csv`,
+`fedscope_flows_q1_2015_2025.csv`, `fedscope_separation_rate_by_fy.csv`;
+figures `econ_headcount_since_1998.pdf`, `econ_separations_history.pdf`,
+`econ_q1_history.pdf`. Built by `src/analyze_history.py` from FedScope
+employment cubes back to September 1998 and separation/accession files back to
+FY2015.
+
+**Headcount.** On a consistent post-2006 basis, federal economists ranged from a
+low of ~4,280 (2008, and again 2019) to the September 2024 peak of 4,998. The
+March 2025 figure of 4,888 is still near the top of that 20-year range — the
+decline so far has unwound roughly one year of growth, back to about the 2023
+level (4,883). It is **not yet** a historic low. (Pre-2006 counts of
+~5,000–5,400 include ~550 Department of State positions reclassified out of
+series 0110 after 2005, so they overstate the earlier level.)
+
+**Real pay.** In constant March 2025 dollars, mean pay rose from ~$133k (1998)
+to a ~$160k peak around 2010, held near $155–158k through 2020, fell to ~$143k
+in 2022 as inflation outran the raises, and has recovered to ~$152k. Today's
+real pay is mid-range historically — above the late-1990s but still below the
+2010 and 2018–2020 peaks.
+
+**Composition.** The PhD share climbed from 20% (1998) to ~29% by the mid-2010s
+and has been flat since (29.7% in March 2025). The GS-14-and-above share rose
+from 23% (1998) to 32% (2020–2024).
+
+**Separations — how 2025 compares.** Full fiscal years FY2015–FY2023 saw
+310–460 economist separations (rate 6–11% of headcount). FY2024 was the calmest
+year in the series — 277 separations, a 5.7% rate. Then **FY2025 recorded 215
+separations in just its first six months** (Oct 2024–Mar 2025) — already 78% of
+FY2024's full-year total, and the reason mix shifted toward retirements (76 in
+six months vs. 65 in all of FY2024) and term-appointment terminations (20 vs. 9).
+
+The one clear historical precedent for elevated economist attrition is
+**FY2019** (461 separations, 10.6% rate), driven by the USDA decision to
+relocate the Economic Research Service to Kansas City — an exodus concentrated
+in transfers and quits at one agency. FY2025 differs in being government-wide
+and retirement/termination-heavy.
+
+**First-quarter comparison.** January–March is normally a modest-outflow
+quarter. Jan–Mar 2025 had **134 separations and 34 accessions** — the most
+departures and nearly the fewest hires of any Q1 in 2015–2025. The previous
+worst Q1 for separations was 2017 (122, the first Trump transition); 2025 is
+worse and, unlike 2017, pairs it with a hiring freeze.
+
+**No formal RIF yet.** Across every file, FY2015 through March 2025, **zero**
+economist separations carry OPM's Reduction-in-Force code. The 2025 drawdown is
+running through quits, retirements (including early-outs) and term-appointment
+endings — consistent with the deferred-resignation program rather than
+statutory RIF, at least through March 2025.
+
 ## Robustness
 
 **Definition** (`fedscope_definition_sensitivity.csv`). The result holds under
@@ -196,6 +257,11 @@ cannot update it.
    exist only for March 2025.
 8. **Coverage gaps.** Some Department of Defense / Department of War components
    submitted late or incompletely in 2025 releases.
+9. **Historical universe drift (§6).** FedScope agency coverage and occupational
+   coding shift over 27 years. The visible ~11% step down from 2005 to 2006 is
+   ~550 Department of State positions reclassified out of series 0110, not a
+   workforce cut; smaller drifts elsewhere are not individually adjusted.
+   Historical `SALARY` is nominal and CPI-deflated (not ECI).
 
 ## Refresh checklist
 
@@ -212,4 +278,9 @@ When OPM publishes newer FedScope data:
       trajectory. If reachable, replace the FedScope-classic fetch.
 - [ ] Extend `fetch_fedscope.py` accessions/separations to the next
       `AprYYYY-to-MarYYYY` release for updated flows.
-- [ ] Re-pull the CPI-U and ECI values in `analyze_2025.py` for the new endpoint.
+- [ ] Add the next September employment cube to `EMPLOYMENT_HISTORY` in
+      `src/fetch_fedscope_history.py` to extend the 1998– series, and the next
+      FY separations file to `FLOW_HISTORY`.
+- [ ] Re-pull CPI-U / ECI in `analyze_2025.py` and `analyze_history.py` for the
+      new endpoint — a formal RIF code (SEP `SH`) in a future file is the number
+      to watch.

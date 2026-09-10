@@ -41,6 +41,8 @@ economist_pay/
 │   ├── fetch_fedscope.py      # Download OPM FedScope, extract economist rows (2025)
 │   ├── clean_fedscope.py      # Build Sept 2024 / March 2025 economist tables
 │   ├── analyze_2025.py        # 2024->2025 headcount, pay, agency, grade, flows
+│   ├── fetch_fedscope_history.py  # FedScope employment cubes to 1998, flows to FY2015
+│   ├── analyze_history.py     # Long-run economist headcount, pay, separations
 │   ├── make_figures.py        # All slide-deck figures
 │   └── phd_placements.py      # PhD placement analysis module
 ├── notebooks/                 # Jupyter notebooks for exploration
@@ -79,6 +81,9 @@ python src/phd_placements.py
 # 2025 update (OPM FedScope): fetch → clean → analyze the 2024→2025 change
 python main.py --fedscope
 python src/make_figures.py --only fedscope2025
+
+# ...with long-run context (employment to 1998, separations to FY2015; ~550 MB)
+python main.py --fedscope --history
 ```
 
 Individual steps can also be run directly:

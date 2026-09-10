@@ -34,8 +34,13 @@ from analyze import run_all
 RAW_DIR = Path(__file__).parent / "data" / "raw" / "fedsdatacenter"
 
 
-def run_fedscope_2025(overwrite: bool = False) -> None:
-    """The 2025 update pipeline: FedScope fetch -> clean -> analyze."""
+def run_fedscope_2025(overwrite: bool = False, history: bool = False) -> None:
+    """The 2025 update pipeline: FedScope fetch -> clean -> analyze.
+
+    With history=True, also fetches the pre-2025 FedScope files (employment
+    cubes to Sep 1998, flows to FY2015 -- ~550 MB of downloads) and runs the
+    long-run analysis.
+    """
     from fetch_fedscope import build as fetch_fedscope
     from clean_fedscope import run_all as clean_fedscope
     from analyze_2025 import run_all as analyze_2025
@@ -55,6 +60,17 @@ def run_fedscope_2025(overwrite: bool = False) -> None:
     print("=" * 60)
     analyze_2025()
 
+    if history:
+        from fetch_fedscope_history import fetch_flows, fetch_employment
+        from analyze_history import run_all as analyze_history
+        print("\n" + "=" * 60)
+        print("Long-run context: fetching historical FedScope (Sep 1998 -> ) ...")
+        print("=" * 60)
+        fetch_flows(overwrite=overwrite)
+        fetch_employment(overwrite=overwrite)
+        print("\nAnalyzing 1998 -> 2025 ...")
+        analyze_history()
+
     print("\nDone. Figures: python src/make_figures.py --only fedscope2025")
 
 
@@ -62,6 +78,8 @@ def main():
     parser = argparse.ArgumentParser(description="Federal economist pay analysis pipeline")
     parser.add_argument("--fedscope", action="store_true",
                         help="Run the 2025 update pipeline (FedScope) instead of the FedsDataCenter one")
+    parser.add_argument("--history", action="store_true",
+                        help="With --fedscope: also fetch/analyze pre-2025 FedScope (~550 MB download)")
     parser.add_argument("--skip-fetch",   action="store_true", help="Skip data download step")
     parser.add_argument("--skip-gender",  action="store_true", help="Skip gender assignment step")
     parser.add_argument("--skip-merge",   action="store_true", help="Skip clean/merge step")
@@ -72,7 +90,7 @@ def main():
     args = parser.parse_args()
 
     if args.fedscope:
-        run_fedscope_2025(overwrite=args.overwrite)
+        run_fedscope_2025(overwrite=args.overwrite, history=args.history)
         return
 
     if not args.skip_fetch:
