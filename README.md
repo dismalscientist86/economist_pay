@@ -12,6 +12,11 @@ Columns: `name, grade, pay_plan, salary, bonus, agency, location, occupation, ye
 ### 2. PhD placement data *(forthcoming)*
 Placement outcomes for newly minted PhD economists. Expected columns: `name, year, department, field, placement, category`. Place CSV in `data/raw/phd_placements/`.
 
+### 3. OPM FedScope — 2025 update
+FedsDataCenter stops at FY2024. To ask whether the number and pay of federal economists changed into 2025, the project uses OPM's FedScope "classic" raw datasets: the preliminary **March 2025** employment snapshot with **September 2024** bundled for comparison, plus April 2024–March 2025 accessions/separations. `src/fetch_fedscope.py` downloads these and extracts the economist rows (occupational series 0110 / 0119).
+
+This source has **no gender or race** — OPM removed those fields as of March 2025 (EOs 14151/14168/14173) — so the 2025 update is aggregate-only; the gender analysis above covers years ≤2024. It is also a different universe from FedsDataCenter (EHRI month-end status vs. annual FOIA extract), the March 2025 snapshot is preliminary and still counts administrative-leave / deferred-resignation staff as employed, and small agency×grade cells are suppressed. See `docs/2025_update_plan.md`.
+
 ### Legacy data (see `data/raw/fedsdatacenter/`)
 - `Federal-Employee-Salaries_FY2015.xlsx` — original FY2015 download from FedsDataCenter
 - `FederalPay.xlsx` — partial FederalPay.org time series (manual collection, 2004+)
@@ -24,14 +29,19 @@ economist_pay/
 ├── data/
 │   ├── raw/
 │   │   ├── fedsdatacenter/    # Raw CSVs from API, one per fiscal year
+│   │   ├── fedscope/          # OPM FedScope economist extracts (2025 update)
 │   │   └── phd_placements/   # PhD placement data (place CSV here)
-│   └── processed/             # Cleaned panel data and gender cache
+│   └── processed/             # Cleaned panel data, gender cache, fedscope_* tables
 ├── src/
 │   ├── utils.py               # Shared helpers (name parsing, numeric cleaning)
 │   ├── fetch_salary_data.py   # Download all years from FedsDataCenter API
 │   ├── assign_gender.py       # Build gender lookup using gender_guesser
 │   ├── clean_merge.py         # Parse names, merge gender, create panel
 │   ├── analyze.py             # Descriptive stats by gender/agency/pay plan
+│   ├── fetch_fedscope.py      # Download OPM FedScope, extract economist rows (2025)
+│   ├── clean_fedscope.py      # Build Sept 2024 / March 2025 economist tables
+│   ├── analyze_2025.py        # 2024->2025 headcount, pay, agency, grade, flows
+│   ├── make_figures.py        # All slide-deck figures
 │   └── phd_placements.py      # PhD placement analysis module
 ├── notebooks/                 # Jupyter notebooks for exploration
 ├── output/
@@ -65,6 +75,10 @@ python main.py --start 2020 --end 2024
 
 # PhD placement analysis (after placing data in data/raw/phd_placements/)
 python src/phd_placements.py
+
+# 2025 update (OPM FedScope): fetch → clean → analyze the 2024→2025 change
+python main.py --fedscope
+python src/make_figures.py --only fedscope2025
 ```
 
 Individual steps can also be run directly:
@@ -74,6 +88,9 @@ python src/fetch_salary_data.py --year 2024   # fetch one year
 python src/assign_gender.py                    # build/rebuild gender cache
 python src/clean_merge.py                      # merge all years
 python src/analyze.py --year 2024             # analyze one year
+python src/fetch_fedscope.py                   # download + extract FedScope economists
+python src/clean_fedscope.py                   # build the fedscope_* processed tables
+python src/analyze_2025.py                     # 2024→2025 comparison tables
 ```
 
 ## Gender assignment

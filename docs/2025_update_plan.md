@@ -116,10 +116,30 @@ data even though the March 2025 headcount snapshot doesn't fully reflect them.
 
 No `gender`, `name`, or `bonus` — not in this source.
 
-### Phase 2 — analysis (`src/analyze_2025.py`, new)
+### Phase 2 — analysis ✅ done (2026-09-09)
 
-All tables written to `output/tables/`, all figures to `output/figures/`, mirroring the
-existing `run_all()` pattern.
+`src/analyze_2025.py` writes the tables below to `output/tables/` (all `fedscope_`
+prefixed); `src/make_figures.py --only fedscope2025` renders five figures. Run via
+`python main.py --fedscope`.
+
+**What the numbers say (preliminary):**
+- **Headcount −2.2%** (4,998 → 4,888), Sept 2024 → March 2025.
+- **Mean pay +2.8% nominal** ($146,952 → $151,094); **+1.4% real** (CPI) / **+1.1%** (ECI).
+- **Pay decomposition (GS):** ~95% of the increase is the January 2025 pay raise; grade-mix
+  and within-grade movement each add little. The workforce did not get materially more
+  senior on the pay side.
+- **Flows (Apr 2024 – Mar 2025):** 317 hires vs 356 separations. Quarterly net went
+  +21 → +64 → −23 → **−101 (2025 Q1)**. Hiring collapsed (145 → 36 accessions Q3→Q1) while
+  separations spiked (81 → 137). Leavers averaged **12.8 years of service** and $145k —
+  mid-career departures, not junior attrition. This is the clearest signal in the data; the
+  March 2025 headcount understates it because admin-leave staff are still counted.
+- **By agency (~76% coverage):** BLS −24, BEA −14, Treasury −13, non-ERS Agriculture −13,
+  FTC −9 shrank; Energy +17, FDIC +12, DHS +11, HHS +7, Census +6 grew.
+- **Grade mix barely moved** in the shown cells; the record-level March 2025 file shows more
+  GS-15s (17.0%) than the suppressed cells (14.9%), so seniority is understated by the cell
+  breakdown.
+
+Original plan for reference:
 
 1. **Headcount change.** Total economists Sept 2024 vs March 2025; percent change; the
    FedScope point plotted against the FY2015–2024 FedsDataCenter trend with an explicit
@@ -154,36 +174,38 @@ existing `run_all()` pattern.
 - Restate all seven limitations in the memo; add a "refresh checklist" for when the final
   March 2025 and the September 2025 quarterly snapshots are published.
 
-### Phase 4 — outputs
+### Phase 4 — outputs (tables + figures ✅; narrative ⬜)
 
-**Tables** (`output/tables/`)
-- `economist_headcount_2024_2025.csv`
-- `economist_pay_change_decomp.csv`
-- `economist_pay_distribution_2024_2025.csv`
-- `economist_by_agency_change.csv`
-- `economist_by_grade_change.csv`
-- `economist_by_appointment_change.csv`
-- `economist_flows_2025.csv`
+**Tables** (`output/tables/`, written by `analyze_2025.py`) ✅
+- `fedscope_headline_2024_2025.csv` — headcount, mean pay (nominal + real), LOS
+- `fedscope_headcount_pay_trend.csv` — FedsDataCenter FY2015–24 + FedScope 2024/2025
+- `fedscope_pay_change_decomp.csv` — GS mean-pay change: raise / steps / mix / interaction
+- `fedscope_pay_distribution_2025.csv` — March 2025 percentiles (record-level)
+- `fedscope_by_agency_change.csv` (+ `fedscope_cell_coverage_2025.csv`)
+- `fedscope_by_grade_change.csv`
+- `fedscope_profile_2025.csv` — March 2025 by pay plan / grade / appointment / age / education
+- `fedscope_flows_monthly_2025.csv`, `_quarterly_2025.csv`, `_profile_2025.csv`
 
-**Figures** (`output/figures/`)
-- `headcount_trend_with_2025.pdf` — long series + FedScope point, source break marked
-- `pay_distribution_2024_vs_2025.pdf`
-- `agency_headcount_waterfall.pdf`
-- `grade_mix_2024_vs_2025.pdf`
+**Figures** (`output/figures/`, `make_figures.py --only fedscope2025`) ✅
+- `fed_economists_2025.pdf` — headcount + mean pay, long series with FedScope points
+- `econ_pay_distribution_2025.pdf`
+- `econ_agency_change_2025.pdf`
+- `econ_grade_mix_2025.pdf`
+- `econ_flows_2025.pdf` — monthly hires vs departures
 
-**Narrative**
+**Narrative** ⬜ *(not started)*
 - `docs/2025_update.md` — findings memo (headline, method, all caveats).
 - New section in `slides/slides.tex` after "Comparison to Prior Work".
 
-### Phase 5 — integration
+### Phase 3 — context and robustness ⬜ *(not started)*
 
-- `main.py` gains a `--fedscope` path that runs fetch → clean → analyze_2025 without
-  touching the FedsDataCenter/gender pipeline.
-- `README.md`: document the source switch, the 2025 gender-data removal, and the
-  FedScope universe caveat. Add `data/raw/fedscope/` and `fedscope_economists_*` to the
-  directory map.
-- `requirements.txt`: no new hard dependencies expected (pandas + requests suffice;
-  `pyarrow` only if the FWD parquet route is later added).
+### Phase 5 — integration ✅ done (2026-09-09)
+
+- `main.py --fedscope` runs fetch → clean → analyze_2025 without touching the
+  FedsDataCenter/gender pipeline.
+- `README.md` documents the source switch, the 2025 gender-data removal, the FedScope
+  universe caveat, and the new commands / files.
+- `requirements.txt`: no new dependencies (pandas + requests + matplotlib suffice).
 
 ---
 

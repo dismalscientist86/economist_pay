@@ -38,10 +38,8 @@ Usage
     python src/clean_fedscope.py
 """
 
-import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 FEDSCOPE_DIR = Path(__file__).parent.parent / "data" / "raw" / "fedscope"

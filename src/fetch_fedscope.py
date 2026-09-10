@@ -45,7 +45,6 @@ import argparse
 import csv
 import io
 import shutil
-import sys
 import zipfile
 from datetime import date
 from pathlib import Path
