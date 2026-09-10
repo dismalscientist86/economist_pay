@@ -1,0 +1,4 @@
+definition,headcount_sep_2024,headcount_mar_2025,headcount_pct_change,mean_salary_sep_2024,mean_salary_mar_2025,pay_pct_change,note
+0110 economist (headline),4998.0,4888.0,-0.022,146952.0,151094,0.0282,
+0110 + 0119 economics assistant,5333.0,5219.0,-0.0214,141185.0,145095,0.0277,"0119 is a clerical series (~$56k); pulls the mean down, change similar"
+0110 with doctorate (Foster et al. proxy),,1386.0,,,179499,,record-level Mar 2025 only; no record-level Sep 2024 to compare

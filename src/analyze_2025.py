@@ -71,6 +71,11 @@ def load_totals() -> pd.DataFrame:
     return df[df["series_label"] == "economist"].set_index("snapshot")
 
 
+def load_totals_raw() -> pd.DataFrame:
+    """Both series (0110 and 0119), both snapshots."""
+    return _load("fedscope_economist_totals.csv", dtype={"series": str})
+
+
 def load_cells() -> pd.DataFrame:
     df = _load("fedscope_economist_cells.csv", dtype={"series": str, "grade": str})
     return df[df["series_label"] == "economist"].copy()
@@ -109,6 +114,55 @@ def headline(totals: pd.DataFrame) -> pd.DataFrame:
     out["cpi_inflation_6mo"] = round(cpi_infl, 4)
     out["eci_inflation_6mo"] = round(eci_infl, 4)
     _write(out, "fedscope_headline_2024_2025.csv", index=False)
+    return out
+
+
+# --------------------------------------------------------------------------
+# 1b. Sensitivity to how "economist" is defined
+# --------------------------------------------------------------------------
+
+def definition_sensitivity(totals_raw: pd.DataFrame, records: pd.DataFrame) -> pd.DataFrame:
+    """
+    The headline uses occupational series 0110. Show the change under two
+    alternatives: 0110 + 0119 (economics assistants), and a PhD-only proxy
+    (0110 with a doctorate) that lines up with Foster et al. (2020, 2023),
+    who restrict their federal-economist sample to PhD holders.
+    """
+    t = totals_raw.pivot_table(index="series", columns="snapshot",
+                               values=["headcount", "mean_salary"])
+    rows = []
+
+    def add(name, h0, h1, p0, p1, note=""):
+        rows.append({
+            "definition": name,
+            "headcount_sep_2024": h0, "headcount_mar_2025": h1,
+            "headcount_pct_change": round(h1 / h0 - 1, 4) if h0 else np.nan,
+            "mean_salary_sep_2024": round(p0) if p0 == p0 else np.nan,
+            "mean_salary_mar_2025": round(p1),
+            "pay_pct_change": round(p1 / p0 - 1, 4) if p0 == p0 else np.nan,
+            "note": note,
+        })
+
+    h0_110, h1_110 = t.loc["0110", ("headcount", SNAP0)], t.loc["0110", ("headcount", SNAP1)]
+    p0_110, p1_110 = t.loc["0110", ("mean_salary", SNAP0)], t.loc["0110", ("mean_salary", SNAP1)]
+    h0_119, h1_119 = t.loc["0119", ("headcount", SNAP0)], t.loc["0119", ("headcount", SNAP1)]
+    p0_119, p1_119 = t.loc["0119", ("mean_salary", SNAP0)], t.loc["0119", ("mean_salary", SNAP1)]
+
+    add("0110 economist (headline)", h0_110, h1_110, p0_110, p1_110)
+
+    h0b, h1b = h0_110 + h0_119, h1_110 + h1_119
+    add("0110 + 0119 economics assistant", h0b, h1b,
+        (p0_110 * h0_110 + p0_119 * h0_119) / h0b,
+        (p1_110 * h1_110 + p1_119 * h1_119) / h1b,
+        "0119 is a clerical series (~$56k); pulls the mean down, change similar")
+
+    phd = records[records["education"].str.contains("DOCTOR", na=False)]
+    add("0110 with doctorate (Foster et al. proxy)", np.nan, len(phd),
+        np.nan, phd["salary"].mean(),
+        "record-level Mar 2025 only; no record-level Sep 2024 to compare")
+
+    out = pd.DataFrame(rows)
+    _write(out, "fedscope_definition_sensitivity.csv", index=False)
     return out
 
 
@@ -360,6 +414,10 @@ def run_all() -> None:
     print("1. headline headcount + pay")
     h = headline(totals)
     print(h.to_string(index=False), "\n")
+
+    print("1b. definition sensitivity")
+    s = definition_sensitivity(load_totals_raw(), records)
+    print(s.to_string(index=False), "\n")
 
     print("2. long-run trend")
     trend(totals)

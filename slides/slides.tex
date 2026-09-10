@@ -202,6 +202,95 @@
 \end{frame}
 
 % =============================================================================
+\section{The 2025 Update}
+% =============================================================================
+
+\begin{frame}{The 2025 Update: Data}
+  \begin{itemize}
+    \item Question: has the \textbf{number} and \textbf{pay} of federal
+          economists changed into 2025?
+    \item FedsDataCenter stops at FY2024. 2025 uses \textbf{OPM FedScope}:
+          preliminary \textbf{March 2025} snapshot with \textbf{September 2024}
+          bundled for comparison (occupational series 0110).
+    \item Three caveats up front:
+      \begin{itemize}
+        \item \textbf{No gender / race} --- removed from FedScope as of March
+              2025 (EOs 14151/14168/14173). This update is headcount and pay only.
+        \item \textbf{Preliminary}, and still counts administrative-leave /
+              deferred-resignation staff as employed $\Rightarrow$ headcount loss
+              understated.
+        \item Different universe from FedsDataCenter (EHRI month-end status);
+              small agency\,$\times$\,grade cells suppressed ($\sim$76\% coverage).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Number and Pay of Federal Economists}
+  \begin{center}
+    \includegraphics[width=0.90\textwidth]{fed_economists_2025}
+  \end{center}
+  \vspace{-0.3em}
+  \begin{itemize}\small
+    \item Headcount \textcolor{myred}{$-2.2\%$} (4,998 $\to$ 4,888),
+          Sep 2024 $\to$ Mar 2025.
+    \item Mean pay $+2.8\%$ nominal, \textbf{$+1.4\%$ real} (CPI-U) --- almost
+          entirely the January 2025 pay raise (2.0\%), not a shift to more
+          senior staff.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Hires and Departures: the Clearer Signal}
+  \begin{center}
+    \includegraphics[width=0.86\textwidth]{econ_flows_2025}
+  \end{center}
+  \vspace{-0.3em}
+  \begin{itemize}\small
+    \item Quarterly net: $+21,\ +64,\ -23,\ \textcolor{myred}{-101}$ (2025\,Q1).
+          Hiring collapsed (145 $\to$ 36); departures spiked (81 $\to$ 137).
+    \item Leavers averaged \textbf{12.8 years} of service and \$145k ---
+          mid-career departures, not junior attrition.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Where Economists Were Gained and Lost}
+  \begin{center}
+    \includegraphics[width=0.72\textwidth]{econ_agency_change_2025}
+  \end{center}
+  \vspace{-0.3em}
+  \begin{itemize}\small
+    \item Statistical agencies among the losers: \textbf{BLS $-24$, BEA $-14$};
+          also Treasury $-13$, Agriculture $-13$, FTC $-9$.
+    \item Gained: Energy $+17$, FDIC $+12$, DHS $+11$, HHS $+7$, Census $+6$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{2025 Update: Robustness}
+  \begin{center}
+    \small
+    \begin{tabular}{lrrrr}
+      \toprule
+      Definition & Sep 2024 & Mar 2025 & Headcount & Pay \\
+      \midrule
+      0110 economist (headline)          & 4,998 & 4,888 & $-2.2\%$ & $+2.8\%$ \\
+      0110 + 0119 economics assistant    & 5,333 & 5,219 & $-2.1\%$ & $+2.8\%$ \\
+      0110 with a doctorate (Foster proxy) & --- & 1,386 & --- & mean \$179k \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vspace{0.3em}
+  \small
+  \begin{itemize}
+    \item Result is not sensitive to the series definition.
+    \item Foster et al.\ (2020, 2023) restrict to \textbf{PhD} federal
+          economists --- $\approx$ the 1,386 doctorate holders here (28\% of
+          0110). Explains their Treasury/Agriculture/HHS focus vs.\ our
+          BLS-heavy full population.
+    \item Shared universe exclusions: CEA, Federal Reserve Board, CBO, USPS,
+          intelligence agencies.
+  \end{itemize}
+\end{frame}
+
+% =============================================================================
 \section{PhD Placement Analysis}
 % =============================================================================
 
@@ -308,13 +397,23 @@
 \section{Summary}
 % =============================================================================
 
-\begin{frame}{Summary}
+\begin{frame}[allowframebreaks]{Summary}
   \textbf{Federal salary (FedsDataCenter, FY2015--2024):}
   \begin{itemize}
     \item Raw median gender gap: 0--3.4\%, broadly consistent with Foster et al.\ (2020)
     \item Gap is entirely between-grade, not within-grade; BEA, Census, BLS show
           female salary \textit{advantage} at median
     \item Female share rising: 32\% $\to$ 34\%; gap re-widened post-2021
+  \end{itemize}
+  \vspace{0.4em}
+  \textbf{The 2025 update (OPM FedScope, Sep 2024 $\to$ Mar 2025):}
+  \begin{itemize}
+    \item Headcount $-2.2\%$; mean pay $+2.8\%$ nominal / $+1.4\%$ real
+          (almost entirely the January 2025 raise)
+    \item Flows show the turn: 2025\,Q1 net $-101$, hiring collapsing as
+          mid-career economists (mean 12.8 yr service) depart
+    \item BLS and BEA among the agencies losing economists
+    \item No gender data after March 2025 (removed under 2025 executive orders)
   \end{itemize}
   \vspace{0.4em}
   \textbf{PhD placements (econphdplacements.com, 1991--2025):}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  13 MAR 2026 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  9 SEP 2026 20:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,7 +1089,7 @@ thkerncmss.
 ] [5
 
 ]
-<../output/figures/salary_trends.pdf, id=97, 720.66916pt x 278.27473pt>
+<../output/figures/salary_trends.pdf, id=103, 720.66916pt x 278.27473pt>
 File: ../output/figures/salary_trends.pdf Graphic file (type pdf)
 <use ../output/figures/salary_trends.pdf>
 Package pdftex.def Info: ../output/figures/salary_trends.pdf  used on input lin
@@ -1107,7 +1107,7 @@ Overfull \vbox (1.25986pt too high) detected at line 130
 [6
 
  <../output/figures/salary_trends.pdf>]
-<../output/figures/female_share_agency.pdf, id=157, 567.22542pt x 314.79369pt>
+<../output/figures/female_share_agency.pdf, id=163, 567.22542pt x 314.79369pt>
 File: ../output/figures/female_share_agency.pdf Graphic file (type pdf)
 <use ../output/figures/female_share_agency.pdf>
 Package pdftex.def Info: ../output/figures/female_share_agency.pdf  used on inp
@@ -1120,7 +1120,7 @@ Overfull \vbox (51.52948pt too high) detected at line 140
 [7
 
  <../output/figures/female_share_agency.pdf>]
-<../output/figures/grade_salary.pdf, id=221, 567.18338pt x 314.52316pt>
+<../output/figures/grade_salary.pdf, id=227, 567.18338pt x 314.52316pt>
 File: ../output/figures/grade_salary.pdf Graphic file (type pdf)
 <use ../output/figures/grade_salary.pdf>
 Package pdftex.def Info: ../output/figures/grade_salary.pdf  used on input line
@@ -1133,7 +1133,7 @@ Overfull \vbox (59.55511pt too high) detected at line 151
 [8
 
  <../output/figures/grade_salary.pdf>]
-<../output/figures/agency_gap.pdf, id=271, 568.31181pt x 387.25966pt>
+<../output/figures/agency_gap.pdf, id=277, 568.31181pt x 387.25966pt>
 File: ../output/figures/agency_gap.pdf Graphic file (type pdf)
 <use ../output/figures/agency_gap.pdf>
 Package pdftex.def Info: ../output/figures/agency_gap.pdf  used on input line 1
@@ -1146,7 +1146,7 @@ Overfull \vbox (135.14148pt too high) detected at line 164
 [9
 
  <../output/figures/agency_gap.pdf>]
-<../output/figures/salary_comparison_paper.pdf, id=339, 570.45525pt x 307.48822
+<../output/figures/salary_comparison_paper.pdf, id=345, 570.45525pt x 307.48822
 pt>
 File: ../output/figures/salary_comparison_paper.pdf Graphic file (type pdf)
 <use ../output/figures/salary_comparison_paper.pdf>
@@ -1164,52 +1164,95 @@ Overfull \vbox (9.70406pt too high) detected at line 174
 ] [12
 
 ]
-<../output/figures/placement_trends.pdf, id=421, 639.45338pt x 351.04211pt>
-File: ../output/figures/placement_trends.pdf Graphic file (type pdf)
-<use ../output/figures/placement_trends.pdf>
-Package pdftex.def Info: ../output/figures/placement_trends.pdf  used on input 
-line 254.
-(pdftex.def)             Requested size: 390.00697pt x 214.10323pt.
+<../output/figures/fed_economists_2025.pdf, id=429, 716.9184pt x 319.05763pt>
+File: ../output/figures/fed_economists_2025.pdf Graphic file (type pdf)
+<use ../output/figures/fed_economists_2025.pdf>
+Package pdftex.def Info: ../output/figures/fed_economists_2025.pdf  used on inp
+ut line 240.
+(pdftex.def)             Requested size: 390.00697pt x 173.56894pt.
 
-Overfull \vbox (48.58025pt too high) detected at line 254
+Overfull \vbox (13.93175pt too high) detected at line 240
  []
 
 [13
 
- <../output/figures/placement_trends.pdf>]
-<../output/figures/placement_comparison.pdf, id=479, 639.4954pt x 343.87444pt>
-File: ../output/figures/placement_comparison.pdf Graphic file (type pdf)
-<use ../output/figures/placement_comparison.pdf>
-Package pdftex.def Info: ../output/figures/placement_comparison.pdf  used on in
-put line 260.
-(pdftex.def)             Requested size: 381.34485pt x 205.06694pt.
+ <../output/figures/fed_economists_2025.pdf>]
+<../output/figures/econ_flows_2025.pdf, id=501, 639.47783pt x 311.39206pt>
+File: ../output/figures/econ_flows_2025.pdf Graphic file (type pdf)
+<use ../output/figures/econ_flows_2025.pdf>
+Package pdftex.def Info: ../output/figures/econ_flows_2025.pdf  used on input l
+ine 253.
+(pdftex.def)             Requested size: 372.67612pt x 181.47227pt.
 
-Overfull \vbox (9.21478pt too high) detected at line 260
+Overfull \vbox (21.27953pt too high) detected at line 253
  []
 
 [14
 
- <../output/figures/placement_comparison.pdf>] [15
+ <../output/figures/econ_flows_2025.pdf>]
+<../output/figures/econ_agency_change_2025.pdf, id=562, 595.51549pt x 420.98877
+pt>
+File: ../output/figures/econ_agency_change_2025.pdf Graphic file (type pdf)
+<use ../output/figures/econ_agency_change_2025.pdf>
+Package pdftex.def Info: ../output/figures/econ_agency_change_2025.pdf  used on
+ input line 265.
+(pdftex.def)             Requested size: 312.00822pt x 220.57274pt.
+
+Overfull \vbox (60.37999pt too high) detected at line 265
+ []
+
+[15
+
+ <../output/figures/econ_agency_change_2025.pdf>] [16
+
+] [17
 
 ]
-<../output/figures/female_sector_comparison.pdf, id=556, 586.08334pt x 291.0833
-3pt>
-File: ../output/figures/female_sector_comparison.pdf Graphic file (type pdf)
-<use ../output/figures/female_sector_comparison.pdf>
-Package pdftex.def Info: ../output/figures/female_sector_comparison.pdf  used o
-n input line 287.
-(pdftex.def)             Requested size: 381.34485pt x 189.40178pt.
- [16
+<../output/figures/placement_trends.pdf, id=650, 639.45338pt x 351.04211pt>
+File: ../output/figures/placement_trends.pdf Graphic file (type pdf)
+<use ../output/figures/placement_trends.pdf>
+Package pdftex.def Info: ../output/figures/placement_trends.pdf  used on input 
+line 343.
+(pdftex.def)             Requested size: 390.00697pt x 214.10323pt.
 
- <../output/figures/female_sector_comparison.pdf>] [17
-
-]
-Overfull \vbox (13.64531pt too high) detected at line 335
+Overfull \vbox (48.58025pt too high) detected at line 343
  []
 
 [18
 
-] [19
+ <../output/figures/placement_trends.pdf>]
+<../output/figures/placement_comparison.pdf, id=707, 639.4954pt x 343.87444pt>
+File: ../output/figures/placement_comparison.pdf Graphic file (type pdf)
+<use ../output/figures/placement_comparison.pdf>
+Package pdftex.def Info: ../output/figures/placement_comparison.pdf  used on in
+put line 349.
+(pdftex.def)             Requested size: 381.34485pt x 205.06694pt.
+
+Overfull \vbox (9.21478pt too high) detected at line 349
+ []
+
+[19
+
+ <../output/figures/placement_comparison.pdf>] [20
+
+]
+<../output/figures/female_sector_comparison.pdf, id=785, 586.08334pt x 291.0833
+3pt>
+File: ../output/figures/female_sector_comparison.pdf Graphic file (type pdf)
+<use ../output/figures/female_sector_comparison.pdf>
+Package pdftex.def Info: ../output/figures/female_sector_comparison.pdf  used o
+n input line 376.
+(pdftex.def)             Requested size: 381.34485pt x 189.40178pt.
+ [21
+
+ <../output/figures/female_sector_comparison.pdf>] [22
+
+] [23
+
+] [24
+
+
+] [25
 
 ]
 \tf@nav=\write6
@@ -1227,30 +1270,31 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 272D3AE2ABF6F9EF6091BB2F7556EAED;707.
+(rerunfilecheck)             Checksum: 6AECCFFF6C72AED8DFC48C8708D3FEEB;831.
  ) 
 Here is how much of TeX's memory you used:
- 25064 strings out of 474485
- 506770 string characters out of 5742789
- 1938542 words of memory out of 5000000
- 46800 multiletter control sequences out of 15000+600000
- 570426 words of font info for 80 fonts, out of 8000000 for 9000
+ 25158 strings out of 474485
+ 509419 string characters out of 5742789
+ 1937542 words of memory out of 5000000
+ 46880 multiletter control sequences out of 15000+600000
+ 570767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,383b,645s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Sandler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
-ss1095.pk><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmss10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Sandler/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Sandler/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/San
-dler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
-C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmtt10.pfb>
-Output written on slides.pdf (19 pages, 309105 bytes).
+ss1000.pk> <C:\Users\Sandler\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\tcss1095.pk><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Sandler/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Sandler/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Sandler/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/U
+sers/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi
+10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb>
+Output written on slides.pdf (25 pages, 391018 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 938 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
