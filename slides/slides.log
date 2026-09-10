@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  9 SEP 2026 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  10 SEP 2026 05:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -897,24 +897,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -976,63 +976,63 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 45.
  (slides.out) (slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 37.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 37.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 45.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 37.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 37.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 37.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 37.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 37.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 37.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 37.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 37.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 37.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 37.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 37.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 37.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 37.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 37.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 37.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 37.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 37.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 37.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 37.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 37.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 45.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 3
-7.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 4
+5.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 3
-7.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 4
+5.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 37.
+ut line 45.
 
 (C:\Users\Sandler\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator
 -basic-dictionary-English.dict
@@ -1065,20 +1065,20 @@ c) [2
 ] [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 106
+.
 
 (C:\Users\Sandler\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 106
+.
 
 (C:\Users\Sandler\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 98.
+ut line 106.
 
 (C:\Users\Sandler\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mat
 hkerncmss.fd
@@ -1093,17 +1093,14 @@ thkerncmss.
 File: ../output/figures/salary_trends.pdf Graphic file (type pdf)
 <use ../output/figures/salary_trends.pdf>
 Package pdftex.def Info: ../output/figures/salary_trends.pdf  used on input lin
-e 130.
-(pdftex.def)             Requested size: 398.6757pt x 153.94325pt.
+e 136.
+(pdftex.def)             Requested size: 361.45534pt x 139.57011pt.
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-130.
+136.
 
 (C:\Users\Sandler\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmss.fd
 File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Overfull \vbox (1.25986pt too high) detected at line 130
- []
-
 [6
 
  <../output/figures/salary_trends.pdf>]
@@ -1111,26 +1108,18 @@ Overfull \vbox (1.25986pt too high) detected at line 130
 File: ../output/figures/female_share_agency.pdf Graphic file (type pdf)
 <use ../output/figures/female_share_agency.pdf>
 Package pdftex.def Info: ../output/figures/female_share_agency.pdf  used on inp
-ut line 140.
-(pdftex.def)             Requested size: 390.00697pt x 216.44414pt.
-
-Overfull \vbox (51.52948pt too high) detected at line 140
- []
-
-[7
+ut line 144.
+(pdftex.def)             Requested size: 234.71906pt x 130.26227pt.
+ [7
 
  <../output/figures/female_share_agency.pdf>]
 <../output/figures/grade_salary.pdf, id=227, 567.18338pt x 314.52316pt>
 File: ../output/figures/grade_salary.pdf Graphic file (type pdf)
 <use ../output/figures/grade_salary.pdf>
 Package pdftex.def Info: ../output/figures/grade_salary.pdf  used on input line
- 151.
-(pdftex.def)             Requested size: 381.34485pt x 211.47809pt.
-
-Overfull \vbox (59.55511pt too high) detected at line 151
- []
-
-[8
+ 153.
+(pdftex.def)             Requested size: 243.2956pt x 134.91597pt.
+ [8
 
  <../output/figures/grade_salary.pdf>]
 <../output/figures/agency_gap.pdf, id=277, 568.31181pt x 387.25966pt>
@@ -1138,12 +1127,8 @@ File: ../output/figures/agency_gap.pdf Graphic file (type pdf)
 <use ../output/figures/agency_gap.pdf>
 Package pdftex.def Info: ../output/figures/agency_gap.pdf  used on input line 1
 64.
-(pdftex.def)             Requested size: 381.34485pt x 259.86444pt.
-
-Overfull \vbox (135.14148pt too high) detected at line 164
- []
-
-[9
+(pdftex.def)             Requested size: 170.67696pt x 116.30287pt.
+ [9
 
  <../output/figures/agency_gap.pdf>]
 <../output/figures/salary_comparison_paper.pdf, id=345, 570.45525pt x 307.48822
@@ -1151,146 +1136,116 @@ pt>
 File: ../output/figures/salary_comparison_paper.pdf Graphic file (type pdf)
 <use ../output/figures/salary_comparison_paper.pdf>
 Package pdftex.def Info: ../output/figures/salary_comparison_paper.pdf  used on
- input line 174.
-(pdftex.def)             Requested size: 381.34485pt x 205.55621pt.
-
-Overfull \vbox (9.70406pt too high) detected at line 174
- []
-
-[10
+ input line 172.
+(pdftex.def)             Requested size: 336.6005pt x 181.43523pt.
+ [10
 
  <../output/figures/salary_comparison_paper.pdf>] [11
 
 ] [12
 
 ]
-<../output/figures/fed_economists_2025.pdf, id=429, 716.9184pt x 319.05763pt>
+<../output/figures/fed_economists_2025.pdf, id=429, 716.9184pt x 319.16742pt>
 File: ../output/figures/fed_economists_2025.pdf Graphic file (type pdf)
 <use ../output/figures/fed_economists_2025.pdf>
 Package pdftex.def Info: ../output/figures/fed_economists_2025.pdf  used on inp
-ut line 240.
-(pdftex.def)             Requested size: 390.00697pt x 173.56894pt.
-
-Overfull \vbox (13.93175pt too high) detected at line 240
- []
+ut line 236.
+(pdftex.def)             Requested size: 323.94489pt x 144.21815pt.
 
 [13
 
  <../output/figures/fed_economists_2025.pdf>]
-<../output/figures/econ_flows_2025.pdf, id=501, 639.47783pt x 311.39206pt>
+<../output/figures/econ_flows_2025.pdf, id=502, 639.47783pt x 311.39206pt>
 File: ../output/figures/econ_flows_2025.pdf Graphic file (type pdf)
 <use ../output/figures/econ_flows_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_flows_2025.pdf  used on input l
-ine 253.
-(pdftex.def)             Requested size: 372.67612pt x 181.47227pt.
-
-Overfull \vbox (21.27953pt too high) detected at line 253
- []
-
-[14
+ine 247.
+(pdftex.def)             Requested size: 286.61096pt x 139.56445pt.
+ [14
 
  <../output/figures/econ_flows_2025.pdf>]
-<../output/figures/econ_separation_reasons_2025.pdf, id=562, 567.30634pt x 305.
+<../output/figures/econ_separation_reasons_2025.pdf, id=563, 567.30634pt x 305.
 94038pt>
 File: ../output/figures/econ_separation_reasons_2025.pdf Graphic file (type pdf
 )
 <use ../output/figures/econ_separation_reasons_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_separation_reasons_2025.pdf  us
-ed on input line 266.
-(pdftex.def)             Requested size: 355.34526pt x 191.63707pt.
-
-Overfull \vbox (31.44432pt too high) detected at line 266
- []
-
-[15
+ed on input line 258.
+(pdftex.def)             Requested size: 232.90872pt x 125.60442pt.
+ [15
 
  <../output/figures/econ_separation_reasons_2025.pdf>]
-<../output/figures/econ_agency_change_2025.pdf, id=624, 595.51549pt x 420.98877
-pt>
+<../output/figures/econ_agency_change_2025.pdf, id=625, 721.3136pt x 315.54512p
+t>
 File: ../output/figures/econ_agency_change_2025.pdf Graphic file (type pdf)
 <use ../output/figures/econ_agency_change_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_agency_change_2025.pdf  used on
- input line 278.
-(pdftex.def)             Requested size: 312.00822pt x 220.57274pt.
-
-Overfull \vbox (60.37999pt too high) detected at line 278
- []
+ input line 268.
+(pdftex.def)             Requested size: 350.94832pt x 153.52548pt.
 
 [16
 
  <../output/figures/econ_agency_change_2025.pdf>]
-<../output/figures/econ_headcount_since_1998.pdf, id=699, 639.45338pt x 459.447
-11pt>
+<../output/figures/econ_headcount_since_1998.pdf, id=702, 784.13013pt x 278.388
+17pt>
 File: ../output/figures/econ_headcount_since_1998.pdf Graphic file (type pdf)
 <use ../output/figures/econ_headcount_since_1998.pdf>
 Package pdftex.def Info: ../output/figures/econ_headcount_since_1998.pdf  used 
-on input line 292.
-(pdftex.def)             Requested size: 372.67612pt x 267.76945pt.
-
-Overfull \vbox (107.5767pt too high) detected at line 292
- []
-
-[17
+on input line 280.
+(pdftex.def)             Requested size: 432.4335pt x 153.52599pt.
+ [17
 
  <../output/figures/econ_headcount_since_1998.pdf>]
-<../output/figures/econ_separations_history.pdf, id=769, 700.078pt x 310.85547p
+<../output/figures/econ_separations_history.pdf, id=770, 700.078pt x 310.85547p
 t>
 File: ../output/figures/econ_separations_history.pdf Graphic file (type pdf)
 <use ../output/figures/econ_separations_history.pdf>
 Package pdftex.def Info: ../output/figures/econ_separations_history.pdf  used o
-n input line 315.
-(pdftex.def)             Requested size: 225.34074pt x 100.0592pt.
-<../output/figures/econ_q1_history.pdf, id=770, 638.02905pt x 314.31993pt>
+n input line 299.
+(pdftex.def)             Requested size: 216.66942pt x 96.20766pt.
+<../output/figures/econ_q1_history.pdf, id=771, 638.02905pt x 314.31993pt>
 File: ../output/figures/econ_q1_history.pdf Graphic file (type pdf)
 <use ../output/figures/econ_q1_history.pdf>
 Package pdftex.def Info: ../output/figures/econ_q1_history.pdf  used on input l
-ine 315.
-(pdftex.def)             Requested size: 199.34116pt x 98.20554pt.
+ine 299.
+(pdftex.def)             Requested size: 216.67387pt x 106.74266pt.
  [18
 
  <../output/figures/econ_separations_history.pdf> <../output/figures/econ_q1_hi
 story.pdf>] [19
 
-]
-[20
+] [20
 
 ]
-<../output/figures/placement_trends.pdf, id=901, 639.45338pt x 351.04211pt>
+<../output/figures/placement_trends.pdf, id=902, 639.45338pt x 351.04211pt>
 File: ../output/figures/placement_trends.pdf Graphic file (type pdf)
 <use ../output/figures/placement_trends.pdf>
 Package pdftex.def Info: ../output/figures/placement_trends.pdf  used on input 
-line 393.
-(pdftex.def)             Requested size: 390.00697pt x 214.10323pt.
-
-Overfull \vbox (48.58025pt too high) detected at line 393
- []
-
-[21
+line 375.
+(pdftex.def)             Requested size: 254.23517pt x 139.56802pt.
+ [21
 
  <../output/figures/placement_trends.pdf>]
-<../output/figures/placement_comparison.pdf, id=958, 639.4954pt x 343.87444pt>
+<../output/figures/placement_comparison.pdf, id=959, 639.4954pt x 343.87444pt>
 File: ../output/figures/placement_comparison.pdf Graphic file (type pdf)
 <use ../output/figures/placement_comparison.pdf>
 Package pdftex.def Info: ../output/figures/placement_comparison.pdf  used on in
-put line 399.
-(pdftex.def)             Requested size: 381.34485pt x 205.06694pt.
-
-Overfull \vbox (9.21478pt too high) detected at line 399
- []
-
-[22
+put line 379.
+(pdftex.def)             Requested size: 250.9049pt x 134.91853pt.
+ [22
 
  <../output/figures/placement_comparison.pdf>] [23
 
 ]
-<../output/figures/female_sector_comparison.pdf, id=1035, 586.08334pt x 291.083
+<../output/figures/female_sector_comparison.pdf, id=1036, 586.08334pt x 291.083
 33pt>
 File: ../output/figures/female_sector_comparison.pdf Graphic file (type pdf)
 <use ../output/figures/female_sector_comparison.pdf>
 Package pdftex.def Info: ../output/figures/female_sector_comparison.pdf  used o
-n input line 426.
-(pdftex.def)             Requested size: 381.34485pt x 189.40178pt.
- [24
+n input line 404.
+(pdftex.def)             Requested size: 262.26843pt x 130.25786pt.
+
+[24
 
  <../output/figures/female_sector_comparison.pdf>] [25
 
@@ -1311,7 +1266,8 @@ n input line 426.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
- (slides.aux)
+
+(slides.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1320,10 +1276,10 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: 6AECCFFF6C72AED8DFC48C8708D3FEEB;831.
  ) 
 Here is how much of TeX's memory you used:
- 25210 strings out of 474485
- 511460 string characters out of 5742789
+ 25212 strings out of 474485
+ 511477 string characters out of 5742789
  1937542 words of memory out of 5000000
- 46926 multiletter control sequences out of 15000+600000
+ 46928 multiletter control sequences out of 15000+600000
  570767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,383b,645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1339,9 +1295,9 @@ sers/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi
 10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on slides.pdf (28 pages, 480880 bytes).
+Output written on slides.pdf (28 pages, 480898 bytes).
 PDF statistics:
- 1189 PDF objects out of 1200 (max. 8388607)
+ 1190 PDF objects out of 1200 (max. 8388607)
  63 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -63,11 +63,13 @@ average** (1.7% base + 0.3% locality; Executive Order 14139).
 | Economists (series 0110) | 4,998 | 4,888 | **−110 (−2.2%)** |
 | Mean length of service | 12.4 yr | 12.6 yr | +0.2 yr |
 
-For context, the FedsDataCenter series (different universe) ran 4,266 in FY2015
-up to 4,718 in FY2024 — a decade of slow growth. FedScope's September 2024
-count of 4,998 and mean pay of $146,952 line up closely with FedsDataCenter's
-FY2024 ($146,848), which makes the March 2025 comparison credible even across
-the source change.
+The figure now uses **FedScope only** (September employment cubes, from
+`fedscope_economists_since_1998.csv`) so there is no source break: the series
+runs 4,469 (Sep 2015) → 4,281 (Sep 2019 trough) → 4,998 (Sep 2024 peak) → 4,888
+(Mar 2025). See §6 for the full 1998– picture. The FedsDataCenter panel, used
+for the gender analysis through FY2024, is a narrower universe (FY2024 count
+4,718 vs. FedScope's 4,998) but tracks the same shape and nearly identical mean
+pay ($146,848 vs. $146,952 for 2024).
 
 ### 2. Pay
 

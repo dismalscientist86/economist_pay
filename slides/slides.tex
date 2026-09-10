@@ -25,6 +25,14 @@
 % ── Figure path ──────────────────────────────────────────────────────────────
 \graphicspath{{../output/figures/}}
 
+% Centered figure that can never exceed a set fraction of the frame height,
+% so a figure + a few bullets always fit. Default 0.6; pass e.g. [0.72] for
+% figure-only frames or [0.5] for text-heavy ones.
+\newcommand{\slidefig}[2][0.6]{%
+  \begin{center}%
+  \includegraphics[width=\linewidth,height=#1\textheight,keepaspectratio]{#2}%
+  \end{center}}
+
 % ── Title info ───────────────────────────────────────────────────────────────
 \title{Federal Economist Compensation \& PhD Placement:\\
        Evidence by Gender}
@@ -118,10 +126,8 @@
 \section{Federal Salary Analysis}
 % =============================================================================
 
-\begin{frame}{Median Salary by Gender, FY2015--2024}
-  \begin{center}
-    \includegraphics[width=0.92\textwidth]{salary_trends}
-  \end{center}
+\begin{frame}[t]{Median Salary by Gender, FY2015--2024}
+  \slidefig[0.6]{salary_trends}
   \begin{itemize}
     \item Gap peaked at 3.4\% in 2015, nearly closed in 2019--2021,
           then \textbf{re-widened to 3.2\%} by 2024
@@ -129,20 +135,16 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Female Share of Federal Economists by Agency}
-  \begin{center}
-    \includegraphics[width=0.90\textwidth]{female_share_agency}
-  \end{center}
+\begin{frame}[t]{Female Share of Federal Economists by Agency}
+  \slidefig[0.56]{female_share_agency}
   \begin{itemize}
     \item Overall share rising: 32\% (2016) $\to$ 34\% (2024)
     \item HHS consistently highest ($\approx$40--45\%); Treasury lowest ($\approx$29--32\%)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Is the Gap Within or Between Grade?}
-  \begin{center}
-    \includegraphics[width=0.88\textwidth]{grade_salary}
-  \end{center}
+\begin{frame}[t]{Is the Gap Within or Between Grade?}
+  \slidefig[0.58]{grade_salary}
   \begin{itemize}
     \item Within-grade gaps are \textbf{near zero or reversed} across all GS levels
     \item The overall salary gap is driven by \textbf{grade distribution}:
@@ -150,10 +152,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Salary Gap by Agency}
-  \begin{center}
-    \includegraphics[width=0.88\textwidth]{agency_gap}
-  \end{center}
+\begin{frame}[t]{Salary Gap by Agency}
+  \slidefig[0.5]{agency_gap}
   \begin{itemize}
     \item \textcolor{myred}{BEA, Census Bureau, and BLS show female salary advantage}
           (women earn more at median)
@@ -167,10 +167,8 @@
 \section{Comparison to Prior Work}
 % =============================================================================
 
-\begin{frame}{Federal Salary Gap: FedsDataCenter vs.\ Foster et al.\ (2020)}
-  \begin{center}
-    \includegraphics[width=0.88\textwidth]{salary_comparison_paper}
-  \end{center}
+\begin{frame}[t]{Federal Salary Gap: FedsDataCenter vs.\ Foster et al.\ (2020)}
+  \slidefig[0.78]{salary_comparison_paper}
 \end{frame}
 
 \begin{frame}{Federal Salary Gap: Comparison Summary}
@@ -225,10 +223,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Number and Pay of Federal Economists}
-  \begin{center}
-    \includegraphics[width=0.90\textwidth]{fed_economists_2025}
-  \end{center}
+\begin{frame}[t]{Number and Pay of Federal Economists}
+  \slidefig[0.62]{fed_economists_2025}
   \vspace{-0.3em}
   \begin{itemize}\small
     \item Headcount \textcolor{myred}{$-2.2\%$} (4,998 $\to$ 4,888),
@@ -239,10 +235,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Hires and Departures: the Clearer Signal}
-  \begin{center}
-    \includegraphics[width=0.86\textwidth]{econ_flows_2025}
-  \end{center}
+\begin{frame}[t]{Hires and Departures: the Clearer Signal}
+  \slidefig[0.6]{econ_flows_2025}
   \vspace{-0.3em}
   \begin{itemize}\small
     \item Quarterly net: $+21,\ +64,\ -23,\ \textcolor{myred}{-101}$ (2025\,Q1).
@@ -252,10 +246,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Why They Left: RIF and Buyout, Not Ordinary Turnover}
-  \begin{center}
-    \includegraphics[width=0.82\textwidth]{econ_separation_reasons_2025}
-  \end{center}
+\begin{frame}[t]{Why They Left: RIF and Buyout, Not Ordinary Turnover}
+  \slidefig[0.54]{econ_separation_reasons_2025}
   \vspace{-0.3em}
   \begin{itemize}\small
     \item 2025\,Q1 holds 86\% of the year's early-out retirements, 64\% of
@@ -265,10 +257,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Where Economists Were Gained and Lost}
-  \begin{center}
-    \includegraphics[width=0.72\textwidth]{econ_agency_change_2025}
-  \end{center}
+\begin{frame}[t]{Where Economists Were Gained and Lost}
+  \slidefig[0.66]{econ_agency_change_2025}
   \vspace{-0.3em}
   \begin{itemize}\small
     \item Statistical agencies among the losers: \textbf{BLS $-24$, BEA $-14$};
@@ -277,10 +267,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Historical Context: Economists Since 1998}
-  \begin{center}
-    \includegraphics[width=0.86\textwidth]{econ_headcount_since_1998}
-  \end{center}
+\begin{frame}[t]{Historical Context: Economists Since 1998}
+  \slidefig[0.66]{econ_headcount_since_1998}
   \vspace{-0.3em}
   \begin{itemize}\small
     \item On a consistent post-2006 basis, headcount ran 4,280--5,000. March
@@ -291,26 +279,22 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Historical Context: 2025 Outflow vs.\ Prior Years}
+\begin{frame}[t]{Historical Context: 2025 Outflow vs.\ Prior Years}
   \begin{columns}[T]
-    \begin{column}{0.52\textwidth}
-      \includegraphics[width=\textwidth]{econ_separations_history}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{econ_separations_history}
     \end{column}
-    \begin{column}{0.46\textwidth}
-      \includegraphics[width=\textwidth]{econ_q1_history}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{econ_q1_history}
     \end{column}
   \end{columns}
-  \vspace{-0.2em}
   \begin{itemize}\small
-    \item FY2024 was the calmest year on record (277 separations). FY2025's
-          \textbf{first six months} already hit 215.
-    \item Jan--Mar 2025: most departures and nearly fewest hires of any Q1 since
-          2015. Prior worst Q1 was 2017 (first Trump transition).
-    \item The one precedent for elevated attrition --- FY2019, the ERS move to
-          Kansas City --- was one agency; 2025 is government-wide.
-    \item \textbf{No separation carries a formal RIF code}, FY2015 through Mar
-          2025 --- it is running through quits, retirements and term-appointment
-          endings.
+    \item FY2024 was the calmest year on record (277 separations); FY2025's
+          \textbf{first six months} already hit 215. Jan--Mar 2025 had the most
+          departures and nearly the fewest hires of any Q1 since 2015.
+    \item The one precedent --- FY2019, the ERS move to Kansas City --- was one
+          agency. \textbf{No separation carries a formal RIF code}: the 2025
+          drawdown runs through quits, retirements and term-appointment endings.
   \end{itemize}
 \end{frame}
 
@@ -382,20 +366,16 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Placement Trends Over Time}
-  \begin{center}
-    \includegraphics[width=0.90\textwidth]{placement_trends}
-  \end{center}
+\begin{frame}[t]{Placement Trends Over Time}
+  \slidefig[0.6]{placement_trends}
   \begin{itemize}
     \item Tenure-track share declining since $\approx$2010; other academic rising
     \item Private sector growing steadily; central bank placements relatively stable
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Placement Shares: EconPhDPlacements vs.\ Foster et al.\ (2023, JEP)}
-  \begin{center}
-    \includegraphics[width=0.88\textwidth]{placement_comparison}
-  \end{center}
+\begin{frame}[t]{Placement Shares: EconPhDPlacements vs.\ Foster et al.\ (2023, JEP)}
+  \slidefig[0.58]{placement_comparison}
 \end{frame}
 
 \begin{frame}{Reconciling the Differences}
@@ -419,10 +399,8 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Female Share by Sector: EconPhDPlacements vs.\ Foster et al.}
-  \begin{center}
-    \includegraphics[width=0.88\textwidth]{female_sector_comparison}
-  \end{center}
+\begin{frame}[t]{Female Share by Sector: EconPhDPlacements vs.\ Foster et al.}
+  \slidefig[0.56]{female_sector_comparison}
 \end{frame}
 
 \begin{frame}{Female Share in Placements: Caveats and Takeaways}

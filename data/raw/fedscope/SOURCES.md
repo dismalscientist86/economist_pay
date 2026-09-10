@@ -1,6 +1,6 @@
 # FedScope source files
 
-Retrieved 2026-09-09 from <https://www.opm.gov/data/datasets/>.
+Retrieved 2026-09-10 from <https://www.opm.gov/data/datasets/>.
 
 OPM FedScope "classic" raw datasets. This is the **preliminary** March 2025
 employment snapshot (posted 2025-07-01) with the September 2024 snapshot

@@ -352,49 +352,54 @@ def fig_salary_comparison_paper():
 ORANGE = "#E08214"   # FedScope series, to set it apart from FedsDataCenter
 
 
-# ── 9. Headcount and mean pay, long run + 2025 ──────────────────────────────
+# ── 9. Headcount and mean pay, single-source FedScope ──────────────────────
 def fig_fed_economists_2025():
-    tr = pd.read_csv(TABLES / "fedscope_headcount_pay_trend.csv")
-    fdc = tr[tr["source"].str.startswith("FedsDataCenter")].copy()
-    fdc["year"] = fdc["period"].str.slice(2).astype(int)
-    fs = tr[tr["source"].str.startswith("FedScope")].copy()
-    fs_x = {"Sep 2024": 2024.5, "Mar 2025": 2025.0}
-    fs["x"] = fs["period"].map(fs_x)
-
-    hl = pd.read_csv(TABLES / "fedscope_headline_2024_2025.csv").set_index("measure")
-    real_mar = hl.loc["mean_salary_real_cpi", "mar_2025"]
+    """FedScope only -- one consistent universe, so no source break. Uses
+    fedscope_economists_since_1998.csv (committed; rebuilt by analyze_history)."""
+    path = TABLES / "fedscope_economists_since_1998.csv"
+    if not path.exists():
+        print("  skipping fed_economists_2025 (run: python main.py --fedscope --history)")
+        return
+    df = pd.read_csv(path)
+    df = df[df["date"] // 100 >= 2013].copy()
+    df["x"] = (df["date"] // 100).astype(float)
+    df.loc[df["period"] == "Mar 2025", "x"] = 2025.25
+    sep = df[df["period"] != "Mar 2025"]
+    mar = df[df["period"] == "Mar 2025"]
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 
     ax = axes[0]
-    ax.plot(fdc["year"], fdc["headcount"], color=BLUE, marker="o", label="FedsDataCenter (FOIA annual)")
-    ax.plot(fs["x"], fs["headcount"], color=ORANGE, marker="D", markersize=7,
-            linestyle="-", label="FedScope (EHRI month-end)")
-    for _, r in fs.iterrows():
+    ax.plot(df["x"], df["headcount"], color=BLUE, marker="o", ms=5,
+            label="September snapshot")
+    ax.plot(mar["x"], mar["headcount"], color=ORANGE, marker="D", ms=8,
+            label="March 2025 (preliminary)")
+    for _, r in pd.concat([sep[sep["x"].isin([2019, 2024])], mar]).iterrows():
         ax.annotate(f"{int(r['headcount']):,}", (r["x"], r["headcount"]),
                     textcoords="offset points", xytext=(0, 8), ha="center", fontsize=9)
     ax.set_title("Number of Federal Economists (series 0110)")
     ax.set_ylabel("Headcount")
-    ax.set_xlabel("Fiscal Year")
-    ax.set_ylim(3800, 5200)
+    ax.set_xlabel("Year")
+    ax.set_ylim(4050, 5200)
     ax.legend(frameon=False, fontsize=8.5, loc="lower left")
     ax.grid(axis="y")
 
     ax = axes[1]
-    ax.plot(fdc["year"], fdc["mean_salary"] / 1000, color=BLUE, marker="o", label="FedsDataCenter")
-    ax.plot(fs["x"], fs["mean_salary"] / 1000, color=ORANGE, marker="D", markersize=7,
-            label="FedScope (nominal)")
-    ax.plot([fs_x["Mar 2025"]], [real_mar / 1000], color=ORANGE, marker="o",
-            markerfacecolor="white", markersize=8, label="Mar 2025, real (Sep-2024 $)")
+    ax.plot(df["x"], df["mean_salary_nominal"] / 1000, color=BLUE, marker="o", ms=5,
+            label="nominal")
+    ax.plot(df["x"], df["mean_salary_2025usd"] / 1000, color=PAPER, marker="o", ms=4,
+            ls="--", label="real (2025 $)")
+    ax.plot(mar["x"], mar["mean_salary_nominal"] / 1000, color=ORANGE, marker="D", ms=8)
     ax.set_title("Mean Adjusted Basic Pay")
     ax.set_ylabel("Mean Salary ($ thousands)")
-    ax.set_xlabel("Fiscal Year")
+    ax.set_xlabel("Year")
     ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("$%g"))
     ax.legend(frameon=False, fontsize=8.5, loc="upper left")
     ax.grid(axis="y")
 
-    note = ("FedScope and FedsDataCenter are different universes (EHRI month-end status vs. annual FOIA extract);\n"
-            "the March 2025 snapshot is preliminary and still counts administrative-leave / deferred-resignation staff.")
+    note = ("Source: OPM FedScope employment cubes (Sep) and the preliminary March 2025 snapshot — "
+            "one consistent universe. March 2025\nstill counts administrative-leave / deferred-resignation "
+            "staff as employed. Real pay deflated by CPI-U to March 2025 dollars.")
     fig.text(0.01, -0.04, note, fontsize=7.5, color=GRAY, va="top")
     save("fed_economists_2025")
 
@@ -445,19 +450,29 @@ def fig_econ_agency_change_2025():
     df["label"] = df["agency_group"].map(label)
     df = df.sort_values("headcount_change")
 
-    colors = [RED if c < 0 else PAPER for c in df["headcount_change"]]
-    fig, ax = plt.subplots(figsize=(8, 6))
-    ax.barh(df["label"], df["headcount_change"], color=colors, alpha=0.85)
+    # keep the agencies that actually moved; fold the rest into one row
+    moved = df[df["headcount_change"].abs() >= 3].copy()
+    flat = df[df["headcount_change"].abs() < 3]
+    if len(flat):
+        moved = pd.concat([moved, pd.DataFrame([{
+            "label": f"{len(flat)} others (±0–2)",
+            "headcount_change": int(flat["headcount_change"].sum())}])],
+            ignore_index=True)
+    moved = moved.sort_values("headcount_change")
+
+    colors = [RED if c < 0 else PAPER for c in moved["headcount_change"]]
+    fig, ax = plt.subplots(figsize=(8, 4.6))
+    ax.barh(moved["label"], moved["headcount_change"], color=colors, alpha=0.85)
     ax.axvline(0, color="black", linewidth=0.8)
     ax.set_xlabel("Change in economists, Sep 2024 → Mar 2025")
     ax.set_title("Where Federal Economists Were Gained and Lost")
     ax.grid(axis="x")
-    for y, c in enumerate(df["headcount_change"]):
+    for y, c in enumerate(moved["headcount_change"]):
         ax.text(c + (0.4 if c >= 0 else -0.4), y, f"{c:+d}",
                 va="center", ha="left" if c >= 0 else "right", fontsize=8)
-    note = ("Agency × pay-plan × grade cells with ≤10 staff are suppressed, so this covers ~76% of\n"
-            "economists; agencies whose count is small on either date are omitted.")
-    ax.text(0.0, -0.13, note, transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    note = ("Agency × pay-plan × grade cells with ≤10 staff are suppressed (~76% coverage). "
+            "Agencies changing by 0–2 are pooled.")
+    ax.text(0.0, -0.20, note, transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
     save("econ_agency_change_2025")
 
 
@@ -559,25 +574,26 @@ def fig_econ_headcount_since_1998():
     post = df[(df["date"] // 100 >= 2006) & (df["period"] != "Mar 2025")]
     mar = df[df["period"] == "Mar 2025"]
 
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(9, 6.5), sharex=True)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 4))
 
     ax1.plot(pre["year"], pre["headcount"], color=GRAY, marker="o", ms=4,
-             label="pre-2006 (incl. ~550 State posts later reclassified)")
+             label="pre-2006 (incl. ~550 State\nposts later reclassified)")
     ax1.plot(post["year"], post["headcount"], color=BLUE, marker="o", ms=4,
-             label="FedScope cube (September)")
+             label="September snapshot")
     ax1.plot(mar["year"], mar["headcount"], color=ORANGE, marker="D", ms=8,
              label="March 2025")
     ax1.axvline(2005.5, color=GRAY, ls=":", lw=1)
     ax1.set_ylim(4050, 5550)
-    ax1.annotate("~550 State Dept posts\nreclassified out of 0110", (2005.5, 5250),
-                 fontsize=7.5, color=GRAY, ha="center")
-    ax1.annotate("ERS relocated to\nKansas City (FY2019)", (2019, 4281),
-                 fontsize=7.5, color=GRAY, ha="center",
-                 xytext=(2016.5, 4120), textcoords="data",
+    ax1.annotate("State Dept posts\nreclassified", (2005.5, 5330),
+                 fontsize=7, color=GRAY, ha="center")
+    ax1.annotate("ERS to\nKansas City", (2019, 4281),
+                 fontsize=7, color=GRAY, ha="center",
+                 xytext=(2015, 4120), textcoords="data",
                  arrowprops=dict(arrowstyle="->", color=GRAY, lw=0.6))
     ax1.set_ylabel("Federal economists (series 0110)")
-    ax1.set_title("Federal Economists, September 1998 – March 2025")
-    ax1.legend(frameon=False, fontsize=8, loc="lower right", ncol=1)
+    ax1.set_xlabel("Year")
+    ax1.set_title("Headcount, Sep 1998 – Mar 2025")
+    ax1.legend(frameon=False, fontsize=7, loc="lower right", ncol=1)
     ax1.grid(axis="y")
 
     ax2.plot(post["year"], post["mean_salary_2025usd"] / 1000, color=PAPER,
@@ -588,7 +604,7 @@ def fig_econ_headcount_since_1998():
     ax2.plot(mar["year"], mar["mean_salary_2025usd"] / 1000, color=ORANGE, marker="D", ms=8)
     ax2.set_ylabel("Pay (2025 $ thousands)")
     ax2.set_xlabel("Year")
-    ax2.set_title("Real Adjusted Basic Pay (CPI-U, March 2025 dollars)")
+    ax2.set_title("Real adjusted basic pay (CPI-U, Mar 2025 $)")
     ax2.yaxis.set_major_formatter(mticker.FormatStrFormatter("$%g"))
     ax2.legend(frameon=False, fontsize=8, loc="lower right")
     ax2.grid(axis="y")
