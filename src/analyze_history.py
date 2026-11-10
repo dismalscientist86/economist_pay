@@ -25,6 +25,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+ROOT = Path(__file__).parent.parent
 HISTORY_DIR = Path(__file__).parent.parent / "data" / "raw" / "fedscope" / "history"
 PROCESSED = Path(__file__).parent.parent / "data" / "processed"
 TABLES = Path(__file__).parent.parent / "output" / "tables"
@@ -38,6 +39,7 @@ CPI_SEP = {
     2012: 231.407, 2013: 234.149, 2014: 238.031, 2015: 237.945,
     2016: 241.428, 2017: 246.819, 2018: 252.439, 2019: 256.759,
     2020: 260.280, 2021: 274.310, 2022: 296.808, 2023: 307.789, 2024: 315.301,
+    2025: 324.800, 2026: 336.940,   # Sept 2026 CPI published Oct 2026
 }
 CPI_MAR2025 = 319.799
 BASE_CPI = CPI_MAR2025
@@ -83,6 +85,36 @@ def _salary(s: pd.Series) -> pd.Series:
 # 1. Employment since 1998
 # --------------------------------------------------------------------------
 
+def _fwd_rows() -> list:
+    """September 2025 and 2026 points from the monthly data.opm.gov files (extract_fwd.py).
+    Same universe as the March 2025 snapshot (EHRI status). Pay excludes the ~1% of rows
+    whose pay is redacted; GS-14+ share is not computed (no GS-equivalent grade)."""
+    econ_path = ROOT / "data" / "raw" / "fedscope" / "fwd" / "economists_employment.csv.gz"
+    stock_path = PROCESSED / "fwd" / "stock_monthly.csv.gz"
+    if not (econ_path.exists() and stock_path.exists()):
+        return []
+    e = pd.read_csv(econ_path, dtype=str)
+    st = pd.read_csv(stock_path)
+    st["econ"] = st["econ"].astype(bool)
+    out = []
+    for yyyymm in (202509, 202609):
+        year = yyyymm // 100
+        x = e[(e["snapshot_yyyymm"] == str(yyyymm)) & (e["occupational_series_code"] == "0110")]
+        pay = pd.to_numeric(x["annualized_adjusted_basic_pay"], errors="coerce")
+        real = pay * BASE_CPI / CPI_SEP[year]
+        out.append({
+            "period": f"Sep {year}", "date": yyyymm, "source": "FWD monthly",
+            "headcount": int(st[(st.month == yyyymm) & st.econ].n.sum()),
+            "mean_salary_nominal": round(pay.mean()),
+            "mean_salary_2025usd": round(real.mean()),
+            "median_salary_2025usd": round(real.median()),
+            "mean_los": round(pd.to_numeric(x["length_of_service_years"], errors="coerce").mean(), 1),
+            "phd_share": round(x["education_level_code"].isin(PHD_EDLVL).mean(), 3),
+            "share_gs14plus": np.nan,
+        })
+    return out
+
+
 def employment_series() -> pd.DataFrame:
     rows = []
     for path in sorted(glob.glob(str(HISTORY_DIR / "employment_*_economists.csv"))):
@@ -121,6 +153,8 @@ def employment_series() -> pd.DataFrame:
         # cube rows use, so the GS-14+ share is not comparable -- leave it out
         "share_gs14plus": np.nan,
     })
+
+    rows += _fwd_rows()
 
     out = pd.DataFrame(rows).sort_values("date").reset_index(drop=True)
     out["headcount_vs_1998"] = (out["headcount"] / out["headcount"].iloc[0] - 1).round(3)

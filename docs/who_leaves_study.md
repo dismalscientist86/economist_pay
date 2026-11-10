@@ -12,7 +12,7 @@ own normal turnover:
 |---|---|---|---|
 | **E1** USDA ERS relocation | Jul–Dec 2019 | **3.6×** normal (DiD vs. other USDA: 3.5×) | skewed to long tenure: **9–10×** at 10+ years vs. 3× under 2 years |
 | **E2** Commerce in-person mandate | Mar 2022–Feb 2023 | +13% (DiD +11%) — **but no break at the mandate** | mild, spread across 2–20 years; see placebo |
-| **E3** 2025 return-to-office order + buyout | Jan–Mar 2025 | **+25%** (highest Q1 since at least 2011) | outside economics, **20+ years** dominates; economists show a **barbell** |
+| **E3** 2025 (return-to-office order and ordinary-channel exits; DRP exits fall later) | Jan–Mar 2025 | **+25%** (highest Q1 since at least 2011) | outside economics, **20+ years** dominates; economists show a **barbell** |
 
 - **E1 is a clear effect.** ERS separations roughly quadrupled and shifted toward
   experienced staff and toward retirements/transfers.
@@ -20,9 +20,10 @@ own normal turnover:
   modestly above normal, but equally unusual windows appear in 2012 and 2023, and the
   one bureau with a large elevation (PTO) was already elevated a year *before* the
   mandate.
-- **E3 is a real, broad surge, but the cause cannot be separated.** The January 20,
-  2025 order ending remote work and the January 28 deferred-resignation offer landed in
-  the same quarter. Agencies with less in-person work saw larger increases
+- **E3 is a real, broad surge, but its cause cannot be pinned down.** These Q1 exits are *not*
+  deferred-resignation (DRP) exits: DRP participants (flagged in the monthly OPM files) stopped
+  working around March but stayed on the payroll until September–December 2025. The January 20,
+  2025 order ending remote work, probationary terminations and agency drawdowns overlap. Agencies with less in-person work saw larger increases
   (Spearman ρ = −0.51, n = 24), but agencies subject to separate, targeted
   reductions in 2025 (e.g., Education, USAID) are also low-in-person agencies.
 - **Economists in 2025** lost about 38 more people than their normal Q1 rate implies
@@ -103,7 +104,7 @@ other 0.95, Census 0.88. But PTO's separation rate was already 1.47× its own no
 elevated through 2023. Whether the Commerce policy even applied to PTO's largely
 remote examiner workforce is not established here.
 
-### E3 — 2025: return-to-office order and deferred-resignation offer
+### E3 — 2025: return-to-office order and ordinary-channel exits (Jan–Mar)
 
 Non-DoD separations Jan–Mar 2025: **41,857** (2.72% of the September 2024 stock) vs.
 2.17% in Q1 2011–19, RR **1.25** (1.24–1.27) — the highest first-quarter rate in the
@@ -121,8 +122,9 @@ series (previous peak 2.49% in 2022; 1.88% in 2024).
 
 By reason (total excess ≈ 8,400): "Other Separation" **+4,394** (17 expected, 4,411
 observed — a code that was essentially unused in 2011–19 Q1s), quits +4,203,
-voluntary retirement +927, early-out +492, transfers −948. The data do not say what
-the "Other" exits are; a deferred-resignation coding is plausible but unverified.
+voluntary retirement +927, early-out +492, transfers −948. They are not DRP exits —
+DRP-flagged separations are coded Quit or Retirement (58 of 141,000 are "Other") — and the data
+do not say what they are.
 
 *Economists* (non-DoD): 137 separations vs. 99 expected at the 2011–19 rate (RR 1.38,
 1.15–1.66; 2.86% quarterly rate, also the highest in 2011–25):
@@ -154,8 +156,9 @@ Interior 0.91, VA 0.97, Treasury 1.01.
   relocation, not telework.
 - **No evidence the 2022 Commerce mandate drove separations**, at the department level
   or for economists; the PTO elevation predates it.
-- **2025 is a large, broad surge that mixes at least three things**: the return-to-office
-  order, the deferred-resignation offer, and agency-specific drawdowns. The negative
+- **2025 is a large, broad surge that mixes several things**: the return-to-office order,
+  probationary terminations and agency-specific drawdowns. The deferred resignation program is a
+  separate, later wave (effective Sept–Dec 2025) that this Q1 window does not contain. The negative
   correlation with in-person share is suggestive but not identified — the most-affected
   agencies were targeted for reasons unrelated to telework.
 - **Economists** look like the rest of government at the senior end (retirements) but

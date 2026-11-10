@@ -1,0 +1,89 @@
+sector,group,dim,level,n,share
+economists,DRP,ten,10-20,71,0.1335
+economists,DRP,ten,2-5,119,0.2237
+economists,DRP,ten,20+,191,0.359
+economists,DRP,ten,5-10,91,0.1711
+economists,DRP,ten,<2,60,0.1128
+economists,DRP,edu,BA,181,0.3402
+economists,DRP,edu,MA,164,0.3083
+economists,DRP,edu,PhD,131,0.2462
+economists,DRP,edu,below BA,56,0.1053
+economists,DRP,gs,GS13,131,0.2462
+economists,DRP,gs,GS14-15,138,0.2594
+economists,DRP,gs,GS9-12,163,0.3064
+economists,DRP,gs,GS<=8,15,0.0282
+economists,DRP,gs,Non-GS,85,0.1598
+economists,DRP,reason,Quit,330,0.6203
+economists,DRP,reason,Retire_early_out,63,0.1184
+economists,DRP,reason,Retire_voluntary,139,0.2613
+economists,other exits,ten,10-20,134,0.1613
+economists,other exits,ten,2-5,181,0.2178
+economists,other exits,ten,20+,259,0.3117
+economists,other exits,ten,5-10,122,0.1468
+economists,other exits,ten,<2,135,0.1625
+economists,other exits,edu,BA,179,0.2154
+economists,other exits,edu,MA,289,0.3478
+economists,other exits,edu,PhD,289,0.3478
+economists,other exits,edu,below BA,70,0.0842
+economists,other exits,edu,unk,4,0.0048
+economists,other exits,gs,GS13,124,0.1492
+economists,other exits,gs,GS14-15,269,0.3237
+economists,other exits,gs,GS9-12,120,0.1444
+economists,other exits,gs,GS<=8,5,0.006
+economists,other exits,gs,Non-GS,313,0.3767
+economists,other exits,reason,Other,35,0.0421
+economists,other exits,reason,Quit,393,0.4729
+economists,other exits,reason,RIF,43,0.0517
+economists,other exits,reason,Retire_early_out,27,0.0325
+economists,other exits,reason,Retire_other,6,0.0072
+economists,other exits,reason,Retire_voluntary,214,0.2575
+economists,other exits,reason,Termination,62,0.0746
+economists,other exits,reason,Transfer,51,0.0614
+all occupations,DRP,ten,10-20,27478,0.1948
+all occupations,DRP,ten,2-5,19627,0.1391
+all occupations,DRP,ten,20+,55131,0.3907
+all occupations,DRP,ten,5-10,17863,0.1266
+all occupations,DRP,ten,<2,20974,0.1487
+all occupations,DRP,ten,unk,20,0.0001
+all occupations,DRP,edu,BA,44484,0.3153
+all occupations,DRP,edu,MA,29743,0.2108
+all occupations,DRP,edu,PhD,4843,0.0343
+all occupations,DRP,edu,below BA,61957,0.4391
+all occupations,DRP,edu,unk,66,0.0005
+all occupations,DRP,gs,GS13,21732,0.154
+all occupations,DRP,gs,GS14-15,21059,0.1493
+all occupations,DRP,gs,GS9-12,41806,0.2963
+all occupations,DRP,gs,GS<=8,22763,0.1613
+all occupations,DRP,gs,Non-GS,33733,0.2391
+all occupations,DRP,reason,Other,58,0.0004
+all occupations,DRP,reason,Quit,68276,0.4839
+all occupations,DRP,reason,RIF,1,0.0
+all occupations,DRP,reason,Retire_early_out,18372,0.1302
+all occupations,DRP,reason,Retire_other,157,0.0011
+all occupations,DRP,reason,Retire_voluntary,53715,0.3807
+all occupations,DRP,reason,Termination,474,0.0034
+all occupations,DRP,reason,Transfer,40,0.0003
+all occupations,other exits,ten,10-20,76348,0.1739
+all occupations,other exits,ten,2-5,65270,0.1487
+all occupations,other exits,ten,20+,120107,0.2735
+all occupations,other exits,ten,5-10,60566,0.1379
+all occupations,other exits,ten,<2,116391,0.2651
+all occupations,other exits,ten,unk,400,0.0009
+all occupations,other exits,edu,BA,123912,0.2822
+all occupations,other exits,edu,MA,71972,0.1639
+all occupations,other exits,edu,PhD,19849,0.0452
+all occupations,other exits,edu,below BA,218177,0.4969
+all occupations,other exits,edu,unk,5172,0.0118
+all occupations,other exits,gs,GS13,40454,0.0921
+all occupations,other exits,gs,GS14-15,38927,0.0887
+all occupations,other exits,gs,GS9-12,95910,0.2184
+all occupations,other exits,gs,GS<=8,91053,0.2074
+all occupations,other exits,gs,Non-GS,172738,0.3934
+all occupations,other exits,reason,Other,29546,0.0673
+all occupations,other exits,reason,Quit,170298,0.3879
+all occupations,other exits,reason,RIF,10820,0.0246
+all occupations,other exits,reason,Retire_early_out,10682,0.0243
+all occupations,other exits,reason,Retire_other,8330,0.019
+all occupations,other exits,reason,Retire_voluntary,118689,0.2703
+all occupations,other exits,reason,Termination,63454,0.1445
+all occupations,other exits,reason,Transfer,27263,0.0621

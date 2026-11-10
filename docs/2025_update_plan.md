@@ -24,7 +24,7 @@ Decisions locked:
 | FedsDataCenter.com API (`src/fetch_salary_data.py`) | **FY2024** | individual + name | inferred from first name | exact base + bonus | No 2025 data — dropdown and API stop at 2024 |
 | **FedScope classic — raw datasets** (opm.gov/data/datasets) | **March 2025** (preliminary, posted 2025-07-01) | de-identified, one row per employee, 3 files | **none** (never in raw files) | `SALARY` = annualized adjusted basic pay | Yes — `.zip` downloads succeed from this environment |
 | **FedScope classic — summary cross-tabs** | March 2025 **and** Sept 2024 (bundled) | pre-aggregated (occ, agency, grade, pay plan, location, age, education, appointment type) | **none** | `AVGSAL` only | Yes |
-| OPM Federal Workforce Data API (data.opm.gov/api/v1/files) | ~July 2026, monthly | de-identified record-level (parquet) | **removed** | exact | Blocked — Akamai returns 503 to this environment |
+| OPM Federal Workforce Data API (data.opm.gov/api/v1/files) | through Sept 2026, monthly | de-identified record-level, pipe-delimited | **none** | exact (redacted for some rows) | API blocked to scripted requests (Akamai 503); **files downloaded by hand** into `data/raw/opm_datasets/` and reduced by `src/extract_fwd.py` |
 
 **Why no gender.** FedScope's raw cube files have never contained gender or race (checked
 against the dimension tables and file headers for every era, 1998–2025). The interactive
@@ -228,8 +228,8 @@ Original plan for reference:
 
 ## Deferred / optional
 
-- **FWD monthly data (data.opm.gov).** Would enable a true Sept 2024 → Sept 2025 (or later)
-  comparison and a monthly trajectory through the 2025 reshaping. Currently blocked from
-  this environment; revisit if run from a different network or once the block clears.
+- **FWD monthly data (data.opm.gov).** Done as of 2026-11-10 — see `docs/2025_update.md` §7 (monthly series
+  Oct 2024 – Sep 2026, with the deferred-resignation flag). Refresh by downloading new months into
+  `data/raw/opm_datasets/` and running `python main.py --fwd`.
 - **ACS / CPS federal-economist gender split.** A survey-based, different-universe proxy if
   a gender dimension for 2025 becomes a priority. Not in current scope.

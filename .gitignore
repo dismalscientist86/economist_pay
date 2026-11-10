@@ -8,3 +8,9 @@ __pycache__/
 
 # Aggregated all-occupation panels (rebuild with: python src/build_panels.py)
 data/processed/panels/
+
+# Monthly data.opm.gov downloads (~41 GB, hand-downloaded) and their derived panels
+data/raw/opm_datasets/
+# (the small derived tables in data/processed/fwd/ ARE committed; only scratch parts are ignored)
+data/processed/fwd/_parts/
+data/processed/fwd/*.log

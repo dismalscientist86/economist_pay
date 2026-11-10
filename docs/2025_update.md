@@ -1,45 +1,46 @@
-# Federal government economists, 2024 → 2025: has the number and pay changed?
+# Federal government economists, 2024 → 2026: has the number and pay changed?
 
-*Draft findings memo — 2026-09-09. Preliminary data; see limitations.*
+*Draft findings memo — first written 2026-09-09; updated 2026-11-10 with OPM data through September 2026.*
 
 ## Bottom line
 
-Between **September 2024 and March 2025**, the number of economists in the
-federal government fell **about 2%** (4,998 → 4,888, series 0110) and mean pay
-rose **2.8% in nominal terms** — roughly **1.4% in real terms** after inflation.
-Almost the entire pay increase is the January 2025 federal pay raise, not a
-shift toward more senior staff.
+**Through September 2026 (§7), federal economists (series 0110) fell from 4,998 to 3,802
+— down 24%, versus 13% for the federal workforce as a whole.** That is below every
+year since at least 2006. Roughly 44% of the drop is the Deferred Resignation Program
+(532 economists who stayed on the payroll until separating, mostly on September 30 (396)
+or December 31 (115), 2025); most
+of the rest is ordinary-channel exits combined with a hiring freeze that eased only in
+mid-2026. Headcount stopped falling around spring 2026 and hiring has resumed (25–33
+economists a month, June–September 2026).
 
-The 2% headcount drop **understates** what is happening. OPM's March 2025
-snapshot still counts employees on administrative leave pending
-resignation/retirement as employed. The **flow data** — actual hires and
-departures — shows the turn clearly: in the first quarter of 2025, economist
-hiring collapsed (36 hires, from 145 two quarters earlier) while departures
-jumped from 81 to 137, for a net loss of ~100 economists in three months.
-Measured against normal first-quarter turnover, the excess came from **both ends
-of the tenure distribution** — about 19 above-normal separations among staff with
-under 2 years of service (quits, terminations) and about 23 among staff with 20+
-years (retirements, early-outs) — while economists with 2–20 years were not
-elevated (see `docs/who_leaves_study.md`). The reason mix — a surge in early-out
-retirements, term-appointment terminations, voluntary retirements and quits, with
-agency-to-agency transfers falling — looks like a buyout-and-drawdown, not
-ordinary turnover.
+**The original window, September 2024 → March 2025,** looked mild on the payroll: the
+number of economists fell about 2% (4,998 → 4,888) and mean pay rose 2.8% nominal
+(+1.4% real), almost entirely the January 2025 federal pay raise. But the March payroll
+**overstates the working workforce**: participants in the deferred resignation program
+(DRP) are reported to have stopped working around March 2025 while staying on the payroll
+until they separated (the data show only the separation dates). About 530 of the 4,888
+economists on the March payroll were such participants, so the working workforce was
+nearer 4,350 — about 13% below September 2024, not 2%.
 
-That pattern cannot be attributed to a single cause. The January 20, 2025
-order ending remote work (return to full-time in-person duty) and the
-January 28 deferred-resignation offer landed within days of each other, and
-both fall inside the same quarter; this data cannot separate them. See
-`Federal-Remote-Work/` and the three-episode analysis for the return-to-office
-question.
+**The first-quarter 2025 exits in the flow data are not DRP exits** (those are dated
+September–December 2025). They are ordinary-channel separations — 137 in Jan–Mar, the
+most of any first quarter since 2015, against 36 hires, the fewest. Measured against normal
+first-quarter turnover, the excess came from **both ends of the tenure distribution**:
+about 19 above-normal separations among staff with under 2 years of service (quits,
+terminations) and about 23 among staff with 20+ years (retirements, early-outs), while
+economists with 2–20 years were not elevated (`docs/who_leaves_study.md`). Non-DRP exits
+stayed elevated from February to July 2025 (1.4–2.3× the same-month 2011–19 norm, peaking in
+April), returned to normal in August–December, and ran *below* normal throughout 2026.
 
-In historical perspective (§6): the March 2025 headcount is still near the top
-of the post-2006 range — the drop so far has unwound about a year of growth, not
-decades. But the *outflow* is extreme. FY2025's first six months already saw 218
-economist separations (78% of all of FY2024's 279), and January–March 2025 had
-the most departures (137; the previous high was 123 in 2017) and the fewest
-hires (36; 38 in 2018) of any first quarter since 2015. No economist separation
-carries a formal RIF code, but that is normal for economists and says little
-about the mechanism (see §6).
+**What caused the 2025 exits cannot be settled from this data.** The January 20, 2025 order
+ending remote work, the January 28 deferred-resignation offer, probationary terminations
+and, from June 2025, formal reductions in force (41 economist RIF separations April–September
+2025, against none before) all overlap. DRP participants are identifiable; the rest are not.
+
+In historical perspective (§6–7): through September 2025 the headcount was still near the
+top of its post-2006 range; the DRP separations and later attrition took it to a
+**post-2006 low**. The FY2025 outflow was also extreme by flow measures: the first six months
+alone saw 218 economist separations (78% of all of FY2024's 279).
 
 ## Data and method
 
@@ -192,7 +193,7 @@ FY2015.
 low of ~4,280 (2008, and again 2019) to the September 2024 peak of 4,998. The
 March 2025 figure of 4,888 is still near the top of that 20-year range — the
 decline so far has unwound roughly one year of growth, back to about the 2023
-level (4,883). It is **not yet** a historic low. (Pre-2006 counts of
+level (4,883) as of March 2025. (By September 2026 it is a historic low — §7.) (Pre-2006 counts of
 ~5,000–5,400 include ~550 Department of State positions reclassified out of
 series 0110 after 2005, so they overstate the earlier level.)
 
@@ -228,16 +229,63 @@ departures and the fewest hires of any Q1 in 2015–2025. The previous high for
 separations was 2017 (123, the first Trump transition); 2025 is higher and,
 unlike 2017, pairs it with a hiring freeze.
 
-**No formal RIF, but that is not informative.** Across every file, FY2015
-through March 2025, **zero** economist separations carry OPM's
-Reduction-in-Force code, and OPM's FY2005–FY2014 separation files show just one
-in ten years (FY2013), even though government-wide RIFs ran roughly 370–1,900 a
-year.
-Economists simply almost never leave by formal RIF, so the absence in 2025 says
-little about the mechanism. What distinguishes 2025 is the reason mix above
-(early-out retirements, term-appointment endings, falling transfers) — which is
-consistent with a deferred-resignation and drawdown environment, but also with
-the co-timed return-to-office order.
+**RIFs: none until June 2025, then a few.** Through March 2025 **zero** economist separations
+carry OPM's Reduction-in-Force code, and OPM's FY2005–FY2014 separation files show just one in ten
+years (FY2013), even though government-wide RIFs ran roughly 370–1,900 a year — economists almost
+never leave by formal RIF. That changed after the window above: the monthly files (§7) show 41
+economist RIF separations in April–September 2025 (22 in July) and 43 through September 2026.
+
+### 7. Through September 2026 (monthly OPM files)
+
+`fwd_headcount_monthly.csv`, `fwd_flows_monthly.csv`, `fwd_drp_profile.csv`,
+`fwd_nondrp_rate_ratio.csv`; figure `fwd_economists_2026.pdf`. Built by `src/extract_fwd.py` and
+`src/analyze_fwd.py` from the monthly Federal Workforce Data files on data.opm.gov (October 2024
+– September 2026, published through 11/04/2026), which replace the quarterly FedScope cubes.
+Unlike the classic Oct 2023–Mar 2025 files, DoD occupation, tenure, education and grade are not
+redacted here; pay and geography are.
+
+| | Sep 2024 | Mar 2025 | Sep 2025 | Oct 2025 | Mar 2026 | Sep 2026 |
+|---|---:|---:|---:|---:|---:|---:|
+| Economists (0110) | 4,998 | 4,888 | 4,517 | 4,081 | 3,831 | **3,802** |
+| index, Sep 2024 = 100 | 100 | 97.8 | 90.4 | 81.7 | 76.7 | **76.1** |
+| All federal employees (index) | 100 | 99.0 | 94.7 | 90.7 | 87.5 | **87.2** |
+
+Economists fell about 11 index points *more* than the workforce as a whole (−24% vs. −13%),
+bottoming at 3,785 in August 2026. The September 2025 → October 2025 step (−436) is the
+deferred-resignation separations.
+
+**Where the −1,196 came from:** deferred-resignation exits 532 (44%); other separations 831
+less 251 hires, net −580 (49%); about −84 (7%) is unexplained — reclassification into or out
+of series 0110 and late-reported actions — so flows and headcount reconcile within 7%.
+
+**Deferred resignation (DRP).** Separations carry a `drp_indicator`. DRP economists left almost
+entirely on September 30, 2025 (396) and December 31 (115); 62% are coded Quit, 26% voluntary
+retirement and 12% early-out retirement. They skew senior (36% with 20+ years of service vs. 31% of
+other exits) and away from the newest staff (11% under 2 years vs. 16%). Across all occupations
+141,000 separations were DRP (6% of the September 2024 workforce), 95% of them effective
+September–December 2025 (76% on September 30). DRP participants are reported to have stopped working about March 2025, so the *working*
+workforce fell earlier and further than the payroll shows (§Bottom line). DRP exits are coded
+Quit or Retirement, not "Other Separation", so the Q1 2025 "Other" surge (§who-leaves study) is
+something else.
+
+**Other exits.** Non-DRP separations by effective month ran at 1.4–2.3× the 2011–19 same-month
+rate from February to July 2025 (peak 2.3× in April), 0.7–1.6× in August–December (1.6× in
+September), and 0.4–1.0× in 2026 (0.37× in September 2026). By reason, non-DRP quits more than
+doubled from 74 (Oct 2024–Mar 2025) to 170 (Apr–Sep 2025) and then fell to 86 and 63; RIFs were 41 in April–September 2025 and near zero
+afterward.
+
+**Hiring.** 106 economists were hired October 2024–September 2025 (88 of them by January) and 145
+October 2025–September 2026, rising to 25–33 a month in June–September 2026. Net non-DRP flow
+turned positive in June 2026.
+
+**Composition.** The workforce got older and more tenured: mean length of service rose from 12.4
+years (Sept 2024) to 14.2 (Sept 2026); the PhD share is unchanged (28.8%); real mean pay is flat
+(about $150,000 in March 2025 dollars; nominal $158,209 in September 2026).
+
+**Caveats.** Files are keyed by the month they were published and also hold late-reported actions, so
+flows are dated by effective month; some actions for the latest months may not be in yet. OPM flags a
+Department of War submission-processing issue for September 2026 (non-DoD data unaffected). Mean pay
+excludes the ~1% of rows with redacted pay.
 
 ## Robustness
 

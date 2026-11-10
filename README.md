@@ -25,6 +25,9 @@ FedScope's raw files have **no gender or race in any year** (OPM's interactive s
 
 The study also relies on a few facts about the FedScope flow files: in the Oct 2023–Mar 2025 files, occupation, tenure, education and grade are redacted for DoD (~35% of rows), so tenure analyses exclude DoD in every period. A larger local archive of OPM downloads (FedScope quarterly cubes, FEVS survey microdata) lives outside the repo at `M:\opm_datasets` and is not yet wired into the pipeline.
 
+### 5. data.opm.gov monthly files — data through September 2026
+OPM's new Federal Workforce Data site publishes monthly Employment, Separations and Accessions raw files (pipe-delimited, one row per employee/action). They are downloaded by hand (the site's API rejects scripted requests) into `data/raw/opm_datasets/` — about 41 GB uncompressed, so they are kept gzip-compressed (`*.txt.gz`; the extractor reads either form) and git-ignored. `src/extract_fwd.py` reduces them to small committed tables (economist rows, plus all-occupation counts by agency × tenure × education × GS band), and `src/analyze_fwd.py` builds the economist headcount and flow series. Separations carry a `drp_indicator` flagging the Deferred Resignation Program, whose participants stopped working around March 2025 but left the payroll mostly on September 30 and December 31, 2025. Unlike the classic Oct 2023–Mar 2025 files, DoD occupation/tenure/education/grade are not redacted here (pay and geography are). Still no gender.
+
 ### Legacy data (see `data/raw/fedsdatacenter/`)
 - `Federal-Employee-Salaries_FY2015.xlsx` — original FY2015 download from FedsDataCenter
 - `FederalPay.xlsx` — partial FederalPay.org time series (manual collection, 2004+)
@@ -55,6 +58,8 @@ economist_pay/
 │   ├── agency_xwalk.py        # Telework-CSV agency names -> FedScope codes; CSV loader
 │   ├── build_panels.py        # All-occupation stock and separation panels (episodes study)
 │   ├── analyze_episodes.py    # Three-episode "who leaves" study: ERS, Commerce, 2025
+│   ├── extract_fwd.py         # Reduce the monthly data.opm.gov files (41 GB) to small tables
+│   ├── analyze_fwd.py         # Economists through Sept 2026: headcount, DRP vs other exits
 │   ├── make_figures.py        # All slide-deck figures
 │   └── phd_placements.py      # PhD placement analysis module
 ├── notebooks/                 # Jupyter notebooks for exploration
@@ -69,7 +74,7 @@ economist_pay/
 │   ├── 2025_update.md         # Findings memo: has federal economist pay/headcount changed?
 │   └── who_leaves_study.md    # Three-episode study: who leaves when workplace conditions change
 ├── Federal-Remote-Work/       # git submodule: telework / return-to-office data and scripts
-├── main.py                    # Full pipeline runner (--fedscope, --history, --episodes)
+├── main.py                    # Full pipeline runner (--fedscope, --history, --episodes, --fwd)
 └── requirements.txt
 ```
 
@@ -125,6 +130,10 @@ python src/fetch_fedscope_history.py            # employment cubes to 1998, flow
 python src/fetch_fedscope_history.py --flows-only    # just the separation/accession files
 python src/analyze_history.py                   # long-run headcount, pay, separation-reason tables
 
+python src/extract_fwd.py                       # monthly OPM files (data/raw/opm_datasets) -> small tables (~7 min)
+python src/analyze_fwd.py                       # economists through Sept 2026 (runs from the committed tables)
+python src/make_figures.py --only fwd           # fwd_economists_2026.pdf
+
 python src/build_panels.py                      # all-occupation panels (~5 min; needs the fedscope cache)
 python src/analyze_episodes.py                  # three-episode study tables
 python src/make_figures.py --only episodes      # its four figures
@@ -159,6 +168,17 @@ Figures in `output/figures/` (`make_figures.py --only fedscope2025`):
 | `econ_flows_2025.pdf` · `econ_separation_reasons_2025.pdf` | monthly hires/departures; departures by reason and quarter |
 | `econ_headcount_since_1998.pdf` | 27-year headcount and real-pay series *(`--history`)* |
 | `econ_separations_history.pdf` · `econ_q1_history.pdf` | separations by fiscal year/reason; first-quarter flows 2015–2025 *(`--history`)* |
+
+### Through September 2026 outputs (`python main.py --fwd`)
+
+| file | contents |
+|---|---|
+| `fwd_headcount_monthly.csv` | economists (0110) and all federal employees by month, Sept 2024–Sept 2026, indexed to Sept 2024 |
+| `fwd_flows_monthly.csv` | economist separations (deferred-resignation vs. other) and hires by effective month |
+| `fwd_drp_profile.csv` | who took the deferred resignation program vs. other exits (tenure, education, grade, reason) |
+| `fwd_nondrp_rate_ratio.csv` | non-DRP separation rate vs. the 2011–19 same-month norm (economists and all occupations) |
+
+Figure `output/figures/fwd_economists_2026.pdf`: economists vs. the workforce (index) and monthly separations/hires. The committed inputs are in `data/processed/fwd/` (all-occupation panels, QA table) and `data/raw/fedscope/fwd/` (economist rows). `fedscope_economists_since_1998.csv` now also carries Sept 2025 and Sept 2026.
 
 ### Three-episode "who leaves" study outputs
 

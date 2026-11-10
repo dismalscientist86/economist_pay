@@ -19,6 +19,7 @@ Usage:
     python main.py --start 2020 --end 2024
     python main.py --fedscope             # 2025 update: fetch -> clean -> analyze
     python main.py --episodes             # three-episode "who leaves" study
+    python main.py --fwd                  # economists through Sept 2026 (monthly OPM files)
 """
 
 import argparse
@@ -91,10 +92,26 @@ def run_episodes() -> None:
     print("\nDone. Figures: python src/make_figures.py --only episodes")
 
 
+def run_fwd() -> None:
+    """Monthly data.opm.gov files through Sept 2026: reduce (if the raw files are present) -> analyze."""
+    from extract_fwd import run_all as extract_fwd, SRC
+    from analyze_fwd import run_all as analyze_fwd
+
+    if list(SRC.glob("employment_*.txt*")):
+        print("Reducing monthly files in", SRC)
+        extract_fwd()
+    else:
+        print(f"No raw files in {SRC}; using the committed tables in data/processed/fwd/")
+    analyze_fwd()
+    print("\nDone. Figures: python src/make_figures.py --only fwd")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Federal economist pay analysis pipeline")
     parser.add_argument("--fedscope", action="store_true",
                         help="Run the 2025 update pipeline (FedScope) instead of the FedsDataCenter one")
+    parser.add_argument("--fwd", action="store_true",
+                        help="Economists through Sept 2026 from the monthly data.opm.gov files")
     parser.add_argument("--episodes", action="store_true",
                         help="Run the three-episode 'who leaves' study (needs the fedscope cache; "
                              "uses the Federal-Remote-Work submodule)")
@@ -115,6 +132,10 @@ def main():
 
     if args.episodes:
         run_episodes()
+        return
+
+    if args.fwd:
+        run_fwd()
         return
 
     if not args.skip_fetch:

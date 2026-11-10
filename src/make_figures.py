@@ -363,9 +363,7 @@ def fig_fed_economists_2025():
         return
     df = pd.read_csv(path)
     df = df[df["date"] // 100 >= 2013].copy()
-    df["x"] = (df["date"] // 100).astype(float)
-    df.loc[df["period"] == "Mar 2025", "x"] = 2025.25
-    sep = df[df["period"] != "Mar 2025"]
+    df["x"] = df["date"] // 100 + (df["date"] % 100 - 1) / 12   # true date (Sep = .67)
     mar = df[df["period"] == "Mar 2025"]
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4))
@@ -375,13 +373,13 @@ def fig_fed_economists_2025():
             label="September snapshot")
     ax.plot(mar["x"], mar["headcount"], color=ORANGE, marker="D", ms=8,
             label="March 2025 (preliminary)")
-    for _, r in pd.concat([sep[sep["x"].isin([2019, 2024])], mar]).iterrows():
+    for _, r in df[df["date"].isin([201909, 202409, 202503, 202609])].iterrows():
         ax.annotate(f"{int(r['headcount']):,}", (r["x"], r["headcount"]),
                     textcoords="offset points", xytext=(0, 8), ha="center", fontsize=9)
     ax.set_title("Number of Federal Economists (series 0110)")
     ax.set_ylabel("Headcount")
     ax.set_xlabel("Year")
-    ax.set_ylim(4050, 5200)
+    ax.set_ylim(3500, 5250)
     ax.legend(frameon=False, fontsize=8.5, loc="lower left")
     ax.grid(axis="y")
 
@@ -569,8 +567,7 @@ def fig_econ_separation_reasons_2025():
 
 def fig_econ_headcount_since_1998():
     df = pd.read_csv(TABLES / "fedscope_economists_since_1998.csv")
-    df["year"] = (df["date"] // 100).astype(float)
-    df.loc[df["period"] == "Mar 2025", "year"] = 2025.25
+    df["year"] = df["date"] // 100 + (df["date"] % 100 - 1) / 12   # true date (Sep = .67)
     pre = df[df["date"] // 100 <= 2005]
     post = df[(df["date"] // 100 >= 2006) & (df["period"] != "Mar 2025")]
     mar = df[df["period"] == "Mar 2025"]
@@ -584,7 +581,7 @@ def fig_econ_headcount_since_1998():
     ax1.plot(mar["year"], mar["headcount"], color=ORANGE, marker="D", ms=8,
              label="March 2025")
     ax1.axvline(2005.5, color=GRAY, ls=":", lw=1)
-    ax1.set_ylim(4050, 5550)
+    ax1.set_ylim(3500, 5550)
     ax1.annotate("State Dept posts\nreclassified", (2005.5, 5330),
                  fontsize=7, color=GRAY, ha="center")
     ax1.annotate("ERS to\nKansas City", (2019, 4281),
@@ -593,7 +590,7 @@ def fig_econ_headcount_since_1998():
                  arrowprops=dict(arrowstyle="->", color=GRAY, lw=0.6))
     ax1.set_ylabel("Federal economists (series 0110)")
     ax1.set_xlabel("Year")
-    ax1.set_title("Headcount, Sep 1998 – Mar 2025")
+    ax1.set_title("Headcount, Sep 1998 – Sep 2026")
     ax1.legend(frameon=False, fontsize=7, loc="lower right", ncol=1)
     ax1.grid(axis="y")
 
@@ -799,7 +796,75 @@ def fig_dose_response_2025():
     save("dose_response_2025")
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# Through September 2026 (analyze_fwd.py; monthly data.opm.gov files)
+# ═══════════════════════════════════════════════════════════════════════════
+
+def fig_fwd_economists_2026():
+    if not _have("fwd_headcount_monthly.csv", "fwd_flows_monthly.csv"):
+        return
+    h = pd.read_csv(TABLES / "fwd_headcount_monthly.csv")
+    f = pd.read_csv(TABLES / "fwd_flows_monthly.csv")
+    toX = lambda m: m // 100 + (m % 100 - 1) / 12     # noqa: E731
+    h["x"], f["x"] = toX(h.month), toX(f.month)
+    drp_total = int(f.sep_drp.sum())
+
+    fig, (a1, a2) = plt.subplots(2, 1, figsize=(9, 6.6), sharex=True,
+                                 gridspec_kw={"height_ratios": [1.15, 1]})
+    a1.plot(h.x, h.econ_index, color=ORANGE, marker="o", ms=3.5, lw=2, label="Economists (series 0110)")
+    a1.plot(h.x, h.all_index, color=BLUE, marker="o", ms=3, lw=1.6, label="All federal employees")
+    # approximate working headcount: payroll minus DRP participants not yet separated
+    # a month-end snapshot still includes people separating effective that month, so
+    # only separations through the *previous* month have left the payroll
+    cum_prev = f.set_index("month").sep_drp.cumsum().shift(1).fillna(0)
+    pending = drp_total - cum_prev.reindex(h.month).fillna(0).values
+    work = h.econ_0110.values - np.where((h.month >= 202503) & (h.month <= 202512), pending, 0)
+    a1.plot(h.x[(h.month >= 202503) & (h.month <= 202512)],
+            (100 * work / h.econ_0110.iloc[0])[(h.month >= 202503) & (h.month <= 202512)],
+            color=ORANGE, ls="--", lw=1.6, label="Economists, excluding DRP participants on leave (approx.)")
+    a1.axhline(100, color="black", lw=0.6)
+    a1.axvline(toX(202503), color=GRAY, ls=":", lw=1)
+    a1.axvline(toX(202509), color=GRAY, ls=":", lw=1)
+    a1.text(toX(202503) + 0.03, 79, "DRP participants\nstop working (Mar 2025)", fontsize=7.5, color=GRAY)
+    a1.text(toX(202509) + 0.03, 98, "DRP separations\n(Sep 30, 2025)", fontsize=7.5, color=GRAY, va="top")
+    last = h.iloc[-1]
+    a1.annotate(f"{int(last.econ_0110):,}\n({last.econ_index - 100:+.0f}%)", (last.x, last.econ_index),
+                textcoords="offset points", xytext=(-4, -26), ha="right", fontsize=8.5, color=ORANGE)
+    a1.annotate(f"({last.all_index - 100:+.0f}%)", (last.x, last.all_index),
+                textcoords="offset points", xytext=(-4, 7), ha="right", fontsize=8.5, color=BLUE)
+    a1.set_ylim(69, 102)
+    a1.set_ylabel("Index (Sep 2024 = 100)")
+    a1.set_title("Federal economists vs. the whole workforce, Sep 2024 – Sep 2026")
+    a1.legend(frameon=False, fontsize=8, loc="lower left")
+    a1.grid(axis="y")
+
+    a2.bar(f.x, f.sep_other, width=0.07, color=RED, alpha=0.9, label="Separations, other")
+    a2.bar(f.x, f.sep_drp, width=0.07, bottom=f.sep_other, color="#7F0000", alpha=0.9,
+           label="Separations, deferred resignation (DRP)")
+    a2.bar(f.x, -f.hires, width=0.07, color=PAPER, alpha=0.9, label="Hires")
+    a2.axhline(0, color="black", lw=0.7)
+    a2.set_ylabel("Economists per month")
+    a2.set_xlabel("Effective month")
+    a2.set_ylim(-60, 135)
+    for _, r in f[f.sep_total > 120].iterrows():
+        a2.text(r.x, 127, f"{int(r.sep_total)}\n(bar clipped)", ha="center", va="top", fontsize=7.5, color=GRAY)
+    ticks = [202410, 202501, 202504, 202507, 202510, 202601, 202604, 202607]
+    a2.set_xticks([toX(m) for m in ticks])
+    a2.set_xticklabels(["Oct 24", "Jan 25", "Apr 25", "Jul 25", "Oct 25", "Jan 26", "Apr 26", "Jul 26"])
+    a2.legend(frameon=False, fontsize=8, loc="upper left", ncol=1)
+    a2.grid(axis="y")
+    fig.text(0.01, -0.01, textwrap.fill(
+        "OPM monthly Federal Workforce Data. Separations/hires are dated by effective date. DRP exits are dated "
+        "Sep 30, 2025 although participants stopped working around March 2025 (dashed line assumes all DRP "
+        "participants left work in March). Hires resume in mid-2026.", 125), fontsize=7.5, color=GRAY, va="top")
+    save("fwd_economists_2026")
+
+
 # ── Run all ──────────────────────────────────────────────────────────────────
+def _fwd_figures():
+    fig_fwd_economists_2026()
+
+
 def _episode_figures():
     fig_who_leaves_episodes()
     fig_econ_q1_2025_barbell()
@@ -833,7 +898,7 @@ def _fedscope_2025_figures():
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", choices=["gender", "fedscope2025", "episodes"],
+    parser.add_argument("--only", choices=["gender", "fedscope2025", "episodes", "fwd"],
                         help="Generate just one group of figures")
     args = parser.parse_args()
 
@@ -844,4 +909,6 @@ if __name__ == "__main__":
         _fedscope_2025_figures()
     if args.only in (None, "episodes"):
         _episode_figures()
+    if args.only in (None, "fwd"):
+        _fwd_figures()
     print(f"Done. All figures saved to {FIGURES}/")
