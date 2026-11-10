@@ -7,6 +7,7 @@ Usage:
 """
 
 import sys
+import textwrap
 from pathlib import Path
 
 import matplotlib
@@ -517,7 +518,7 @@ def fig_econ_flows_2025():
     sep = prof.set_index("direction").loc["separation"]
     note = (f"Shaded: Jan-Mar 2025. Joiners: mean {acc['mean_los']:.0f} yr service, "
             f"\\${acc['mean_salary']:,.0f}.  Leavers: mean {sep['mean_los']:.0f} yr, "
-            f"\\${sep['mean_salary']:,.0f} (mid-career departures, not juniors).")
+            f"\\${sep['mean_salary']:,.0f}.")
     ax.text(0.0, -0.15, note, transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
     save("econ_flows_2025")
 
@@ -660,7 +661,152 @@ def fig_econ_q1_history():
     save("econ_q1_history")
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# Three-episode "who leaves" study (analyze_episodes.py)
+# ═══════════════════════════════════════════════════════════════════════════
+
+TEN = ["<2", "2-5", "5-10", "10-20", "20+"]
+
+
+def _have(*names):
+    missing = [n for n in names if not (TABLES / n).exists()]
+    if missing:
+        print(f"  skipping (run python src/analyze_episodes.py first): {missing}")
+    return not missing
+
+
+def fig_who_leaves_episodes():
+    if not _have("episodes_rates.csv"):
+        return
+    r = pd.read_csv(TABLES / "episodes_rates.csv")
+    panels = [
+        ("E1", "ERS relocation (Jul–Dec 2019)", (0.7, 28), [1, 2, 5, 10, 20],
+         [("treated", "all", "ERS", BLUE), ("comparison", "all", "other USDA", GRAY)]),
+        ("E2", "Commerce ex-Census mandate\n(Mar 2022–Feb 2023)", (0.75, 1.7), [0.8, 1, 1.2, 1.5],
+         [("treated", "all", "Commerce ex-Census", BLUE), ("comparison", "all", "all other non-DoD", GRAY)]),
+        ("E3", "2025 (Jan–Mar), non-DoD", (0.3, 3.6), [0.4, 0.6, 1, 1.5, 2, 3],
+         [("treated", "non_econ", "non-economists", BLUE), ("treated", "econ", "economists", ORANGE)]),
+    ]
+    fig, axes = plt.subplots(1, 3, figsize=(13, 4.2))
+    for ax, (ep, title, ylim, ticks, series) in zip(axes, panels):
+        for i, (grp, sector, label, color) in enumerate(series):
+            d = r[(r.episode == ep) & (r.group == grp) & (r.sector == sector) & (r.dim == "ten")]
+            d = d.set_index("level").reindex(TEN)
+            x = np.arange(len(TEN)) + (-0.1 if i == 0 else 0.1)
+            ax.errorbar(x, d.rr, yerr=[d.rr - d.rr_lo, d.rr_hi - d.rr], fmt="o", color=color,
+                        capsize=3, ms=6, label=label)
+        ax.axhline(1, color="black", lw=0.8)
+        ax.set_yscale("log")
+        ax.set_ylim(*ylim)
+        ax.set_yticks(ticks)
+        ax.set_yticklabels([f"{t:g}" for t in ticks])
+        ax.yaxis.set_minor_formatter(mticker.NullFormatter())
+        ax.set_xticks(range(len(TEN)))
+        ax.set_xticklabels(TEN)
+        ax.set_xlabel("Length of service (years)")
+        ax.set_title(title, fontsize=11)
+        ax.legend(frameon=False, fontsize=8.5, loc="upper left")
+        ax.grid(axis="y")
+    axes[0].set_ylabel("Separation rate vs. normal (ratio, log scale)")
+    fig.text(0.01, -0.03, "Ratio of the window's separation rate to the same window in 2011–18/2011–19, 95% Poisson CIs. "
+             "DoD excluded (tenure redacted). Tenure of stock is measured at the prior September.",
+             fontsize=7.5, color=GRAY, va="top")
+    save("who_leaves_episodes")
+
+
+def fig_econ_q1_2025_barbell():
+    if not _have("episodes_E3_excess.csv"):
+        return
+    x = pd.read_csv(TABLES / "episodes_E3_excess.csv")
+    e = x[(x.sector == "econ") & (x.reason == "ALL") & (x.tenure != "ALL")].set_index("tenure").loc[TEN]
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(10, 4))
+    a1.bar(TEN, e.excess, color=[RED if v > 0 else BLUE for v in e.excess], alpha=0.9)
+    a1.axhline(0, color="black", lw=0.8)
+    for i, v in enumerate(e.excess):
+        a1.text(i, v + (1 if v >= 0 else -1), f"{v:+.0f}", ha="center", va="bottom" if v >= 0 else "top", fontsize=9)
+    a1.set_xlabel("Length of service (years)")
+    a1.set_ylabel("Separations above the 2011–19 Q1 rate")
+    a1.set_title("Economists, Jan–Mar 2025: where the excess is", fontsize=11)
+    a1.set_ylim(e.excess.min() - 4, e.excess.max() + 5)
+    a1.grid(axis="y")
+    w = 0.38
+    xs = np.arange(len(TEN))
+    a2.bar(xs - w / 2, e.b_rate_pct, w, color=GRAY, alpha=0.8, label="2011–19 Q1 average")
+    a2.bar(xs + w / 2, e.e_rate_pct, w, color=ORANGE, alpha=0.9, label="Jan–Mar 2025")
+    a2.set_xticks(xs)
+    a2.set_xticklabels(TEN)
+    a2.set_xlabel("Length of service (years)")
+    a2.set_ylabel("Quarterly separation rate (%)")
+    a2.set_title("Quarterly separation rate", fontsize=11)
+    a2.legend(frameon=False, fontsize=9)
+    a2.grid(axis="y")
+    fig.text(0.01, -0.03, textwrap.fill(
+        "Non-DoD economists (n=137 separations; DoD occupations are redacted). Excess is rate-adjusted for "
+        "workforce growth. Junior excess: quits, terminations, other; senior excess: retirements, early-outs.", 120),
+        fontsize=7.5, color=GRAY, va="top")
+    save("econ_q1_2025_barbell")
+
+
+def fig_e2_bureau_placebo():
+    if not _have("episodes_commerce_bureau_placebo.csv"):
+        return
+    bp = pd.read_csv(TABLES / "episodes_commerce_bureau_placebo.csv")
+    pv = bp.pivot(index="year", columns="bureau", values="rr")
+    style = {"PTO": (RED, 2.4), "NOAA": (ORANGE, 1.8), "Census": (BLUE, 1.4),
+             "NIST": ("#8073AC", 1.2), "BEA": (PAPER, 1.2)}
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    for b, (c, lw) in style.items():
+        ax.plot(pv.index, pv[b], color=c, lw=lw, marker="o", ms=4, label=b)
+    ax.axhline(1, color="black", lw=0.8)
+    ax.axvline(2022, color=GRAY, ls="--", lw=1)
+    ax.text(2022.08, ax.get_ylim()[1] * 0.97, "Mar 2022\nmandate", fontsize=8, color=GRAY, va="top")
+    ax.set_xlabel("Window start (March of year; 12 months)")
+    ax.set_ylabel("Separation rate vs. own 2011–19 norm")
+    ax.set_title("Commerce bureaus: no break at the March 2022 mandate")
+    ax.set_xticks(pv.index)
+    ax.legend(frameon=False, fontsize=8.5, ncol=5, loc="upper left")
+    ax.grid(axis="y")
+    ax.text(0.0, -0.17, "PTO's elevated separations begin in the Mar 2021 window, a year before the mandate; Census follows its "
+            "decennial-census cycle.", transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    save("e2_bureau_placebo")
+
+
+def fig_dose_response_2025():
+    if not _have("episodes_dose_response_2025.csv", "episodes_dose_response_stats.csv"):
+        return
+    d = pd.read_csv(TABLES / "episodes_dose_response_2025.csv")
+    st = pd.read_csv(TABLES / "episodes_dose_response_stats.csv")
+    rho = st[(st.outcome == "rr") & (st.exposure == "inperson_pct")].iloc[0]
+    fig, ax = plt.subplots(figsize=(8, 5))
+    ax.scatter(d.inperson_pct, d.rr, s=np.sqrt(d.employees_sep24) * 1.6, color=BLUE, alpha=0.55,
+               edgecolor="white")
+    for _, r in d.iterrows():
+        ax.annotate(r.agency, (r.inperson_pct, r.rr), fontsize=8, xytext=(4, 3), textcoords="offset points")
+    ax.axhline(1, color="black", lw=0.8)
+    ax.set_yscale("log")
+    ax.set_yticks([0.8, 1, 1.5, 2, 3, 4.5])
+    ax.set_yticklabels(["0.8", "1", "1.5", "2", "3", "4.5"])
+    ax.yaxis.set_minor_formatter(mticker.NullFormatter())
+    ax.set_xlabel("2024 share of work hours done in person (%)")
+    ax.set_ylabel("Jan–Mar 2025 separation rate vs. 2011–19 norm")
+    ax.set_title(f"Telework exposure vs. 2025 Q1 exits (Spearman ρ = {rho.spearman_rho:.2f}, n = {int(rho.n)})",
+                 fontsize=11)
+    ax.grid(alpha=0.3)
+    ax.text(0.0, -0.15, textwrap.fill(
+        "All occupations incl. DoD (counts only). Descriptive: agencies targeted separately in 2025 "
+        "(e.g., Education, USAID) are also low-in-person agencies. Bubble = employees.", 95),
+        transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
+    save("dose_response_2025")
+
+
 # ── Run all ──────────────────────────────────────────────────────────────────
+def _episode_figures():
+    fig_who_leaves_episodes()
+    fig_econ_q1_2025_barbell()
+    fig_e2_bureau_placebo()
+    fig_dose_response_2025()
+
+
 def _gender_figures():
     fig_salary_trends()
     fig_female_share_agency()
@@ -687,7 +833,7 @@ def _fedscope_2025_figures():
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--only", choices=["gender", "fedscope2025"],
+    parser.add_argument("--only", choices=["gender", "fedscope2025", "episodes"],
                         help="Generate just one group of figures")
     args = parser.parse_args()
 
@@ -696,4 +842,6 @@ if __name__ == "__main__":
         _gender_figures()
     if args.only in (None, "fedscope2025"):
         _fedscope_2025_figures()
+    if args.only in (None, "episodes"):
+        _episode_figures()
     print(f"Done. All figures saved to {FIGURES}/")

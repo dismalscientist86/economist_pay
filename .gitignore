@@ -5,3 +5,6 @@ data/raw/fedscope/_downloads/
 # Python
 __pycache__/
 *.pyc
+
+# Aggregated all-occupation panels (rebuild with: python src/build_panels.py)
+data/processed/panels/

@@ -20,6 +20,11 @@ FedsDataCenter stops at FY2024. To ask whether the number and pay of federal eco
 
 FedScope's raw files have **no gender or race in any year** (OPM's interactive site offered them until March 2025, when they were removed under EOs 14151/14168/14173), so the 2025 update is aggregate-only; the gender analysis above relies on name-based assignment on FedsDataCenter and covers years ≤2024. It is also a different universe from FedsDataCenter (EHRI month-end status vs. annual FOIA extract), the March 2025 snapshot is preliminary and still counts administrative-leave / deferred-resignation staff as employed, and small agency×grade cells are suppressed. Pre-2006 headcounts include ~550 Department of State positions later reclassified out of series 0110. Full method and caveats: `docs/2025_update_plan.md`; findings memo: `docs/2025_update.md`.
 
+### 4. Federal-Remote-Work *(git submodule)* — telework and return-to-office
+`Federal-Remote-Work/` is a separate repo ([dismalscientist86/Federal-Remote-Work](https://github.com/dismalscientist86/Federal-Remote-Work)) pinned as a submodule. It contributes two agency-level 2024 CSVs — in-person work rates and return-to-office plans — and exploratory scripts on Commerce bureaus (its scripts use hardcoded paths and are not part of the pipeline). `src/agency_xwalk.py` links the CSVs' agency names to FedScope agency codes. The **three-episode "who leaves" study** (`src/build_panels.py`, `src/analyze_episodes.py`) combines it with the all-occupation FedScope files; see `docs/who_leaves_study.md`.
+
+The study also relies on a few facts about the FedScope flow files: in the Oct 2023–Mar 2025 files, occupation, tenure, education and grade are redacted for DoD (~35% of rows), so tenure analyses exclude DoD in every period. A larger local archive of OPM downloads (FedScope quarterly cubes, FEVS survey microdata) lives outside the repo at `M:\opm_datasets` and is not yet wired into the pipeline.
+
 ### Legacy data (see `data/raw/fedsdatacenter/`)
 - `Federal-Employee-Salaries_FY2015.xlsx` — original FY2015 download from FedsDataCenter
 - `FederalPay.xlsx` — partial FederalPay.org time series (manual collection, 2004+)
@@ -47,6 +52,9 @@ economist_pay/
 │   ├── analyze_2025.py        # 2024->2025 headcount, pay, agency, grade, flows
 │   ├── fetch_fedscope_history.py  # FedScope employment cubes to 1998, flows to FY2015
 │   ├── analyze_history.py     # Long-run economist headcount, pay, separations
+│   ├── agency_xwalk.py        # Telework-CSV agency names -> FedScope codes; CSV loader
+│   ├── build_panels.py        # All-occupation stock and separation panels (episodes study)
+│   ├── analyze_episodes.py    # Three-episode "who leaves" study: ERS, Commerce, 2025
 │   ├── make_figures.py        # All slide-deck figures
 │   └── phd_placements.py      # PhD placement analysis module
 ├── notebooks/                 # Jupyter notebooks for exploration
@@ -58,14 +66,20 @@ economist_pay/
 ├── docs/
 │   ├── Notes.txt              # Original project notes
 │   ├── 2025_update_plan.md    # Plan + data landscape for the FedScope extension
-│   └── 2025_update.md         # Findings memo: has federal economist pay/headcount changed?
-├── main.py                    # Full pipeline runner (--fedscope, --history)
+│   ├── 2025_update.md         # Findings memo: has federal economist pay/headcount changed?
+│   └── who_leaves_study.md    # Three-episode study: who leaves when workplace conditions change
+├── Federal-Remote-Work/       # git submodule: telework / return-to-office data and scripts
+├── main.py                    # Full pipeline runner (--fedscope, --history, --episodes)
 └── requirements.txt
 ```
 
 ## Setup
 
 ```bash
+git clone --recurse-submodules https://github.com/dismalscientist86/economist_pay.git
+# or, in an existing clone:
+git submodule update --init
+
 pip install -r requirements.txt
 ```
 
@@ -110,7 +124,13 @@ python src/analyze_2025.py                      # 2024→2025 comparison tables
 python src/fetch_fedscope_history.py            # employment cubes to 1998, flows to FY2015
 python src/fetch_fedscope_history.py --flows-only    # just the separation/accession files
 python src/analyze_history.py                   # long-run headcount, pay, separation-reason tables
+
+python src/build_panels.py                      # all-occupation panels (~5 min; needs the fedscope cache)
+python src/analyze_episodes.py                  # three-episode study tables
+python src/make_figures.py --only episodes      # its four figures
 ```
+
+The same study as one command: `python main.py --episodes`.
 
 ### 2025 update outputs
 
@@ -139,6 +159,19 @@ Figures in `output/figures/` (`make_figures.py --only fedscope2025`):
 | `econ_flows_2025.pdf` · `econ_separation_reasons_2025.pdf` | monthly hires/departures; departures by reason and quarter |
 | `econ_headcount_since_1998.pdf` | 27-year headcount and real-pay series *(`--history`)* |
 | `econ_separations_history.pdf` · `econ_q1_history.pdf` | separations by fiscal year/reason; first-quarter flows 2015–2025 *(`--history`)* |
+
+### Three-episode "who leaves" study outputs
+
+Tables in `output/tables/` (`episodes_`-prefixed); method, results and caveats in `docs/who_leaves_study.md`:
+
+| file | contents |
+|---|---|
+| `episodes_rates.csv` · `episodes_did.csv` · `episodes_leaver_mix.csv` | separation rate ratios (event ÷ normal) overall and by tenure / education / GS band / reason; treated-vs-comparison ratios; who the leavers are |
+| `episodes_commerce_bureaus.csv` · `episodes_E2_placebo.csv` · `episodes_commerce_bureau_placebo.csv` | Commerce by bureau, and the placebo years that test whether March 2022 is unusual |
+| `episodes_E3_q1_series.csv` · `episodes_E3_excess.csv` | first-quarter separation rates 2011–2025; 2025 excess by tenure and reason (economists vs. others) |
+| `episodes_dose_response_2025.csv` · `episodes_dose_response_stats.csv` | agency telework exposure vs. 2025 exits |
+
+Figures in `output/figures/` (`make_figures.py --only episodes`): `who_leaves_episodes.pdf` (rate ratios by tenure for the three episodes), `econ_q1_2025_barbell.pdf` (economists' 2025 excess by tenure), `e2_bureau_placebo.pdf` (Commerce bureaus by window year), `dose_response_2025.pdf` (agency in-person share vs. 2025 exits).
 
 ## Gender assignment
 

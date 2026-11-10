@@ -1,0 +1,7 @@
+outcome,exposure,n,spearman_rho,p
+rr,inperson_pct,24,-0.509,0.011
+rr,remote_share,24,0.27,0.201
+rr,tw_eligible_share,24,0.27,0.202
+rr_voluntary,inperson_pct,24,-0.27,0.203
+rr_voluntary,remote_share,24,0.162,0.45
+rr_voluntary,tw_eligible_share,24,0.187,0.38

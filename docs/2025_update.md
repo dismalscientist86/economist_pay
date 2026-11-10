@@ -15,10 +15,13 @@ snapshot still counts employees on administrative leave pending
 resignation/retirement as employed. The **flow data** — actual hires and
 departures — shows the turn clearly: in the first quarter of 2025, economist
 hiring collapsed (36 hires, from 145 two quarters earlier) while departures
-jumped from 81 to 137, for a net loss of ~100 economists in three months. The
-people leaving were experienced mid-career staff (mean 12.8 years of federal
-service), and the reason mix — a surge in early-out retirements,
-term-appointment terminations, voluntary retirements and quits, with
+jumped from 81 to 137, for a net loss of ~100 economists in three months.
+Measured against normal first-quarter turnover, the excess came from **both ends
+of the tenure distribution** — about 19 above-normal separations among staff with
+under 2 years of service (quits, terminations) and about 23 among staff with 20+
+years (retirements, early-outs) — while economists with 2–20 years were not
+elevated (see `docs/who_leaves_study.md`). The reason mix — a surge in early-out
+retirements, term-appointment terminations, voluntary retirements and quits, with
 agency-to-agency transfers falling — looks like a buyout-and-drawdown, not
 ordinary turnover.
 
@@ -126,10 +129,12 @@ six months. The pay increase is the statutory raise.
 Hiring fell to a quarter of its mid-2024 pace while departures rose sharply.
 Over the full year, 317 economists were hired and 356 left.
 
-- **Leavers**: mean **12.8 years** of federal service, mean pay **$144,938** —
-  established mid-career economists, consistent with the deferred-resignation
-  program rather than ordinary probationary attrition.
-- **Joiners**: mean **1.9 years** of service, mean pay **$114,890** — junior.
+- **Leavers** over the year: mean **12.8 years** of federal service, mean pay
+  **$144,938**; **joiners**: mean **1.9 years**, mean pay **$114,890**. (The leavers'
+  average mostly reflects normal turnover; it says little about *who left more than
+  usual*. Against the 2011–19 first-quarter norm, the 2025 excess is a barbell — under
+  2 years and 20+ years of service — not mid-career staff. See
+  `docs/who_leaves_study.md`.)
 
 **Why they left.** 2025 Q1 is one of four quarters but holds a lopsided share of
 the year's departures by reason:
@@ -285,6 +290,13 @@ cannot update it.
    ~550 Department of State positions reclassified out of series 0110, not a
    workforce cut; smaller drifts elsewhere are not individually adjusted.
    Historical `SALARY` is nominal and CPI-deflated (not ECI).
+10. **DoD economists are invisible in flows since Oct 2023.** In the Oct 2023 –
+    Mar 2025 separation and accession files, occupation, tenure, education and grade
+    are REDACTED for Army, Navy, Air Force and the defense agencies (~35% of all rows),
+    so DoD economists (~4–5% of the series) cannot be identified. FY2024–25 economist
+    flow counts therefore run ~4–5% low relative to earlier years — a conservative bias
+    for the "2025 is extreme" comparison. The tenure analysis in
+    `docs/who_leaves_study.md` excludes DoD in every period for the same reason.
 
 ## Refresh checklist
 

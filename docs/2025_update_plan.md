@@ -137,9 +137,10 @@ prefixed); `src/make_figures.py --only fedscope2025` renders five figures. Run v
   senior on the pay side.
 - **Flows (Apr 2024 – Mar 2025):** 317 hires vs 356 separations. Quarterly net went
   +21 → +64 → −23 → **−101 (2025 Q1)**. Hiring collapsed (145 → 36 accessions Q3→Q1) while
-  separations spiked (81 → 137). Leavers averaged **12.8 years of service** and $145k —
-  mid-career departures, not junior attrition. This is the clearest signal in the data; the
-  March 2025 headcount understates it because admin-leave staff are still counted.
+  separations spiked (81 → 137). Against normal first-quarter turnover the excess is a
+  tenure barbell (under 2 years and 20+ years; 2–20 years not elevated — see
+  `docs/who_leaves_study.md`). This is the clearest signal in the data; the March 2025
+  headcount understates it because admin-leave staff are still counted.
 - **By agency (~76% coverage):** BLS −24, BEA −14, Treasury −13, non-ERS Agriculture −13,
   FTC −9 shrank; Energy +17, FDIC +12, DHS +11, HHS +7, Census +6 grew.
 - **Grade mix barely moved** in the shown cells; the record-level March 2025 file shows more

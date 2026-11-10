@@ -50,7 +50,7 @@
 \headcommand {\beamer@framepages {19}{19}}
 \headcommand {\beamer@sectionpages {12}{19}}
 \headcommand {\beamer@subsectionpages {12}{19}}
-\headcommand {\sectionentry {5}{PhD Placement Analysis}{20}{PhD Placement Analysis}{0}}
+\headcommand {\sectionentry {5}{Who Leaves: Three Episodes}{20}{Who Leaves: Three Episodes}{0}}
 \headcommand {\slideentry {5}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
 \headcommand {\slideentry {5}{0}{2}{21/21}{}{0}}
@@ -59,21 +59,34 @@
 \headcommand {\beamer@framepages {22}{22}}
 \headcommand {\slideentry {5}{0}{4}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {5}{0}{5}{24/24}{}{0}}
+\headcommand {\beamer@sectionpages {20}{23}}
+\headcommand {\beamer@subsectionpages {20}{23}}
+\headcommand {\sectionentry {6}{PhD Placement Analysis}{24}{PhD Placement Analysis}{0}}
+\headcommand {\slideentry {6}{0}{1}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {5}{0}{6}{25/25}{}{0}}
+\headcommand {\slideentry {6}{0}{2}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\beamer@sectionpages {20}{25}}
-\headcommand {\beamer@subsectionpages {20}{25}}
-\headcommand {\sectionentry {6}{Summary}{26}{Summary}{0}}
-\headcommand {\slideentry {6}{0}{1}{26/26}{}{0}}
+\headcommand {\slideentry {6}{0}{3}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {6}{0}{1}{26/27}{}{0}}
-\headcommand {\beamer@framepages {26}{27}}
-\headcommand {\slideentry {6}{0}{2}{28/28}{}{0}}
+\headcommand {\slideentry {6}{0}{4}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {6}{0}{5}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@partpages {1}{28}}
-\headcommand {\beamer@subsectionpages {26}{28}}
-\headcommand {\beamer@sectionpages {26}{28}}
-\headcommand {\beamer@documentpages {28}}
-\headcommand {\gdef \inserttotalframenumber {28}}
+\headcommand {\slideentry {6}{0}{6}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@sectionpages {24}{29}}
+\headcommand {\beamer@subsectionpages {24}{29}}
+\headcommand {\sectionentry {7}{Summary}{30}{Summary}{0}}
+\headcommand {\slideentry {7}{0}{1}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {7}{0}{1}{30/31}{}{0}}
+\headcommand {\beamer@framepages {30}{31}}
+\headcommand {\slideentry {7}{0}{1}{30/32}{}{0}}
+\headcommand {\beamer@framepages {30}{32}}
+\headcommand {\slideentry {7}{0}{2}{33/33}{}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@partpages {1}{33}}
+\headcommand {\beamer@subsectionpages {30}{33}}
+\headcommand {\beamer@sectionpages {30}{33}}
+\headcommand {\beamer@documentpages {33}}
+\headcommand {\gdef \inserttotalframenumber {33}}

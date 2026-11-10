@@ -18,6 +18,7 @@ Usage:
     python main.py --skip-fetch           # skip download (use existing raw files)
     python main.py --start 2020 --end 2024
     python main.py --fedscope             # 2025 update: fetch -> clean -> analyze
+    python main.py --episodes             # three-episode "who leaves" study
 """
 
 import argparse
@@ -74,10 +75,29 @@ def run_fedscope_2025(overwrite: bool = False, history: bool = False) -> None:
     print("\nDone. Figures: python src/make_figures.py --only fedscope2025")
 
 
+def run_episodes() -> None:
+    """Three-episode "who leaves" study (all occupations; ~5 min the first time)."""
+    from build_panels import run_all as build_panels
+    from analyze_episodes import run_all as analyze_episodes
+
+    print("=" * 60)
+    print("Building all-occupation panels from FedScope...")
+    print("=" * 60)
+    build_panels()
+    print("\n" + "=" * 60)
+    print("Analyzing the three episodes (ERS 2019, Commerce 2022, 2025)...")
+    print("=" * 60)
+    analyze_episodes()
+    print("\nDone. Figures: python src/make_figures.py --only episodes")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Federal economist pay analysis pipeline")
     parser.add_argument("--fedscope", action="store_true",
                         help="Run the 2025 update pipeline (FedScope) instead of the FedsDataCenter one")
+    parser.add_argument("--episodes", action="store_true",
+                        help="Run the three-episode 'who leaves' study (needs the fedscope cache; "
+                             "uses the Federal-Remote-Work submodule)")
     parser.add_argument("--history", action="store_true",
                         help="With --fedscope: also fetch/analyze pre-2025 FedScope (~550 MB download)")
     parser.add_argument("--skip-fetch",   action="store_true", help="Skip data download step")
@@ -91,6 +111,10 @@ def main():
 
     if args.fedscope:
         run_fedscope_2025(overwrite=args.overwrite, history=args.history)
+        return
+
+    if args.episodes:
+        run_episodes()
         return
 
     if not args.skip_fetch:

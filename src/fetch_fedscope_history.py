@@ -86,6 +86,22 @@ EMPLOYMENT_HISTORY = {
 }
 
 
+# Full (all-occupation) separation files read directly from their zips by
+# build_panels.py -- nothing is extracted into the repo. The FY2015-19, FY2020-24
+# and 2023-25 files are already in FLOW_HISTORY / fetch_fedscope.py.
+PANEL_FLOW_INPUTS = {
+    "sep_fy2005_2009": ("532/f61ffa3e-00ce-45bc-aebf-eb9244d3a113.zip",
+                        "separations_FY2005-2009.zip"),
+    "sep_fy2010_2014": ("534/67e6daee-26da-4b46-8d28-331a62375d64.zip",
+                        "separations_FY2010-2014.zip"),
+}
+
+
+def fetch_panel_inputs(overwrite: bool = False) -> None:
+    for rel, name in PANEL_FLOW_INPUTS.values():
+        _download(rel, name, overwrite)
+
+
 def _download(rel: str, local_name: str, overwrite: bool) -> Path:
     DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
     dest = DOWNLOAD_DIR / local_name

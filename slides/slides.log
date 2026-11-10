@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  10 NOV 2026 11:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  10 NOV 2026 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,7 +1089,7 @@ thkerncmss.
 ] [5
 
 ]
-<../output/figures/salary_trends.pdf, id=103, 720.66916pt x 278.27473pt>
+<../output/figures/salary_trends.pdf, id=109, 720.66916pt x 278.27473pt>
 File: ../output/figures/salary_trends.pdf Graphic file (type pdf)
 <use ../output/figures/salary_trends.pdf>
 Package pdftex.def Info: ../output/figures/salary_trends.pdf  used on input lin
@@ -1104,7 +1104,7 @@ File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 [6
 
  <../output/figures/salary_trends.pdf>]
-<../output/figures/female_share_agency.pdf, id=163, 567.22542pt x 314.79369pt>
+<../output/figures/female_share_agency.pdf, id=169, 567.22542pt x 314.79369pt>
 File: ../output/figures/female_share_agency.pdf Graphic file (type pdf)
 <use ../output/figures/female_share_agency.pdf>
 Package pdftex.def Info: ../output/figures/female_share_agency.pdf  used on inp
@@ -1113,7 +1113,7 @@ ut line 144.
  [7
 
  <../output/figures/female_share_agency.pdf>]
-<../output/figures/grade_salary.pdf, id=227, 567.18338pt x 314.52316pt>
+<../output/figures/grade_salary.pdf, id=233, 567.18338pt x 314.52316pt>
 File: ../output/figures/grade_salary.pdf Graphic file (type pdf)
 <use ../output/figures/grade_salary.pdf>
 Package pdftex.def Info: ../output/figures/grade_salary.pdf  used on input line
@@ -1122,7 +1122,7 @@ Package pdftex.def Info: ../output/figures/grade_salary.pdf  used on input line
  [8
 
  <../output/figures/grade_salary.pdf>]
-<../output/figures/agency_gap.pdf, id=277, 568.31181pt x 387.25966pt>
+<../output/figures/agency_gap.pdf, id=283, 568.31181pt x 387.25966pt>
 File: ../output/figures/agency_gap.pdf Graphic file (type pdf)
 <use ../output/figures/agency_gap.pdf>
 Package pdftex.def Info: ../output/figures/agency_gap.pdf  used on input line 1
@@ -1131,7 +1131,7 @@ Package pdftex.def Info: ../output/figures/agency_gap.pdf  used on input line 1
  [9
 
  <../output/figures/agency_gap.pdf>]
-<../output/figures/salary_comparison_paper.pdf, id=345, 570.45525pt x 307.48822
+<../output/figures/salary_comparison_paper.pdf, id=351, 570.45525pt x 307.48822
 pt>
 File: ../output/figures/salary_comparison_paper.pdf Graphic file (type pdf)
 <use ../output/figures/salary_comparison_paper.pdf>
@@ -1145,7 +1145,7 @@ Package pdftex.def Info: ../output/figures/salary_comparison_paper.pdf  used on
 ] [12
 
 ]
-<../output/figures/fed_economists_2025.pdf, id=429, 716.9184pt x 319.16742pt>
+<../output/figures/fed_economists_2025.pdf, id=435, 716.9184pt x 319.16742pt>
 File: ../output/figures/fed_economists_2025.pdf Graphic file (type pdf)
 <use ../output/figures/fed_economists_2025.pdf>
 Package pdftex.def Info: ../output/figures/fed_economists_2025.pdf  used on inp
@@ -1155,7 +1155,7 @@ ut line 237.
 [13
 
  <../output/figures/fed_economists_2025.pdf>]
-<../output/figures/econ_flows_2025.pdf, id=502, 639.47783pt x 311.39206pt>
+<../output/figures/econ_flows_2025.pdf, id=508, 639.47783pt x 311.39206pt>
 File: ../output/figures/econ_flows_2025.pdf Graphic file (type pdf)
 <use ../output/figures/econ_flows_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_flows_2025.pdf  used on input l
@@ -1164,7 +1164,7 @@ ine 248.
  [14
 
  <../output/figures/econ_flows_2025.pdf>]
-<../output/figures/econ_separation_reasons_2025.pdf, id=563, 567.30634pt x 305.
+<../output/figures/econ_separation_reasons_2025.pdf, id=567, 567.30634pt x 305.
 94038pt>
 File: ../output/figures/econ_separation_reasons_2025.pdf Graphic file (type pdf
 )
@@ -1175,7 +1175,7 @@ ed on input line 259.
  [15
 
  <../output/figures/econ_separation_reasons_2025.pdf>]
-<../output/figures/econ_agency_change_2025.pdf, id=625, 721.3136pt x 315.54512p
+<../output/figures/econ_agency_change_2025.pdf, id=629, 721.3136pt x 315.54512p
 t>
 File: ../output/figures/econ_agency_change_2025.pdf Graphic file (type pdf)
 <use ../output/figures/econ_agency_change_2025.pdf>
@@ -1186,7 +1186,7 @@ Package pdftex.def Info: ../output/figures/econ_agency_change_2025.pdf  used on
 [16
 
  <../output/figures/econ_agency_change_2025.pdf>]
-<../output/figures/econ_headcount_since_1998.pdf, id=702, 784.13013pt x 278.388
+<../output/figures/econ_headcount_since_1998.pdf, id=706, 784.13013pt x 278.388
 17pt>
 File: ../output/figures/econ_headcount_since_1998.pdf Graphic file (type pdf)
 <use ../output/figures/econ_headcount_since_1998.pdf>
@@ -1196,14 +1196,14 @@ on input line 281.
  [17
 
  <../output/figures/econ_headcount_since_1998.pdf>]
-<../output/figures/econ_separations_history.pdf, id=770, 801.8018pt x 310.85547
+<../output/figures/econ_separations_history.pdf, id=774, 801.8018pt x 310.85547
 pt>
 File: ../output/figures/econ_separations_history.pdf Graphic file (type pdf)
 <use ../output/figures/econ_separations_history.pdf>
 Package pdftex.def Info: ../output/figures/econ_separations_history.pdf  used o
 n input line 301.
 (pdftex.def)             Requested size: 216.66066pt x 83.99849pt.
-<../output/figures/econ_q1_history.pdf, id=771, 638.02905pt x 314.31993pt>
+<../output/figures/econ_q1_history.pdf, id=775, 638.02905pt x 314.31993pt>
 File: ../output/figures/econ_q1_history.pdf Graphic file (type pdf)
 <use ../output/figures/econ_q1_history.pdf>
 Package pdftex.def Info: ../output/figures/econ_q1_history.pdf  used on input l
@@ -1214,47 +1214,86 @@ ine 301.
  <../output/figures/econ_separations_history.pdf> <../output/figures/econ_q1_hi
 story.pdf>] [19
 
-] [20
+]
+<../output/figures/who_leaves_episodes.pdf, id=902, 931.56032pt x 322.18556pt>
+File: ../output/figures/who_leaves_episodes.pdf Graphic file (type pdf)
+<use ../output/figures/who_leaves_episodes.pdf>
+Package pdftex.def Info: ../output/figures/who_leaves_episodes.pdf  used on inp
+ut line 342.
+(pdftex.def)             Requested size: 336.27118pt x 116.30135pt.
+ [20
+
+ <../output/figures/who_leaves_episodes.pdf>]
+<../output/figures/econ_q1_2025_barbell.pdf, id=978, 716.9184pt x 316.3958pt>
+File: ../output/figures/econ_q1_2025_barbell.pdf Graphic file (type pdf)
+<use ../output/figures/econ_q1_2025_barbell.pdf>
+Package pdftex.def Info: ../output/figures/econ_q1_2025_barbell.pdf  used on in
+put line 352.
+(pdftex.def)             Requested size: 289.8909pt x 127.93683pt.
+ [21
+
+ <../output/figures/econ_q1_2025_barbell.pdf>]
+<../output/figures/e2_bureau_placebo.pdf, id=1046, 550.84862pt x 310.26878pt>
+File: ../output/figures/e2_bureau_placebo.pdf Graphic file (type pdf)
+<use ../output/figures/e2_bureau_placebo.pdf>
+Package pdftex.def Info: ../output/figures/e2_bureau_placebo.pdf  used on input
+ line 363.
+(pdftex.def)             Requested size: 239.52475pt x 134.91374pt.
+ [22
+
+ <../output/figures/e2_bureau_placebo.pdf>]
+<../output/figures/dose_response_2025.pdf, id=1118, 567.19778pt x 346.82552pt>
+File: ../output/figures/dose_response_2025.pdf Graphic file (type pdf)
+<use ../output/figures/dose_response_2025.pdf>
+Package pdftex.def Info: ../output/figures/dose_response_2025.pdf  used on inpu
+t line 375.
+(pdftex.def)             Requested size: 228.25119pt x 139.56918pt.
+ [23
+
+ <../output/figures/dose_response_2025.pdf>] [24
 
 ]
-<../output/figures/placement_trends.pdf, id=903, 639.45338pt x 351.04211pt>
+<../output/figures/placement_trends.pdf, id=1203, 639.45338pt x 351.04211pt>
 File: ../output/figures/placement_trends.pdf Graphic file (type pdf)
 <use ../output/figures/placement_trends.pdf>
 Package pdftex.def Info: ../output/figures/placement_trends.pdf  used on input 
-line 377.
+line 425.
 (pdftex.def)             Requested size: 254.23517pt x 139.56802pt.
- [21
+ [25
 
  <../output/figures/placement_trends.pdf>]
-<../output/figures/placement_comparison.pdf, id=960, 639.4954pt x 343.87444pt>
+<../output/figures/placement_comparison.pdf, id=1261, 639.4954pt x 343.87444pt>
+
 File: ../output/figures/placement_comparison.pdf Graphic file (type pdf)
 <use ../output/figures/placement_comparison.pdf>
 Package pdftex.def Info: ../output/figures/placement_comparison.pdf  used on in
-put line 381.
+put line 429.
 (pdftex.def)             Requested size: 250.9049pt x 134.91853pt.
- [22
+ [26
 
- <../output/figures/placement_comparison.pdf>] [23
+ <../output/figures/placement_comparison.pdf>] [27
 
 ]
-<../output/figures/female_sector_comparison.pdf, id=1037, 586.08334pt x 291.083
+<../output/figures/female_sector_comparison.pdf, id=1338, 586.08334pt x 291.083
 33pt>
 File: ../output/figures/female_sector_comparison.pdf Graphic file (type pdf)
 <use ../output/figures/female_sector_comparison.pdf>
 Package pdftex.def Info: ../output/figures/female_sector_comparison.pdf  used o
-n input line 406.
+n input line 454.
 (pdftex.def)             Requested size: 262.26843pt x 130.25786pt.
+ [28
 
-[24
+ <../output/figures/female_sector_comparison.pdf>] [29
 
- <../output/figures/female_sector_comparison.pdf>] [25
+] [30
 
-] [26
-
-] [27
+] [31
 
 
-] [28
+] [32
+
+
+] [33
 
 ]
 \tf@nav=\write6
@@ -1266,20 +1305,19 @@ n input line 406.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-
-(slides.aux)
+ (slides.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 6AECCFFF6C72AED8DFC48C8708D3FEEB;831.
+(rerunfilecheck)             Checksum: 9A64FA10D60AD6B36C7494D060D8EA7B;1013.
  ) 
 Here is how much of TeX's memory you used:
- 25212 strings out of 474485
- 511475 string characters out of 5742789
- 1937542 words of memory out of 5000000
- 46928 multiletter control sequences out of 15000+600000
+ 25277 strings out of 474485
+ 513452 string characters out of 5742789
+ 1938542 words of memory out of 5000000
+ 46982 multiletter control sequences out of 15000+600000
  570767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,383b,645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1295,9 +1333,9 @@ sers/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi
 10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on slides.pdf (28 pages, 481438 bytes).
+Output written on slides.pdf (33 pages, 593226 bytes).
 PDF statistics:
- 1191 PDF objects out of 1200 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1503 PDF objects out of 1728 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 
