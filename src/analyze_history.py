@@ -141,9 +141,9 @@ def employment_series() -> pd.DataFrame:
 def _load_flows() -> pd.DataFrame:
     frames = []
 
-    # pre-2025 coded files: AGYSUB, SEP/ACC, EFDATE, ..., OCC, ..., SALARY, LOS
-    for path in glob.glob(str(HISTORY_DIR / "*_fy20*_economists.csv")) + \
-                glob.glob(str(HISTORY_DIR / "*_fy2015_2019_economists.csv")):
+    # pre-2025 coded files: AGYSUB, SEP/ACC, EFDATE, ..., OCC, ..., SALARY, LOS.
+    # Load each file exactly once.
+    for path in sorted(glob.glob(str(HISTORY_DIR / "*_fy*_economists.csv"))):
         df = pd.read_csv(path, dtype=str)
         direction = "separation" if "separation" in path else "accession"
         code_col = "SEP" if direction == "separation" else "ACC"
@@ -179,7 +179,11 @@ def _load_flows() -> pd.DataFrame:
             "los": pd.to_numeric(df["LOS"], errors="coerce"),
         }))
 
-    fl = pd.concat(frames, ignore_index=True).drop_duplicates()
+    # Rows are one per person. Identical (month, reason, salary, tenure) rows are
+    # distinct people, so never drop_duplicates() here -- and the source windows
+    # (Oct 2014-Sep 2019, Oct 2019-Sep 2023, Oct 2023-Mar 2024, Apr 2024-Mar 2025)
+    # do not overlap, so there is nothing to de-duplicate.
+    fl = pd.concat(frames, ignore_index=True)
     fl["cal_year"] = fl["month"] // 100
     fl["cal_q"] = (fl["month"] % 100 - 1) // 3 + 1
     fl["fiscal_year"] = fl["cal_year"] + (fl["month"] % 100 >= 10)

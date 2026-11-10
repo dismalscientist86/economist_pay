@@ -14,20 +14,29 @@ The 2% headcount drop **understates** what is happening. OPM's March 2025
 snapshot still counts employees on administrative leave pending
 resignation/retirement as employed. The **flow data** — actual hires and
 departures — shows the turn clearly: in the first quarter of 2025, economist
-hiring collapsed while departures roughly doubled, for a net loss of ~100
-economists in three months. The people leaving were experienced mid-career
-staff (mean 12.8 years of federal service), and the reason mix — a surge in
-early-out retirements, term-appointment terminations, voluntary retirements and
-quits, with agency-to-agency transfers falling — is the signature of a
-reduction-in-force and buyout, not ordinary turnover.
+hiring collapsed (36 hires, from 145 two quarters earlier) while departures
+jumped from 81 to 137, for a net loss of ~100 economists in three months. The
+people leaving were experienced mid-career staff (mean 12.8 years of federal
+service), and the reason mix — a surge in early-out retirements,
+term-appointment terminations, voluntary retirements and quits, with
+agency-to-agency transfers falling — looks like a buyout-and-drawdown, not
+ordinary turnover.
+
+That pattern cannot be attributed to a single cause. The January 20, 2025
+order ending remote work (return to full-time in-person duty) and the
+January 28 deferred-resignation offer landed within days of each other, and
+both fall inside the same quarter; this data cannot separate them. See
+`Federal-Remote-Work/` and the three-episode analysis for the return-to-office
+question.
 
 In historical perspective (§6): the March 2025 headcount is still near the top
 of the post-2006 range — the drop so far has unwound about a year of growth, not
-decades. But the *outflow* is extreme. FY2025's first six months already saw 215
-economist separations (78% of all of FY2024), and January–March 2025 had the
-most departures and nearly the fewest hires of any first quarter since 2015 —
-worse than the FY2019 ERS relocation on a rate basis and worse than the 2017
-transition on Q1 departures. No separations yet carry a formal RIF code.
+decades. But the *outflow* is extreme. FY2025's first six months already saw 218
+economist separations (78% of all of FY2024's 279), and January–March 2025 had
+the most departures (137; the previous high was 123 in 2017) and the fewest
+hires (36; 38 in 2018) of any first quarter since 2015. No economist separation
+carries a formal RIF code, but that is normal for economists and says little
+about the mechanism (see §6).
 
 ## Data and method
 
@@ -42,10 +51,13 @@ transition on Q1 departures. No separations yet carry a formal RIF code.
 
 FedsDataCenter.com — the source for the FY2015–2024 gender panel — stops at
 FY2024, so this update switches sources. FedScope is a different universe (an
-EHRI month-end status snapshot rather than an annual FOIA extract) and, since
-March 2025, **carries no gender or race fields** (removed under EOs 14151 /
-14168 / 14173). The gender analysis in this repo therefore ends at FY2024; this
-update is headcount and pay only.
+EHRI month-end status snapshot rather than an annual FOIA extract) and its raw
+files **have never carried gender or race** — not in any cube from 1998 through
+2025. (The interactive FedScope site did offer gender and race cuts; OPM took
+those down in March 2025 under EOs 14151 / 14168 / 14173, which also removed
+them from the replacement data.opm.gov platform.) The gender analysis in this
+repo comes from name-based assignment on FedsDataCenter and therefore ends at
+FY2024; this update is headcount and pay only.
 
 Real values deflate the March 2025 mean to September 2024 dollars using
 BLS CPI-U (+1.43% over the six months) and, separately, the ECI for wages and
@@ -190,29 +202,37 @@ and has been flat since (29.7% in March 2025). The GS-14-and-above share rose
 from 23% (1998) to 32% (2020–2024).
 
 **Separations — how 2025 compares.** Full fiscal years FY2015–FY2023 saw
-310–460 economist separations (rate 6–11% of headcount). FY2024 was the calmest
-year in the series — 277 separations, a 5.7% rate. Then **FY2025 recorded 215
-separations in just its first six months** (Oct 2024–Mar 2025) — already 78% of
-FY2024's full-year total, and the reason mix shifted toward retirements (76 in
-six months vs. 65 in all of FY2024) and term-appointment terminations (20 vs. 9).
+321–461 economist separations (rate 7–11% of headcount). FY2024 was the calmest
+year in the series — 279 separations, a 5.7% rate. Then **FY2025 recorded 218
+separations in just its first six months** (Oct 2024–Mar 2025) — 78% of
+FY2024's full-year total (4.4% of headcount in half a year, ~8.7% annualized),
+and the reason mix shifted toward retirements (77 in six months vs. 65 in all of
+FY2024) and term-appointment terminations (22 vs. 9).
 
 The one clear historical precedent for elevated economist attrition is
-**FY2019** (461 separations, 10.6% rate), driven by the USDA decision to
-relocate the Economic Research Service to Kansas City — an exodus concentrated
-in transfers and quits at one agency. FY2025 differs in being government-wide
-and retirement/termination-heavy.
+**FY2019** (461 separations, 10.6% rate). The USDA decision to relocate the
+Economic Research Service to Kansas City accounts for about half of that year's
+jump: ERS economist separations tripled from 21 (FY2018) to 63 (FY2019),
+concentrated in September 2019 (20 retirements, 11 transfers, 3 quits), while
+all other agencies rose from 360 to 398. FY2025 differs in being
+government-wide and retirement/termination-heavy.
 
 **First-quarter comparison.** January–March is normally a modest-outflow
-quarter. Jan–Mar 2025 had **134 separations and 34 accessions** — the most
-departures and nearly the fewest hires of any Q1 in 2015–2025. The previous
-worst Q1 for separations was 2017 (122, the first Trump transition); 2025 is
-worse and, unlike 2017, pairs it with a hiring freeze.
+quarter. Jan–Mar 2025 had **137 separations and 36 accessions** — the most
+departures and the fewest hires of any Q1 in 2015–2025. The previous high for
+separations was 2017 (123, the first Trump transition); 2025 is higher and,
+unlike 2017, pairs it with a hiring freeze.
 
-**No formal RIF yet.** Across every file, FY2015 through March 2025, **zero**
-economist separations carry OPM's Reduction-in-Force code. The 2025 drawdown is
-running through quits, retirements (including early-outs) and term-appointment
-endings — consistent with the deferred-resignation program rather than
-statutory RIF, at least through March 2025.
+**No formal RIF, but that is not informative.** Across every file, FY2015
+through March 2025, **zero** economist separations carry OPM's
+Reduction-in-Force code, and OPM's FY2005–FY2014 separation files show just one
+in ten years (FY2013), even though government-wide RIFs ran roughly 370–1,900 a
+year.
+Economists simply almost never leave by formal RIF, so the absence in 2025 says
+little about the mechanism. What distinguishes 2025 is the reason mix above
+(early-out retirements, term-appointment endings, falling transfers) — which is
+consistent with a deferred-resignation and drawdown environment, but also with
+the co-timed return-to-office order.
 
 ## Robustness
 
@@ -247,7 +267,8 @@ cannot update it.
 2. **March 2025 is preliminary** and subject to OPM revision.
 3. **Headcount loss is understated.** Admin-leave / deferred-resignation staff
    are still counted as employed in March 2025.
-4. **No gender or race.** Removed from FedScope as of March 2025.
+4. **No gender or race.** FedScope's raw files never included them (only the
+   interactive site did, until OPM removed it in March 2025).
 5. **Universe break.** FedScope levels are not directly comparable to the
    FedsDataCenter FY2015–2024 series.
 6. **~76% coverage on the agency/grade breakdown.** Agency × pay-plan × grade
@@ -284,5 +305,6 @@ When OPM publishes newer FedScope data:
       `src/fetch_fedscope_history.py` to extend the 1998– series, and the next
       FY separations file to `FLOW_HISTORY`.
 - [ ] Re-pull CPI-U / ECI in `analyze_2025.py` and `analyze_history.py` for the
-      new endpoint — a formal RIF code (SEP `SH`) in a future file is the number
-      to watch.
+      new endpoint. (Watch quits, early-out retirements and term-appointment
+      endings rather than the RIF code, which is near-zero for economists in
+      every year.)

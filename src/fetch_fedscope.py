@@ -11,8 +11,9 @@ only public source is OPM's FedScope "classic" raw datasets:
 This release is the *preliminary* March 2025 snapshot (posted 2025-07-01). It
 carries the September 2024 snapshot alongside for a clean comparison. Note:
 
-  - Gender / race were removed from FedScope as of March 2025 (EO 14151/14168/
-    14173). This data has no gender dimension.
+  - No gender or race: the FedScope raw files never carried them in any year
+    (the interactive site did, until OPM removed them in March 2025 under
+    EO 14151/14168/14173).
   - The March 2025 snapshot does NOT reflect the 2025 reshaping: employees on
     administrative leave pending resignation/retirement are still counted.
   - Some rows (mostly DoD) are fully REDACTED; those economists cannot be
@@ -256,7 +257,8 @@ def write_sources_md() -> None:
         "",
         "## Caveats (carry into every output)",
         "",
-        "- **No gender / race.** Removed from FedScope as of March 2025 (EO 14151/14168/14173).",
+        "- **No gender / race.** The raw files never carried them in any year (OPM's interactive",
+        "  site offered them until removing them in March 2025, EO 14151/14168/14173).",
         "- **Preliminary.** March 2025 is subject to revision.",
         "- **Understates the decline.** Employees on administrative leave pending",
         "  resignation/retirement are still counted as current in March 2025.",

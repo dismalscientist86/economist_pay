@@ -22,14 +22,19 @@ Decisions locked:
 | Source | Latest period | Granularity | Gender | Salary field | Usable here |
 |---|---|---|---|---|---|
 | FedsDataCenter.com API (`src/fetch_salary_data.py`) | **FY2024** | individual + name | inferred from first name | exact base + bonus | No 2025 data — dropdown and API stop at 2024 |
-| **FedScope classic — raw datasets** (opm.gov/data/datasets) | **March 2025** (preliminary, posted 2025-07-01) | de-identified, one row per employee, 3 files | **removed** | `SALARY` = annualized adjusted basic pay | Yes — `.zip` downloads succeed from this environment |
-| **FedScope classic — summary cross-tabs** | March 2025 **and** Sept 2024 (bundled) | pre-aggregated (occ, agency, grade, pay plan, location, age, education, appointment type) | **removed** | `AVGSAL` only | Yes |
+| **FedScope classic — raw datasets** (opm.gov/data/datasets) | **March 2025** (preliminary, posted 2025-07-01) | de-identified, one row per employee, 3 files | **none** (never in raw files) | `SALARY` = annualized adjusted basic pay | Yes — `.zip` downloads succeed from this environment |
+| **FedScope classic — summary cross-tabs** | March 2025 **and** Sept 2024 (bundled) | pre-aggregated (occ, agency, grade, pay plan, location, age, education, appointment type) | **none** | `AVGSAL` only | Yes |
 | OPM Federal Workforce Data API (data.opm.gov/api/v1/files) | ~July 2026, monthly | de-identified record-level (parquet) | **removed** | exact | Blocked — Akamai returns 503 to this environment |
 
-**Why no gender.** Per Executive Orders 14151, 14168, and 14173, OPM removed sex, race,
-and related demographic elements from FedScope and the new Federal Workforce Data platform
-beginning with the March 2025 release. There is currently no public source for
-gender-disaggregated 2025 federal workforce data.
+**Why no gender.** FedScope's raw cube files have never contained gender or race (checked
+against the dimension tables and file headers for every era, 1998–2025). The interactive
+FedScope site did offer those cuts; per Executive Orders 14151, 14168, and 14173, OPM removed
+sex, race, and related demographic elements from it, and from the new Federal Workforce Data
+platform, beginning in March 2025. So there was never a FedScope-file route to gender, and
+there is currently no public source for gender-disaggregated 2025 federal workforce data. In
+this project gender comes from name-based assignment on FedsDataCenter (through FY2024). The
+OPM Federal Employee Viewpoint Survey public files (self-reported gender, agency-level, through
+2023) are the one other source with a gender field.
 
 **Why single-source.** The FedScope universe (≈4,998 economists in Sept 2024) does not match
 the FedsDataCenter FY2024 file (4,718 economist records): different construction (EHRI

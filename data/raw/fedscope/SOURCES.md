@@ -1,6 +1,6 @@
 # FedScope source files
 
-Retrieved 2026-09-10 from <https://www.opm.gov/data/datasets/>.
+Retrieved 2026-11-10 from <https://www.opm.gov/data/datasets/>.
 
 OPM FedScope "classic" raw datasets. This is the **preliminary** March 2025
 employment snapshot (posted 2025-07-01) with the September 2024 snapshot
@@ -17,7 +17,8 @@ bundled for comparison, plus the April 2024-March 2025 accessions/separations.
 
 ## Caveats (carry into every output)
 
-- **No gender / race.** Removed from FedScope as of March 2025 (EO 14151/14168/14173).
+- **No gender / race.** The raw files never carried them in any year (OPM's interactive
+  site offered them until removing them in March 2025, EO 14151/14168/14173).
 - **Preliminary.** March 2025 is subject to revision.
 - **Understates the decline.** Employees on administrative leave pending
   resignation/retirement are still counted as current in March 2025.

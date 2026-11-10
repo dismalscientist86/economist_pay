@@ -633,8 +633,8 @@ def fig_econ_separations_history():
     ax.legend(frameon=False, fontsize=8.5, ncol=3)
     ax.grid(axis="y")
     ax.text(0.0, -0.16, "FY = Oct–Sep. FY2025 (hatched) is Oct 2024 – Mar 2025 only "
-            "— half a year already near a full prior year. FY2019's spike was the "
-            "USDA/ERS relocation to Kansas City.",
+            "— half a year already near a full prior year. About half of FY2019's "
+            "jump over FY2018 was the USDA/ERS relocation to Kansas City.",
             transform=ax.transAxes, fontsize=7.5, color=GRAY, va="top")
     save("econ_separations_history")
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  10 SEP 2026 05:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.29)  10 NOV 2026 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1149,7 +1149,7 @@ Package pdftex.def Info: ../output/figures/salary_comparison_paper.pdf  used on
 File: ../output/figures/fed_economists_2025.pdf Graphic file (type pdf)
 <use ../output/figures/fed_economists_2025.pdf>
 Package pdftex.def Info: ../output/figures/fed_economists_2025.pdf  used on inp
-ut line 236.
+ut line 237.
 (pdftex.def)             Requested size: 323.94489pt x 144.21815pt.
 
 [13
@@ -1159,7 +1159,7 @@ ut line 236.
 File: ../output/figures/econ_flows_2025.pdf Graphic file (type pdf)
 <use ../output/figures/econ_flows_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_flows_2025.pdf  used on input l
-ine 247.
+ine 248.
 (pdftex.def)             Requested size: 286.61096pt x 139.56445pt.
  [14
 
@@ -1170,7 +1170,7 @@ File: ../output/figures/econ_separation_reasons_2025.pdf Graphic file (type pdf
 )
 <use ../output/figures/econ_separation_reasons_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_separation_reasons_2025.pdf  us
-ed on input line 258.
+ed on input line 259.
 (pdftex.def)             Requested size: 232.90872pt x 125.60442pt.
  [15
 
@@ -1180,7 +1180,7 @@ t>
 File: ../output/figures/econ_agency_change_2025.pdf Graphic file (type pdf)
 <use ../output/figures/econ_agency_change_2025.pdf>
 Package pdftex.def Info: ../output/figures/econ_agency_change_2025.pdf  used on
- input line 268.
+ input line 269.
 (pdftex.def)             Requested size: 350.94832pt x 153.52548pt.
 
 [16
@@ -1191,23 +1191,23 @@ Package pdftex.def Info: ../output/figures/econ_agency_change_2025.pdf  used on
 File: ../output/figures/econ_headcount_since_1998.pdf Graphic file (type pdf)
 <use ../output/figures/econ_headcount_since_1998.pdf>
 Package pdftex.def Info: ../output/figures/econ_headcount_since_1998.pdf  used 
-on input line 280.
+on input line 281.
 (pdftex.def)             Requested size: 432.4335pt x 153.52599pt.
  [17
 
  <../output/figures/econ_headcount_since_1998.pdf>]
-<../output/figures/econ_separations_history.pdf, id=770, 700.078pt x 310.85547p
-t>
+<../output/figures/econ_separations_history.pdf, id=770, 801.8018pt x 310.85547
+pt>
 File: ../output/figures/econ_separations_history.pdf Graphic file (type pdf)
 <use ../output/figures/econ_separations_history.pdf>
 Package pdftex.def Info: ../output/figures/econ_separations_history.pdf  used o
-n input line 299.
-(pdftex.def)             Requested size: 216.66942pt x 96.20766pt.
+n input line 301.
+(pdftex.def)             Requested size: 216.66066pt x 83.99849pt.
 <../output/figures/econ_q1_history.pdf, id=771, 638.02905pt x 314.31993pt>
 File: ../output/figures/econ_q1_history.pdf Graphic file (type pdf)
 <use ../output/figures/econ_q1_history.pdf>
 Package pdftex.def Info: ../output/figures/econ_q1_history.pdf  used on input l
-ine 299.
+ine 301.
 (pdftex.def)             Requested size: 216.67387pt x 106.74266pt.
  [18
 
@@ -1217,32 +1217,32 @@ story.pdf>] [19
 ] [20
 
 ]
-<../output/figures/placement_trends.pdf, id=902, 639.45338pt x 351.04211pt>
+<../output/figures/placement_trends.pdf, id=903, 639.45338pt x 351.04211pt>
 File: ../output/figures/placement_trends.pdf Graphic file (type pdf)
 <use ../output/figures/placement_trends.pdf>
 Package pdftex.def Info: ../output/figures/placement_trends.pdf  used on input 
-line 375.
+line 377.
 (pdftex.def)             Requested size: 254.23517pt x 139.56802pt.
  [21
 
  <../output/figures/placement_trends.pdf>]
-<../output/figures/placement_comparison.pdf, id=959, 639.4954pt x 343.87444pt>
+<../output/figures/placement_comparison.pdf, id=960, 639.4954pt x 343.87444pt>
 File: ../output/figures/placement_comparison.pdf Graphic file (type pdf)
 <use ../output/figures/placement_comparison.pdf>
 Package pdftex.def Info: ../output/figures/placement_comparison.pdf  used on in
-put line 379.
+put line 381.
 (pdftex.def)             Requested size: 250.9049pt x 134.91853pt.
  [22
 
  <../output/figures/placement_comparison.pdf>] [23
 
 ]
-<../output/figures/female_sector_comparison.pdf, id=1036, 586.08334pt x 291.083
+<../output/figures/female_sector_comparison.pdf, id=1037, 586.08334pt x 291.083
 33pt>
 File: ../output/figures/female_sector_comparison.pdf Graphic file (type pdf)
 <use ../output/figures/female_sector_comparison.pdf>
 Package pdftex.def Info: ../output/figures/female_sector_comparison.pdf  used o
-n input line 404.
+n input line 406.
 (pdftex.def)             Requested size: 262.26843pt x 130.25786pt.
 
 [24
@@ -1277,7 +1277,7 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  25212 strings out of 474485
- 511477 string characters out of 5742789
+ 511475 string characters out of 5742789
  1937542 words of memory out of 5000000
  46928 multiletter control sequences out of 15000+600000
  570767 words of font info for 81 fonts, out of 8000000 for 9000
@@ -1295,9 +1295,9 @@ sers/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi
 10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><C:/Users/Sandler/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb>
-Output written on slides.pdf (28 pages, 480898 bytes).
+Output written on slides.pdf (28 pages, 481438 bytes).
 PDF statistics:
- 1190 PDF objects out of 1200 (max. 8388607)
+ 1191 PDF objects out of 1200 (max. 8388607)
  63 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
